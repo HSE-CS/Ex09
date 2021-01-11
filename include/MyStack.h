@@ -26,7 +26,7 @@ class MyStack{
     }
     T get() const {
         if (isEmpty())
-            return -1;
+            throw "Stack is empty!";
         else
             return data[top];
     }
