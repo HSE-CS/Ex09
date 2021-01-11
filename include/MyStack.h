@@ -17,7 +17,9 @@ class MyStack {
     MyStack(const MyStack& st) {
         size = st.size;
         stack = new T[size];
-        wmemcpy(stack, st.stack, size);
+        for (int i = 0; i < size; ++i) {
+            stack[i] = st.stack[i];
+        }
         position = st.position;
     }
     ~MyStack() {
