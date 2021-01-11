@@ -4,8 +4,7 @@
 
 int main() {
     MyStack<int> st(5);
-    st.push(124);
     const MyStack<int> &st2 = st;
-    std::cout << st2.get();
+    std::cout << st2.isEmpty();
     return 0;
 }
