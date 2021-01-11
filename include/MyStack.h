@@ -16,8 +16,8 @@ class MyStack {
     this->size = 0;
   }
 
-  explicit MyStack(int length) : top(0), 
-  size(length), 
+  explicit MyStack(int length) : top(0),
+  size(length),
   database(new T[length]) {}
 
   MyStack(const MyStack& OtherStack) {
@@ -32,7 +32,7 @@ class MyStack {
   bool isFull() const {
     if (size == top) {
       return true;
-    }else {
+    } else {
       return false;
     }
   }
@@ -45,7 +45,7 @@ class MyStack {
   bool isEmpty() const {
     if (top <= 0) {
       return true;
-    }else {
+    } else {
       return false;
     }
   }
