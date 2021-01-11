@@ -28,14 +28,14 @@ class MyStack {
     if (top > 0) {
       return stack[top - 1];
     }
-    return NULL;
+    return 0;
   }
   Type pop() {
     if (top > 0) {
       --top;
       return stack[top];
     }
-    return NULL;
+    return 0;
   }
   void push(Type element) {
     if (top < size) {
