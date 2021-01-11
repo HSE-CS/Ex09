@@ -56,8 +56,9 @@ class MyStack {
         if (index < length) {
             data[index] = a;
             return 0;
-        }else
+        } else {
             return -1;
+        }
     }
 };
 
