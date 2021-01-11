@@ -55,11 +55,11 @@ TEST(MyStackTest, test8) {
 TEST(MyStackTest, test9) {
     MyStack<int> st(5);
     int a[] = { 1, 2, 3, 4, 5 };
-    for (size_t i = 0; i < 5; ++i) {
-        st.push(a[i]);
+    for (auto i : a) {
+        st.push(i);
     }
     int count = 0;
-    for (size_t i = 4; i >= 0; --i) {
+    for (int i = 4; i >= 0; --i) {
         if (a[i] == st.pop()) ++count;
     }
     EXPECT_EQ(5, count);

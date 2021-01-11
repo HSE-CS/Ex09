@@ -8,6 +8,7 @@ class MyStack {
      unsigned int size;
      int top;
      T *value;
+
  public:
      explicit MyStack(unsigned int max_size) {
          size = max_size;
@@ -42,7 +43,7 @@ class MyStack {
      bool isFull() const {
          if (top == size)
              return true;
-         else 
+         else
              return false;
      }
      bool isEmpty() const {
