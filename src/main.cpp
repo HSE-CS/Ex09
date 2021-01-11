@@ -17,3 +17,4 @@ int main() {
         std::cout << new_st.pop() << " ";
     return 0;
 }
+
