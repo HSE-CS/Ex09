@@ -1,6 +1,6 @@
 // Copyright 2021 Islam Osmanov
 #include <string>
-#include <gtest/gtest.h>
+#include "gtest/gtest.h"
 #include "MyStack.h"
 
 TEST(MyStackTest, test1) {
