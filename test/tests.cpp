@@ -1,5 +1,8 @@
 //// Copyright 2021 Ozhiganova Polina
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
+
+#include <string>
+
 #include "MyStack.h"
 
 TEST(MyStack, check_get) {  // 1
