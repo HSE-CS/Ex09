@@ -17,28 +17,28 @@ add_subdirectory(test)
 ################################
 
 # Make PROJECT_SOURCE_DIR, PROJECT_BINARY_DIR, and PROJECT_NAME available.
-set(CMAKE_CXX_STANDARD 17)
-set(PROJECT_NAME Ex08)
-project(${PROJECT_NAME})
+# set(CMAKE_CXX_STANDARD 17)
+# set(PROJECT_NAME Ex08)
+# project(${PROJECT_NAME})
 
 
 # Define project test files
-file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
+# file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
 
 # FIXME: Define all cpp files which you want to test
-set(SRC_FILES ${PROJECT_SOURCE_DIR}/src/main.cpp
-        ${PROJECT_SOURCE_DIR}/include/MyStack.h)
+# set(SRC_FILES ${PROJECT_SOURCE_DIR}/src/main.cpp
+#         ${PROJECT_SOURCE_DIR}/include/MyStack.h)
 
-add_library(task_lib ${SRC_FILES})
+# add_library(task_lib ${SRC_FILES})
 
 # This adds another subdirectory, which has 'project(gtest)'.
-add_subdirectory(gtest)
+# add_subdirectory(gtest)
 
 # Unit Tests
-add_executable(runUnitTests ${TEST_SRC_FILES})
+# add_executable(runUnitTests ${TEST_SRC_FILES})
 
 # Standard linking to gtest stuff.
-target_link_libraries(runUnitTests gtest gtest_main)
+# target_link_libraries(runUnitTests gtest gtest_main)
 
 # Extra linking for the project.
-target_link_libraries(runUnitTests task_lib)
+# target_link_libraries(runUnitTests task_lib)
