@@ -56,15 +56,16 @@ MyStack<int> st(2);
 st.push(3);
 st.push(8);
 st.pop();
-EXPECT_EQ(3, st.get());
+st.pop();
+EXPECT_EQ(true, st.isEmpty());
 }
 
 TEST(MyStack, test_9) {
-MyStack<int> st(9);
+MyStack<int> st(2);
 st.push(2);
 st.push(3);
 st.pop();
-EXPECT_EQ(false, st.isEmpty());
+EXPECT_EQ(false, st.isFull());
 }
 
 TEST(MyStack, test_10) {
@@ -75,7 +76,7 @@ st.push(1);
 st.push(1);
 st.push(1);
 while (!st.isEmpty()) {
-st.pop();
+	st.pop();
 }
 EXPECT_EQ(false, st.isFull());
 }
