@@ -54,7 +54,7 @@ TEST(MyStack, check_warning) {  // 7
   st.pop();
   st.pop();
   int rez = INT_MAX;
-  ASSERT_EQ(rez, st2.pop());
+  ASSERT_EQ(rez, st.pop());
 }
 
 TEST(MyStack, check_get_empty) {  // 8
