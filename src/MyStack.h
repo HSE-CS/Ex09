@@ -1,5 +1,22 @@
-#include "MyStack.h"
-#include<iostream>
+#include <iostream>
+using namespace std;
+template <typename T>
+class MyStack
+{
+private:
+    T *stackPtr;
+    int size;
+
+public:
+    T top;
+    MyStack(int = 10);
+    ~MyStack();
+    bool push(const T);
+    T pop();
+    bool isFull();
+    bool isEmpty();
+    T get();
+};
 
 template <typename T>
 MyStack<T>::MyStack(int s)
@@ -53,13 +70,13 @@ bool MyStack<T>::push(const T value)
 }
 
 template <typename T>
-bool MyStack<T>::pop()
+T MyStack<T>::pop()
 {
     if (top == - 1)
-        return false;
+        return NULL;
 
+    T ans = stackPtr[top];
     stackPtr[top] = 0;
     top--;
-
-    return true;
+    return ans;
 }

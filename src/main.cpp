@@ -1,16 +1,17 @@
 #include "MyStack.h"
 #include <iostream>
+using namespace std;
 int main()
 {
-    MyStack <int> mystack(5);
-    int ct = 0;
-    while (ct++ != 5)
+    MyStack <int> myStack(5);
+    for (int i = 0; i < 5; i++)
     {
         int temp;
         std:: cin >> temp;
         myStack.push(temp);
+
     }
-    myStack.pop();
-    myStack.pop();
+    while(!myStack.isEmpty())
+       std::cout << myStack.pop() << " ";
     return 0;
 }
