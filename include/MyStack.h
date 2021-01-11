@@ -49,7 +49,7 @@ return false;
 Stack get() {
 return stackPtr[top];
 };
-}
+};
 
 #endif
 
