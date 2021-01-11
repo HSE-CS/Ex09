@@ -5,7 +5,7 @@
 
 TEST(MyStack, test_1) {
 	MyStack<int> st(8);
-	st.push(rand());
+	st.push(2);
 	EXPECT_EQ(false, st.isEmpty());
 }
 

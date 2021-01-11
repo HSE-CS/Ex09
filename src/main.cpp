@@ -2,8 +2,7 @@
 #include "MyStack.h"
 #include <iostream>
 
-int main()
-{
+int main() {
     MyStack<int> st(5);
     st.push(0);
     st.push(1);
