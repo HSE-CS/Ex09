@@ -62,7 +62,7 @@ TEST(MyStackTest, test9) {
     const MyStack<int> &st2 = st;
     EXPECT_EQ("124", st2.get());
 }
-TEST(MyStackTest, test9) {
+TEST(MyStackTest, test10) {
     MyStack<int> st(5);
     const MyStack<int> &st2 = st;
     EXPECT_EQ(true, st2.isEmpty());
