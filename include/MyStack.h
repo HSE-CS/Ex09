@@ -4,12 +4,12 @@
 
 template <class T>
 class MyStack {
-private:
+ private:
     unsigned length;
     unsigned index;
     T* data;
 
-public:
+ public:
     MyStack() {
         length = 0;
         index = -1;
@@ -56,10 +56,8 @@ public:
         if (index < length) {
             data[index] = a;
             return 0;
-        }
-        else {
+        }else
             return -1;
-        }
     }
 };
 
