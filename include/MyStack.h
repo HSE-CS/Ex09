@@ -47,6 +47,5 @@ class MyStack {
   bool isEmpty() const {
     return this->head == 0;
   }
-
 };
 #endif  // INCLUDE_MYSTACK_H_
