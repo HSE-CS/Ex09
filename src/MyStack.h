@@ -1,14 +1,13 @@
 #include <iostream>
-using namespace std;
 template <typename T>
 class MyStack
 {
 private:
     T *stackPtr;
     int size;
+    T top;
 
 public:
-    T top;
     MyStack(int = 10);
     ~MyStack();
     bool push(const T);
