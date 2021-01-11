@@ -51,7 +51,7 @@ template <typename T>
 T MyStack<T>::get()
 {
     if (top == - 1)
-      return NULL;
+      return 0;
     return stackPtr[top];
 }
 

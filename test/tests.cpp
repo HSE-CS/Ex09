@@ -55,7 +55,7 @@ TEST(MyStackTest, test3_2) {
 TEST(MyStackTest, test4_1) {
   MyStack<int> MyStack(1);
 
-  EXPECT_EQ(NULL, MyStack.pop());
+  EXPECT_EQ(0, MyStack.pop());
 }
 
 TEST(MyStackTest, test4_2) {
