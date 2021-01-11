@@ -1,6 +1,7 @@
 // Copyright 2020 Polina Lukicheva
-#include "MyStack.h"
+#include <random>
 
+#include "MyStack.h"
 int main() {
   Stack<int> st(10);
   st.push(rand());
