@@ -37,7 +37,8 @@ public:
 	}
 
 	T get() const {
-		return database[top];
+		int ind = top - 1;
+		return database[ind];
 	}
 
 	bool isEmpty() const {
