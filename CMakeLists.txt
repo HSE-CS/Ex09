@@ -27,7 +27,6 @@ file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
 
 # FIXME: Define all cpp files which you want to test
 set(SRC_FILES ${PROJECT_SOURCE_DIR}/src/main.cpp
-        ${PROJECT_SOURCE_DIR}/src/MyStack.cpp
         ${PROJECT_SOURCE_DIR}/include/MyStack.h)
 
 add_library(task_lib ${SRC_FILES})
