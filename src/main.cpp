@@ -3,8 +3,7 @@
 #include <iostream>
 #include <random>
 
-int main()
-{
+int main() {
   MyStack<int> st(10);
   st.push(rand());
   st.push(rand());
