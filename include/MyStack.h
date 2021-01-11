@@ -9,7 +9,7 @@ class MyStack {
   int top;
   int size;
   T* stack;
- 
+
  public:
   explicit MyStack(int sizeIn) {
     top = 0;
