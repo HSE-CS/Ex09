@@ -4,9 +4,9 @@
 #include "MyStack.h"
 int main() {
   Stack<int> st(10);
-  st.push(rand());
-  st.push(rand());
-  st.push(rand());
+  st.push(1);
+  st.push(2);
+  st.push(3);
   while (!st.isEmpty()) std::cout << st.pop() << " ";
   Stack<int> st2(5);
   st2.push(1);

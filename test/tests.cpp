@@ -1,7 +1,6 @@
 // Copyright 2020 GHA Test Team
 #include <gtest/gtest.h>
 
-#include <random>
 #include <string>
 
 #include "MyStack.h"
@@ -13,24 +12,24 @@ TEST(MyStackTest, test1) {
 
 TEST(MyStackTest, test2) {
   Stack<int> st(5);
-  st.push(rand());
-  st.push(rand());
-  st.push(rand());
+  st.push(1);
+  st.push(1);
+  st.push(1);
   EXPECT_EQ(false, st.isEmpty());
 }
 
 TEST(MyStackTest, test3) {
   Stack<int> st(3);
-  st.push(rand());
-  st.push(rand());
-  st.push(rand());
+  st.push(1);
+  st.push(1);
+  st.push(1);
   EXPECT_EQ(true, st.isFull());
 }
 
 TEST(MyStackTest, test4) {
   Stack<int> st(3);
-  st.push(rand());
-  st.push(rand());
+  st.push(1);
+  st.push(1);
   EXPECT_EQ(false, st.isFull());
 }
 
