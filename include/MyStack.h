@@ -8,8 +8,9 @@ class MyStack {
     int size;
     int top;
     T *data;
+
  public:
-    MyStack(int sz) :
+    explicit MyStack(int sz) :
       size(sz), top(0) {
       data = new T[size];
     }
