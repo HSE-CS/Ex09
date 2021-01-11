@@ -11,4 +11,6 @@ int main() {
   std::cout << stack.get() << std::endl;
   std::cout << stack.pop() << std::endl;
   std::cout << stack.get() << std::endl;
+  MyStack<int> stack2(stack);
+  std::cout << stack2.get() << std::endl;
 }

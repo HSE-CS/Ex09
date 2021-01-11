@@ -18,7 +18,10 @@ class MyStack {
   }
 
   MyStack(const MyStack &stack) {
-    this->storage = stack.storage;
+    this->storage = new T[stack.size];
+    for (int i = 0; i < stack.size; ++i) {
+      this->storage[i] = stack.storage[i];
+    }
     this->size = stack.size;
     this->top = stack.top;
   }
