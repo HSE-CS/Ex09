@@ -1,11 +1,11 @@
-// Created by Stanislav on 11/01/2021
+// Copyright 2020 Stanislav Stoianov
 
-#include <iostream>
 #include "../include/MyStack.h"
+#include <iostream>
 
 int main() {
-  MyStack<int> Mystack(1);
-  Mystack.push(42);
-  std::cout << Mystack.isFull();
+  MyStack<int> stack(1);
+  stack.push(42);
+  std::cout << stack.isFull();
   return 0;
 }

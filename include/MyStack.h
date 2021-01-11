@@ -1,4 +1,4 @@
-// Created by Stanislav on 11/01/2021
+// Copyright 2020 Stanislav Stoianov
 
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
@@ -6,13 +6,11 @@
 template<class T>
 class MyStack {
  private:
-
   unsigned int size;
   unsigned int head;
   T *data;
 
  public:
-
   explicit MyStack(int size) : head(0), size(size), data(new T[size + 1]) {}
 
   MyStack(const MyStack &MyStack) {
@@ -51,5 +49,4 @@ class MyStack {
   }
 
 };
-
 #endif  // INCLUDE_MYSTACK_H_

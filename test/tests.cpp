@@ -49,7 +49,7 @@ TEST(MyStackTest, test11) {
 
 TEST(MyStackTest, test12) {
   MyStack<int> stack(5);
-  const MyStack<int>& stack2 = stack;
+  const MyStack<int> &stack2 = stack;
   EXPECT_EQ(true, stack2.isEmpty());
 }
 
