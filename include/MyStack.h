@@ -4,24 +4,23 @@
 
 template <class T>
 class MyStack {
-private:
+  private:
     unsigned length;
     unsigned index;
     T *data;
- 
-public:
-    explicit MyStack() {
+  public:
+    MyStack() {
         length = 0;
-        index=-1;
+        index = -1;
         data = nullptr;
     }
     explicit MyStack(unsigned x) {
         data = new T[x];
-        index=-1;
+        index = -1;
         length = x;
     }
-    MyStack(const MyStack& my_stc){
-        unsigned x = my_stc.lenght;
+    MyStack(const MyStack& my_stc) {
+        unsigned x = my_stc.lenghth;
         unsigned y = my_stc.index;
         data = new T[x];
         length = x;
@@ -56,8 +55,7 @@ public:
         if (index < length) {
           data[index] = a;
           return 0;
-          }
-        else
+          } else
           return -1;
     }
 };

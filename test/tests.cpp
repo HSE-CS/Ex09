@@ -16,7 +16,7 @@ TEST(MyStackTest, test2) {
 
 TEST(MyStackTest, test3) {
   MyStack<int> st(5);
-  MyStack<int> st2=st;  
+  MyStack<int> st2 = st;
   EXPECT_EQ(true, st2.isEmpty());
 }
 
