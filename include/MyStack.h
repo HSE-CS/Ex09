@@ -34,7 +34,6 @@ class MyStack{
         if (isEmpty()) {
             return -1;
         } else {
-            data[top] = 0;
             return data[--top];
         }
     }
