@@ -72,7 +72,7 @@ template <typename T>
 T MyStack<T>::pop()
 {
     if (top == - 1)
-        return NULL;
+        return 0;
 
     T ans = stackPtr[top];
     stackPtr[top] = 0;
