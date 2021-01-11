@@ -1,9 +1,6 @@
+// Copyright 2020 GN
 #include "MyStack.h"
-#include "typeinfo"
-int main()
-{
-    auto i{ 42 };
-    std::cout << typeid(i).name() << " ";
+int main() {
     MyStack<char> st(10);
     st.push('a');
     st.push('b');

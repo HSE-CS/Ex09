@@ -8,7 +8,7 @@ class MyStack {
     T* stack;
     int size;
     int position = 0;
- 
+
  public:
     explicit MyStack(int size_) {
         size = size_;
@@ -17,7 +17,7 @@ class MyStack {
     MyStack(const MyStack& st) {
         size = st.size;
         stack = new T[size];
-        memcpy(stack, st.stack, size);
+        wmemcpy(stack, st.stack, size);
         position = st.position;
     }
     ~MyStack() {
@@ -39,19 +39,18 @@ class MyStack {
             stack[position] = x;
             position++;
         }
-        if (position == size) {}
     }
     bool isFull() {
         if (position == size) {
            return true;
         }
         return false;
-    };
+    }
     bool isEmpty() {
         if (position == 0) {
            return true;
-        };
+        }
         return false;
-    };
+    }
 };
-#endif // INCLUDE_MYSTACK_H_
+#endif  // INCLUDE_MYSTACK_H_
