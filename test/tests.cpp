@@ -1,9 +1,10 @@
 // Copyright 2020 Baklanov
 #include "../include/MyStack.h"
 
+#include <gtest/gtest.h>
 #include <string>
 
-#include <gtest/gtest.h>
+
 
 TEST(MyStackTest, test1) {
   MyStack<int> st(10);
