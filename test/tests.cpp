@@ -1,8 +1,9 @@
 // Copyright 2020 GHA Test Team
-#include "MyStack.h"
-
 #include <gtest/gtest.h>
+
 #include <string>
+
+#include "MyStack.h"
 
 TEST(MyStackTest, test1) {
   Stack<int> st(5);
@@ -61,7 +62,7 @@ TEST(MyStackTest, test8) {
 TEST(MyStackTest, test9) {
   Stack<char> st(4);
   st.push('k');
-  Stack<int> st2(st);
+  Stack<char> st2(st);
   EXPECT_EQ('k', st2.get());
 }
 
