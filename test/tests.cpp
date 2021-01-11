@@ -1,3 +1,4 @@
+// Copyright 2020 Baklanov
 #include "../include/MyStack.h"
 #include <cstring>
 #include <gtest/gtest.h>
