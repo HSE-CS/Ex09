@@ -1,6 +1,7 @@
 // Copyright 2020 GHA Test Team
 #include <gtest/gtest.h>
 
+#include <random>
 #include <string>
 
 #include "MyStack.h"
