@@ -50,14 +50,12 @@ public:
 	}
 
 	T pop() {
-		top -= 1;
-		int index = top + 1;
-		return database[index];
+		return database[--top];
 	}
 
 	void push(T th) {
-		top += 1;
 		database[top] = th;
+		top++;
 	}
 };
 

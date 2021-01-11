@@ -19,6 +19,8 @@ int main() {
 
 	MyStack<std::string> OtherStack(2);
 	OtherStack.push("Manchester United");
-	std::cout << OtherStack.get() << std::endl;
+	OtherStack.push("Manchester United");
+	OtherStack.pop();
+	std::cout << OtherStack.isFull() << std::endl;
 	return 0;
 }
