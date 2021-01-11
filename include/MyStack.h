@@ -27,9 +27,9 @@ class MyStack {
 template <typename T>
 MyStack<T>::MyStack(int size) {
 if (size > 0) {
- this->size = size;
- stackPtr = new T[size];
- top = -1;
+this->size = size;
+stackPtr = new T[size];
+top = -1;
 }
 }
 
@@ -39,7 +39,7 @@ size = stack.size;
 top = stack.top;
 stackPtr = new T[size];
 for (int i = 0; i < size; i++)
- stackPtr[i] = stack.stackPtr[i];
+stackPtr[i] = stack.stackPtr[i];
 }
 
 template <typename T>
@@ -50,7 +50,7 @@ delete[] stackPtr;
 template <typename T>
 bool MyStack<T>::push(T value) {
 if (top == size - 1) {
- return false;
+return false;
 }
 top++;
 stackPtr[top] = value;
@@ -60,7 +60,7 @@ return true;
 template <typename T>
 T MyStack<T>::pop() {
 if (top == -1)
- throw -1;
+throw -1;
 top--;
 return stackPtr[top+1];
 }
@@ -68,21 +68,21 @@ return stackPtr[top+1];
 template <typename T>
 T MyStack<T>::get() const {
 if (top == -1)
- throw -1;
+throw -1;
 return stackPtr[top];
 }
 
 template <typename T>
 bool MyStack<T>::isEmpty()const {
 if (top == -1)
- return true;
+return true;
 return false;
 }
 
 template <typename T>
 bool MyStack<T>::isFull()const {
 if (top + 1 == size)
- return true;
+return true;
 return false;
 }
 
