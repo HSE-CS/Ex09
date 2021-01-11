@@ -5,11 +5,11 @@
 
 template<class T>
 class MyStack{
-
  private:
     unsigned int size;
     int top;
     T* data;
+
  public:
     explicit MyStack(unsigned int size) {
         data = new T[size];
@@ -31,17 +31,17 @@ class MyStack{
             return data[top];
     }
     T pop() {
-        if (isEmpty())
+        if (isEmpty()) {
             return -1;
-        else {
+        } else {
             data[top] = 0;
             return data[--top];
         }
     }
     void push(T info) {
-        if (isFull())
+        if (isFull()) {
             return;
-        else {
+        } else {
             top++;
             data[top] = info;
         }
