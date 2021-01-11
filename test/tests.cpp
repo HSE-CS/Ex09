@@ -89,6 +89,6 @@ TEST(MyStackTest, test10) {
   MyStack<char> st_(st);
   st_.push('z');
   st_.push('a');
-  st_.push('w')
+  st_.push('w');
   EXPECT_EQ(true, st_.isFull());
 }
