@@ -4,11 +4,12 @@
 
 template <class T>
 class MyStack {
-  private:
+ private:
     unsigned length;
     unsigned index;
     T *data;
-  public:
+
+ public:
     MyStack() {
         length = 0;
         index = -1;
@@ -20,7 +21,7 @@ class MyStack {
         length = x;
     }
     MyStack(const MyStack& my_stc) {
-        unsigned x = my_stc.lenghth;
+        unsigned x = my_stc.length;
         unsigned y = my_stc.index;
         data = new T[x];
         length = x;
