@@ -43,7 +43,7 @@ TEST(MyStackTest, test6) {
 	MyStack<std::string> Stack(1);
 	Stack.push("C#");
 	Stack.pop();
-	EXPECT_EQ(true, Stack.isEmpty);
+	EXPECT_EQ(true, Stack.isEmpty());
 }
 
 TEST(MyStackTest, test7) {
