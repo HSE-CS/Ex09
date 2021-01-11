@@ -9,14 +9,14 @@ TEST(MyStack, check_get) {  // 1
   ASSERT_EQ(rez, st.get());
 }
 
-TEST(MyStack, check_pop) { // 2
+TEST(MyStack, check_pop) {  // 2
   MyStack<int> st(1);
   st.push(5);
   int rez = 5;
   ASSERT_EQ(rez, st.pop());
 }
 
-TEST(MyStack,check_full) {  // 3
+TEST(MyStack, check_full) {  // 3
   MyStack<int> st(3);
   st.push(5);
   st.push(10);
@@ -25,7 +25,7 @@ TEST(MyStack,check_full) {  // 3
   ASSERT_EQ(rez, st.isFull());
 }
 
-TEST(MyStack,check_empty) {  // 4
+TEST(MyStack, check_empty) {  // 4
   MyStack<int> st(1);
   st.push(5);
   st.pop();
@@ -33,18 +33,18 @@ TEST(MyStack,check_empty) {  // 4
   ASSERT_EQ(rez, st.isEmpty());
 }
 
-TEST(MyStack,not_empty) {  // 5
+TEST(MyStack, not_empty) {  // 5
   MyStack<int> st(1);
   st.push(5);
   ASSERT_FALSE(st.isEmpty());
 }
 
-TEST(MyStack,check_true) {  // 6
+TEST(MyStack, check_true) {  // 6
   MyStack<int> st(1);
   ASSERT_TRUE(st.isEmpty());
 }
 
-TEST(MyStack,check_warning) {  // 7
+TEST(MyStack, check_warning) {  // 7
   MyStack<int> st(2);
   st.push(1);
   st.push(2);
@@ -54,19 +54,19 @@ TEST(MyStack,check_warning) {  // 7
   ASSERT_EQ(rez, st2.pop());
 }
 
-TEST(MyStack,check_get_empty) {  // 8
+TEST(MyStack, check_get_empty) {  // 8
   MyStack<int> st(1);
   int rez = INT_MAX;
   ASSERT_EQ(rez, st.get());
 }
 
-TEST(MyStack,check_false) {  // 9
+TEST(MyStack, check_false) {  // 9
   MyStack<int> st(5);
   st.push(5);
   ASSERT_FALSE(st.isFull());
 }
 
-TEST(MyStack,check_2nd_get) {  // 10
+TEST(MyStack, check_2nd_get) {  // 10
   MyStack<int> st(2);
   st.push(1);
   st.push(2);
