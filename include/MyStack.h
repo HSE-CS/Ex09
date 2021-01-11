@@ -27,9 +27,9 @@ class MyStack {
   }
 
   T get() const {
-    if (index){
+    if (index)  {
       return arr[index - 1];
-    } else{
+    } else  {
       return NO_VALUE;
     }
   }
@@ -71,6 +71,7 @@ class MyStack {
   }
 
   const int NO_VALUE = INT_MAX;
+
  private:
   int size;
   T *arr;
