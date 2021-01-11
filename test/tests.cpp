@@ -77,6 +77,6 @@ TEST(MyStackTest, test10) {
   st.push(2);
   st.push(3);
   MyStack<char> st2(st);
-  st.pop();
+  st2.pop();
   EXPECT_EQ(false, st2.isFull());
 }
