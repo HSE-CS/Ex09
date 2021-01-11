@@ -3,8 +3,10 @@
 #include <iostream>
 
 int main() {
-    MyStack<int> st(5);
-    const MyStack<int> &st2 = st;
-    std::cout << st2.isEmpty();
+    MyStack<int> st(0);
+    st.push(2);
+    st.pop();
+    st.push(24);
+    std::cout << st.get();
     return 0;
 }

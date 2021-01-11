@@ -22,8 +22,9 @@ TEST(MyStackTest, test3) {
 TEST(MyStackTest, test4) {
     MyStack<int> st(0);
     st.push(2);
+    st.pop();
     st.push(24);
-    EXPECT_EQ(true, st.isFull());
+    EXPECT_EQ(24, st.get());
 }
 TEST(MyStackTest, test5) {
     MyStack<int> st(1);
