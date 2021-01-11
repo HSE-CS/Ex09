@@ -1,7 +1,7 @@
 // Copyright 2021 Kuznetsov Mikhail
+#include <string>
 #include "gtest/gtest.h"
 #include "MyStack.h"
-#include <string>
 
 TEST(MyStackTest, test1) {
   MyStack<int> st(16);
@@ -16,7 +16,7 @@ TEST(MyStackTest, test2) {
 
 TEST(MyStackTest, test3) {
   MyStack<int> st(5);
-  for(int i = 0; i < 5; i++)
+  for (int i = 0; i < 5; i++)
     st.push(i);
   EXPECT_EQ(true, st.isFull());
 }
@@ -64,7 +64,7 @@ TEST(MyStackTest, test9) {
   MyStack<char> st(8);
   for (char c = 'a'; c < 'a' + 8; c++)
     st.push(c);
-  while(!st.isEmpty())
+  while (!st.isEmpty())
     st.pop();
   EXPECT_EQ(true, st.isEmpty());
 }
