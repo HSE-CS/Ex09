@@ -52,14 +52,14 @@ T MyStack<T>::get() const {
     if (!isEmpty()) {
         return Mystack[top];
     } else {
-        throw length_error("The Mystack is empty");
+        throw "The Mystack is empty";
     }
 }
 
 template<class T>
 void MyStack<T>::push(T x) {
     if (isFull()) {
-        throw length_error("The Mystack is full");
+        throw "The Mystack is full";
     } else {
         Mystack[++top] = x;
     }
@@ -68,7 +68,7 @@ void MyStack<T>::push(T x) {
 template<class T>
 T MyStack<T>::pop() {
     if (isEmpty()) {
-        throw length_error("The Mystack is empty");
+        throw "The Mystack is empty";
     } else {
         return Mystack[top--];
     }
