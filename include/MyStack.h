@@ -32,14 +32,14 @@ class MyStack{
     }
     T pop() {
         if (isEmpty()) {
-            return -1;
+            throw "Stack is empty!";
         } else {
             return data[--top];
         }
     }
     void push(T info) {
         if (isFull()) {
-            return;
+            throw "Stack overflow!";
         } else {
             top++;
             data[top] = info;
