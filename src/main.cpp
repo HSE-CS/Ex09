@@ -1,7 +1,7 @@
 // Copyright 2020 Stanislav Stoianov
 
-#include "../include/MyStack.h"
 #include <iostream>
+#include "../include/MyStack.h"
 
 int main() {
   MyStack<int> stack(1);
