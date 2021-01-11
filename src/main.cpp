@@ -2,17 +2,18 @@
 
 #include "MyStack.h"
 #include <iostream>
-#include <stdlib.h>
+#include <cstdlib>
 
 int main() {
   MyStack<int> st(8);
-  while(!st.isFull()) {
-    st.push(rand());
+  int start = 2021;
+  while (!st.isFull()) {
+    st.push(start++);
     std::cout << st.get() << " ";
   }
   MyStack<int> new_st(st);
   std::cout << std::endl;
-  while(!new_st.isEmpty())
+  while (!new_st.isEmpty())
     std::cout << new_st.pop() << " ";
   return 0;
 }
