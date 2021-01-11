@@ -9,14 +9,15 @@ class MyStack {
   T *storage;
   int size;
   int top;
+
  public:
-  MyStack(int size) {
+  explicit MyStack(int size) {
     storage = new T[size];
     top = 0;
     this->size = size;
   }
 
-  MyStack(MyStack &stack) {
+  MyStack(const MyStack &stack) {
     this->storage = stack.storage;
     this->size = stack.size;
     this->top = stack.top;
@@ -56,4 +57,4 @@ class MyStack {
   }
 };
 
-#endif //INCLUDE_MYSTACK_H_
+#endif  // INCLUDE_MYSTACK_H_

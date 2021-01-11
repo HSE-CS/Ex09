@@ -3,7 +3,7 @@
 #include <iostream>
 #include "MyStack.h"
 
-int main(){
+int main() {
   MyStack<int> stack(10);
   stack.push(1);
   std::cout << stack.get() << std::endl;
