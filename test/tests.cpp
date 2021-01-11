@@ -1,6 +1,8 @@
 // Copyright 2020 Baklanov
 #include "../include/MyStack.h"
+
 #include <string>
+
 #include <gtest/gtest.h>
 
 TEST(MyStackTest, test1) {
