@@ -68,7 +68,6 @@ TEST(MyStackTest, test9) {
   Stack.push('a');
   Stack.push('2');
   Stack.push('3');
-  
   EXPECT_EQ(true, Stack.isFull());
 }
 
