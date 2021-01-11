@@ -37,7 +37,8 @@ TEST(MyStackTest, test6) {
   st.push("first");
   st.push("second");
 
-  EXPECT_EQ(std::string("second"), st.get());
+  std::string res("second");
+  EXPECT_EQ(res, st.get());
 }
 TEST(MyStackTest, test7) {
   MyStack<int> st(2);

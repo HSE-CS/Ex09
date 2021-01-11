@@ -7,14 +7,13 @@
 #define INCLUDE_MYSTACK_H_
 
 #include <stdexcept>
-
 template<typename T>
 class MyStack {
  public:
   explicit MyStack(size_t cap = 10) :
+      vals(new T[cap]),
       size(0),
-      capacity(cap),
-      vals(new T[capacity]) {}
+      capacity(cap) {}
   MyStack(const MyStack<T>& other) : size(other.size),
                                      capacity(other.capacity),
                                      vals(new T[other.capacity]) {
@@ -49,16 +48,10 @@ class MyStack {
     vals[size++] = val;
   }
   [[nodiscard]] bool isFull() const {
-    if (size == capacity) {
-      return true;
-    }
-    return false;
+    return size == capacity;
   }
   [[nodiscard]] bool isEmpty() const {
-    if (size) {
-      return false;
-    }
-    return true;
+    return size == 0;
   }
 
  private:

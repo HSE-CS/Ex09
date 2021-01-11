@@ -4,7 +4,6 @@
 //
 #include "MyStack.h"
 #include <iostream>
-#include <cstdlib>
 
 int main() {
   MyStack<int> s(10);
