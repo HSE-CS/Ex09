@@ -32,7 +32,7 @@ TEST(MyStackTest, test3) {
 TEST(MyStackTest, test4) {
   MyStack<std::string> st(10);
   st.push("111");
-  EXPECT_EQ(true, st.push("222"););
+  EXPECT_EQ(true, st.push("222"));
 }
 
 TEST(MyStackTest, test5) {
@@ -40,7 +40,7 @@ TEST(MyStackTest, test5) {
   st.push("111");
   st.push("111");
   st.push("111");
-  EXPECT_EQ(false, st.push("222"););
+  EXPECT_EQ(false, st.push("222"));
 }
 
 TEST(MyStackTest, test6) {
@@ -65,7 +65,7 @@ TEST(MyStackTest, test9) {
   EXPECT_EQ(1, st.get());
 }
 
-TEST(MyStackTest, test9) {
+TEST(MyStackTest, test10) {
   MyStack<int> st(3);
   st.push(1);
   st.push(2);
