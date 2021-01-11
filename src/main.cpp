@@ -4,11 +4,12 @@
 //
 #include "MyStack.h"
 #include <iostream>
+#include <cstdlib>
 
 int main() {
   MyStack<int> s(10);
-  while (!s.isFull()) {
-    s.push((int) (rand() % 50));
+  for (int i = 0; !s.isFull(); i++) {
+    s.push(i);
   }
 
   MyStack<int> reverse_s(10);

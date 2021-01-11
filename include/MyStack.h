@@ -24,7 +24,7 @@ class MyStack {
   ~MyStack() {
     delete[] vals;
   }
-  [[nodiscard]] T get() const {
+  T get() const {
     if (size > 0)
       return vals[size - 1];
     else
