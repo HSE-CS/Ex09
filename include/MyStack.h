@@ -1,4 +1,7 @@
-﻿template<typename Stack>
+// Copyright 2020 Baklanov
+#ifndef INCLUDE_MYSTACK_H_ 
+#define INCLUDE_MYSTACK_H_ 
+template<typename Stack>
 class MyStack
 {
 private:
@@ -11,7 +14,7 @@ public:
 		this->stackPtr = 0;
 		this->top = 0;
 	}
-	MyStack(int size) {
+	explicit MyStack(int size) {
 		this->size = size;
 		this->stackPtr = new Stack[size];
 		this->top = 0;
@@ -49,5 +52,7 @@ public:
 		return stackPtr[top];
 	};
 };
+
+#endif
 
 
