@@ -75,7 +75,7 @@ st.push(1);
 st.push(1);
 st.push(1);
 while (!st.isEmpty()) {
-	st.pop();
+st.pop();
 }
 EXPECT_EQ(false, st.isFull());
 }
