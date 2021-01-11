@@ -7,12 +7,12 @@
 
 template <typename T>
 class MyStack {
-private:
- T *stackPtr;
- int size;
- T top;
+ private:
+  T *stackPtr;
+  int size;
+  T top;
 
-public:
+ public:
   explicit MyStack(int s = 10) {
       size = s > 0 ? s: 10;
       stackPtr = new T[size];
