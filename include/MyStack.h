@@ -57,11 +57,9 @@ public:
         return true;
     }
 
-    T pop()
-    {
+    T pop() {
         if (top == - 1)
             return 0;
-
         T ans = stackPtr[top];
         stackPtr[top] = 0;
         top--;

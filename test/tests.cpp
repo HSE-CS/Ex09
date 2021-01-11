@@ -5,68 +5,67 @@
 #include <string>
 
 TEST(MyStackTest, test1_1) {
-  MyStack<int> MyStack(5);
-  EXPECT_EQ(true, MyStack.isEmpty());
+  MyStack<int> Mystack(5);
+  EXPECT_EQ(true, Mystack.isEmpty());
 }
 
 TEST(MyStackTest, test1_2) {
-  MyStack<int> MyStack(5);
-  MyStack.push(42);
+  MyStack<int> Mystack(5);
+  Mystack.push(42);
 
-  EXPECT_EQ(false, MyStack.isEmpty());
+  EXPECT_EQ(false, Mystack.isEmpty());
 }
 
 TEST(MyStackTest, test1_3) {
-  MyStack<int> MyStack(1);
-  MyStack.push(42);
-  MyStack.pop();
+  MyStack<int> Mystack(1);
+  Mystack.push(42);
+  Mystack.pop();
 
-  EXPECT_EQ(true, MyStack.isEmpty());
+  EXPECT_EQ(true, Mystack.isEmpty());
 }
 
 TEST(MyStackTest, test2_1) {
-  MyStack<int> MyStack(5);
-  MyStack.push(42);
+  MyStack<int> Mystack(5);
+  Mystack.push(42);
 
-  EXPECT_EQ(false, MyStack.isFull());
+  EXPECT_EQ(false, Mystack.isFull());
 }
 
 TEST(MyStackTest, test2_2) {
-  MyStack<int> MyStack(1);
-  MyStack.push(42);
+  MyStack<int> Mystack(1);
+  Mystack.push(42);
 
-  EXPECT_EQ(true, MyStack.isFull());
+  EXPECT_EQ(true, Mystack.isFull());
 }
 
 TEST(MyStackTest, test3_1) {
-  MyStack<int> MyStack(1);
-  MyStack.push(42);
+  MyStack<int> Mystack(1);
+  Mystack.push(42);
 
-  EXPECT_EQ(42, MyStack.get());
+  EXPECT_EQ(42, Mystack.get());
 }
 
 TEST(MyStackTest, test3_2) {
-  MyStack<int> MyStack(1);
-  MyStack.push(42);
+  MyStack<int> Mystack(1);
+  Mystack.push(42);
 
-  EXPECT_EQ(42, MyStack.pop());
+  EXPECT_EQ(42, Mystack.pop());
 }
 
 TEST(MyStackTest, test4_1) {
-  MyStack<int> MyStack(1);
+  MyStack<int> Mystack(1);
 
-  EXPECT_EQ(0, MyStack.pop());
+  EXPECT_EQ(0, Mystack.pop());
 }
 
 TEST(MyStackTest, test4_2) {
-  MyStack<int> MyStack(1);
-  MyStack.push(42);
+  MyStack<int> Mystack(1);
+  Mystack.push(42);
 
-  EXPECT_EQ(false, MyStack.push(42));
+  EXPECT_EQ(false, Mystack.push(42));
 }
 
 TEST(MyStackTest, test4_3) {
-  MyStack<int> MyStack();
-
-  EXPECT_EQ(false, MyStack.isFull());
+  MyStack<int> Mystack(5);
+  EXPECT_EQ(false, Mystack.isFull());
 }
