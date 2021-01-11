@@ -72,7 +72,7 @@ TEST(MyStackTest, test10) {
         st.push(i);
     }
     int ans;
-    while (!st.isEmpty) {
+    while (!st.isEmpty()) {
         ans = st.pop();
     }
     EXPECT_EQ(1, ans);
