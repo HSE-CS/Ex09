@@ -1,8 +1,8 @@
 // Copyright 2020 GHA Test Team
 
 #include <gtest/gtest.h>
-#include "../include/MyStack.h"
 #include <string>
+#include "../include/MyStack.h"
 
 TEST(MyStackTest, test1) {
   MyStack<int> stack(16);
