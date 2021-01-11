@@ -19,7 +19,7 @@ TEST(MyStackTest, test3) {
     MyStack<int> st(5);
     st.push(1);
     st.pop();
-    EXPECT_EQ(false, st.isEmpty());
+    EXPECT_EQ(true, st.isEmpty());
 }
 
 TEST(MyStackTest, test4) {
@@ -55,8 +55,8 @@ TEST(MyStackTest, test8) {
 TEST(MyStackTest, test9) {
     MyStack<int> st(5);
     int a[] = { 1, 2, 3, 4, 5 };
-    for (auto i : a) {
-        st.push(i);
+    for (size_t i = 0; i < 5; ++i) {
+        st.push(a[i]);
     }
     int count = 0;
     for (size_t i = 4; i >= 0; --i) {

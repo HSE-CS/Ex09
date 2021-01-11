@@ -3,8 +3,7 @@
 #define INCLUDE_MYSTACK_H_
 
 template <typename T>
-class MyStack
-{
+class MyStack {
  private:
      unsigned int size;
      int top;
@@ -27,7 +26,7 @@ class MyStack
          delete value;
      }
      T get() const {
-         if (top != 0) 
+         if (top != 0)
              return value[top - 1];
      }
      T pop() {
@@ -41,15 +40,15 @@ class MyStack
          top++;
      }
      bool isFull() const {
-         if (top == size) 
+         if (top == size)
              return true;
          else 
              return false;
      }
      bool isEmpty() const {
-         if (top == 0) 
+         if (top == 0)
              return true;
-         else 
+         else
              return false;
      }
 };

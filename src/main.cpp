@@ -5,16 +5,16 @@
 
 int main() {
     MyStack<int> test1(10);
-    while (!test1.isFull()) {  // заполним случайными числами,
-        test1.push(std::rand() % 100);  // пока стек не полон
+    while (!test1.isFull()) {  // fill stack with random numbers
+        test1.push(std::rand() % 100);
     }
-    MyStack<int> test2(test1);  // скопируем первый стек
-    while (!test1.isEmpty()) {  // проверим как сработало копирование 
-        std::cout << test1.get() << " ";  // и протестируем функцию get
-        std::cout << test1.pop() << " ";  // и pop
+    MyStack<int> test2(test1);  // copy stack
+    while (!test1.isEmpty()) {  // check if it worked
+        std::cout << test1.get() << " ";  // and test get function
+        std::cout << test1.pop() << " ";  // and pop
         std::cout << test2.pop() << "\n";
     }
-    int a[10];  // с помощью стека перевернем массив
+    int a[10];  // reverse array with stack
     for (size_t i = 0; i < 10; ++i) {
         a[i] = std::rand() % 10;
         std::cout << a[i] << " ";
@@ -27,6 +27,6 @@ int main() {
     for (size_t i = 0; i < 10; ++i) {
         a[i] = test3.pop();
         std::cout << a[i] << " ";
-    }  // получаем перевернутый массив на выходе
+    }  // check if array is reversed
     return 0;
 }
