@@ -11,7 +11,7 @@ class MyStack {
   T* data;
   
  public:
-  explicit MyStack(insigned int size){
+  explicit MyStack(unsigned int size){
     currentSize = 0;
     maxSize = size;
     data = new T[maxSize];
@@ -21,7 +21,7 @@ class MyStack {
     currentSize = newStack.currentSize;
     maxSize = newStack.maxSize;
     data = new T[maxSize];
-    for (size_t i = 0; i < currentSize; i++)
+    for (unsigned i = 0; i < currentSize; i++)
       data[i] = newStack.data[i];
   }
 
