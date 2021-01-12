@@ -37,7 +37,7 @@ template <typename T> class MyStack {
      T pop() {
          --top_index;
          if (top_index >= 0)
-             return data[top_index];
+             return data[top_index+1];
          else
              throw "Stack has already empty!";
      }
