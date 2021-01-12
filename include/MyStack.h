@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include <cstring>
 
 template <typename T>
 class MyStack
@@ -42,7 +43,6 @@ public:
     {
         if (size == capacity)
         {
-            //T* newTail = static_cast<T*>(std::realloc(tail, capacity *= 2));
             T* newTail = new T[capacity *= 2];
             if (!newTail)
             {
