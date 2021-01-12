@@ -53,12 +53,11 @@ class MyStack {
             return true;
         else
             return false;
-    }
-    
+    }  
  private:
     int size;
     int top;
     T* store;
 };
 
-#endif // INCLUDE_MYSTACK_H_
+#endif  // INCLUDE_MYSTACK_H_

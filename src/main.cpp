@@ -22,7 +22,5 @@ int main() {
     std::cout << st.isEmpty() << "\n";
     while (!st2.isEmpty())
         std::cout << st2.pop() << " ";
-
     return 0;
-
 }
