@@ -1,30 +1,28 @@
 //
-//  MyStack.h
+//  MyStack.cpp
 //  programming-technologies
 //
 //  Created by Даниил Иванов on 12.01.2021.
 //  Copyright © 2021 Daniil Ivanov. All rights reserved.
 //
-
-
 #pragma once
-#ifndef MYSTACK_H
-#define MYSTACK_H
+#ifndef MYSTACK_H_
+#define MYSTACK_H_
 #include <iostream>
 
-template <typename T>
+template <class T>
 class MyStack {
 private:
 	size_t SizeMaximum;
 	size_t SizeCurrent;
 	T* value;
 public:
-	MyStack(size_t count) {
+	MyStack (std::size_t count) {
 		SizeMaximum = count;
 		SizeCurrent = 0;
 		value = new T[SizeMaximum+1];
 	}
-	MyStack(const Mystack& copied) {
+	MyStack (const MyStack& copied) {
 		
 	}
 	void push(T value) {
@@ -34,10 +32,10 @@ public:
 		SizeCurrent++;
 	}
 	T pop() {
-		if (isEmpty)
-			return;
-		SizeCurrent--;
-		return value[SizeCurrent + 1];
+		if (!(isEmpty)) {
+			SizeCurrent--;
+			return value[SizeCurrent];
+		}
 	}
 	bool isEmpty() {
 		return SizeCurrent == 0;
