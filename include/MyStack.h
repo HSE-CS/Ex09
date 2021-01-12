@@ -1,4 +1,4 @@
-// Copyright DB 2021
+  // Copyright DB 2021
 
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
@@ -11,6 +11,7 @@ class MyStack {
      unsigned int length;
      unsigned int position;
      T* stack;
+
  public:
      MyStack() {
          length = 0;
@@ -32,15 +33,13 @@ class MyStack {
      bool isFull() {
          if (position == length) {
              return true;
-         }
-         else
+         } else
              return false;
      }
      bool isEmpty() {
          if (position == 0) {
              return true;
-         }
-         else
+         } else
              return false;
      }
      ~MyStack() {
