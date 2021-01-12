@@ -12,9 +12,9 @@ class MyStack {
 
  public:
   explicit MyStack(int size) {
-    if (size <= 0)
+    if (size <= 0) {
       throw "Incorrect size";
-    else {
+    } else {
       stack = new T[size];
       capacity = size;
     }
@@ -26,9 +26,10 @@ class MyStack {
     stack = new T[for_copy.capacity];
     capacity = for_copy.capacity;
     index = for_copy.index;
-    if (!for_copy.isEmpty())
+    if (!for_copy.isEmpty()) {
       for (int i = 0; i < index + 1; i++)
         stack[i] = for_copy.stack[i];
+    }
   }
   bool isEmpty() const {
     return index == -1;
@@ -46,17 +47,17 @@ class MyStack {
     if (!isFull()) {
       index++;
       stack[index] = element;
-    }
-    else
+    } else {
       throw "Stack is full";
+    }
   }
   T pop() {
     if (!isEmpty()) {
       index--;
       return stack[index + 1];
-    }
-    else
+    } else {
       throw "Stack is empty";
+    }
   }
 };
 #endif  // INCLUDE_MYSTACK_H_
