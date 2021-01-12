@@ -2,12 +2,11 @@
 #include "MyStack.h"
 #include <iostream>
 
-int main()
-{
+int main() {
     MyStack<int> st(10);
-    st.push(rand());
-    st.push(rand());
-    st.push(rand());
+    st.push(rand_r());
+    st.push(rand_r());
+    st.push(rand_r());
 
     while (!st.isEmpty())
         std::cout << st.pop() << " ";
