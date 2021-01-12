@@ -42,7 +42,7 @@ template <typename T> class MyStack {
              throw "Stack has already empty!";
      }
      T get() const {
-         if (top_index)
+         if (top_index != -1)
              return data[top_index];
          return 0;
      }
