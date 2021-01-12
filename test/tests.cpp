@@ -55,6 +55,7 @@ TEST(StackTest, test9) {
     stack.push(2);
     stack.pop();
     EXPECT_EQ(3, stack.get());
+}
 TEST(StackTest, test10) {
     MyStack<char> stack(5);
     stack.push('A');
