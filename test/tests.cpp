@@ -50,7 +50,7 @@ TEST(MyStackTest, test5) {
   st.push(20);
   EXPECT_EQ(false, st.isFull());
   st.push(30);
-  EXPECT_EQ(false, st.isFull());
+  EXPECT_EQ(true, st.isFull());
 }
 
 TEST(MyStackTest, test6) {
@@ -72,7 +72,7 @@ TEST(MyStackTest, test7) {
   EXPECT_EQ(true, st.isFull());
   EXPECT_EQ(false, st.isEmpty());
   EXPECT_EQ("juice", st.pop());
-  EXPECT_EQ("banana", st.pop());
+  EXPECT_EQ("banana", st.get());
   EXPECT_EQ("banana", st.pop());
   EXPECT_EQ("apple", st.pop());
   EXPECT_EQ(true, st.isEmpty());
@@ -111,7 +111,7 @@ TEST(MyStackTest, test10) {
   EXPECT_EQ(3000, st.pop());
   EXPECT_EQ(2000, st.pop());
   EXPECT_EQ(1000, st.pop());
-  EXPECT_EQ(true, st.isFull());
-  EXPECT_EQ(false, st.isEmpty());
+  EXPECT_EQ(false, st.isFull());
+  EXPECT_EQ(true, st.isEmpty());
 }
 
