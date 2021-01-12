@@ -38,8 +38,9 @@ template <typename T> class MyStack {
          if (this->top_index >= 0) {
              --top_index;
              return data[top_index + 1];
-         } else
+         } else {
              return 0;
+         }
      }
      T get() const {
          if (top_index != -1)
