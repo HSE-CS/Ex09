@@ -52,9 +52,9 @@ TEST(MyStackTest, test6) {
 TEST(MyStackTest, test7) {
     MyStack<float> st(5);
     st.push(1.1);
-    st.push(2.2);
+    st.push(2.0);
     st.pop();
-    EXPECT_DOUBLE_EQ(2.2, st.get());
+    EXPECT_DOUBLE_EQ(2.0, st.get());
 }
 
 TEST(MyStackTest, test8) {
