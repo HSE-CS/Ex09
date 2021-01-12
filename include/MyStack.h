@@ -5,12 +5,11 @@
 
 template <typename T>
 class MyStack {
-private:
+ private:
     unsigned int stack_size {};
     unsigned int stack_head = 0;
     T *stack_values;
-
-public:
+ public:
     // constructors
     explicit MyStack(unsigned int new_size) {
         stack_size = new_size;
@@ -27,7 +26,7 @@ public:
         delete stack_values;
     }
 
-    //functions
+    // functions
     [[nodiscard]] bool isFull() const {
         if (stack_head == stack_size)
             return true;
@@ -59,4 +58,7 @@ public:
 };
 
 
-#endif //INCLUDE_MYSTACK_H_
+// Warning message: -1 -> stack is empty but use function pop
+// Warning message: -2 -> stack is full but use function push
+
+#endif  // INCLUDE_MYSTACK_H_

@@ -1,3 +1,4 @@
+// Copyright 2021 by alexgiving
 #include <iostream>
 #include "MyStack.h"
 
@@ -6,15 +7,13 @@ int main() {
     while (!stack1.isFull()) {
         stack1.push(std::rand() % 100);
     }
-
     MyStack<int> stack2(stack1);
-    while (!stack2.isEmpty()){
+    while (!stack2.isEmpty()) {
         std::cout << stack2.pop() << "\n";
     }
-
+    
     unsigned int a = 123456789;
     unsigned int b = 0;
-
     std::cout << a << "\n";
     MyStack<int> tempStack(9);
     while (!tempStack.isFull()) {
