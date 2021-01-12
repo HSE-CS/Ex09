@@ -4,9 +4,8 @@
 #ifdef MY_STACK_H
 #include <iostream>
 template <class T>
-class MyStack
-{
-public:
+class MyStack {
+ public:
     explicit MyStack(int size) {
         this->head = 0;
         this->size = size;
@@ -57,11 +56,9 @@ public:
         return (head == 0);
     }
 
-private:
-	int head{};
-	int size{};
-	T* stack;
+ private:
+    int head{};
+    int size{};
+    T* stack;
 };
-
-
-#endif // MY_STACK_H
+#endif  // MY_STACK_H
