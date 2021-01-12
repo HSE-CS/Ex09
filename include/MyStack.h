@@ -1,65 +1,65 @@
 // Copyright 2020 Shabarshin Leonid
+#include <iostream>
+#include <new>
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
 
-#include <iostream>
-#include <string>
 
 template<class T>
 class MyStack {
-private:
-    T* stack;
-    int size;
-    int top;
-
 public:
-    explicit MyStack(int n) {
-        this->size = n;
-        this->top = -1;
-        this->stack = new T[n];
+    explicit MyStack(int _size) {
+        size = _size;
+        store = new T[size];
     }
     MyStack(const MyStack& copy) {
-        this->size = copy.size;
-        this->top = copy.top;
-        this->stack = new T[copy.size];
+        size = copy.size;
+        store = new T[size];
         for (int i = 0; i < size; i++) {
-            this->stack[i] = copy.stack[i];
+            store[i] = copy.store[i];
         }
+        top = copy.top;
     }
     ~MyStack() {
-        this->size = 0;
-        this->top = -1;
-        delete[] stack;
+        delete[] store;
     }
+
     T get() const {
-        if (!isEmpty()) {
-            return stack[top];
-        }
-        std::cout << "Stack is empty" << std::endl;
-        return 0;
+        return store[top - 1];
     }
     T pop() {
-        if (!isEmpty()) {
-            top--;
-            return stack[top + 1];
-        }
-        std::cout << "Stack is empty" << std::endl;
-        return 0;
-    }
-    void push(T num) {
-        if (!isFull()) {
-            stack[top + 1] = num;
-            top++;
+        if (top == 0) {
+            return 0;
         }
         else {
-            std::cout << "Stack is full" << std::endl;
+            top--;
+            return store[top];
+        }
+    }
+    void push(T value) {
+        if (top < size) {
+            store[top] = value;
+            top++;
         }
     }
     bool isFull() const {
-        return (top == size - 1);
+        if (top == size)
+            return true;
+        else
+            return false;
     }
+
     bool isEmpty() const {
-        return (top == -1);
+        if (top == 0)
+            return true;
+        else
+            return false;
     }
+
+private:
+    int size;
+    int top;
+    T* store;
 };
+
 #endif  // INCLUDE_MYSTACK_H_
