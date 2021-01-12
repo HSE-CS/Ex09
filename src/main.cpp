@@ -1,5 +1,6 @@
 // Copyright 2021 Schenikova
 #include "MyStack.h"
+#include <iostream>
 
 int main()
 {
