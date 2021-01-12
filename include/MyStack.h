@@ -1,7 +1,7 @@
 // Copyright 2020 ArinaMonicheva
 
-#ifndef MYSTACK_MYSTACK_H_
-#define MYSTACK_MYSTACK_H_
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 
 #include <iostream>
 
@@ -16,12 +16,12 @@ class MyStack {
   explicit MyStack(unsigned int needSize) {
     if (needSize > 0) {
       stackArray = new S[needSize];
-	}
+    }
     stackSize = needSize;
     lastIn = -1;
   }
 
-  MyStack(MyStack &otherStack) {
+  MyStack(const MyStack &otherStack) {
     stackArray = new S[otherStack.stackSize];
     stackSize = otherStack.stackSize;
     lastIn = otherStack.lastIn;
@@ -38,22 +38,22 @@ class MyStack {
     if (lastIn != -1) {
       return stackArray[lastIn];
     }
-	//throw "ERR: empty stack";
+    throw "ERR: empty stack";
   }
 
   S pop() {
     if (lastIn != -1) {
       return stackArray[lastIn--];
     }
-	//throw "ERR: empty stack";
+    throw "ERR: empty stack";
   }
 
   void push(S newElement) {
     if (lastIn < stackSize - 1) {
       stackArray[++lastIn] = newElement;
-	  return;
+      return;
     }
-	//throw "ERR: full stack";
+    throw "ERR: full stack";
   }
 
   bool isFull() const {
@@ -63,7 +63,6 @@ class MyStack {
   bool isEmpty() const {
     return lastIn == -1;
   }
-
 };
 
-#endif // MYSTACK_MYSTACK_H_
+#endif  // INCLUDE_MYSTACK_H_
