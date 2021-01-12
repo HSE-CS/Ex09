@@ -47,8 +47,7 @@ class MyStack{
         if (!isEmpty()) {
             return this->stack[this->head - 1];
         }
-        else
-            return -1;
+        return -1;
     }
 
     T pop() {
@@ -57,8 +56,7 @@ class MyStack{
             T value = this->stack[this->head];
             return value;
         }
-        else
-            return -1;
+        return -1;
     }
 
     void push(T pushed) {
