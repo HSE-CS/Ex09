@@ -11,6 +11,7 @@ class MyStack {
   size_t max_size;
   size_t cur_size;
   T* stack;
+
  public:
   MyStack() {
     max_size = 0;
@@ -24,12 +25,12 @@ class MyStack {
     stack = new T[size];
   }
 
-  MyStack(MyStack* other_stack) {
+  explicit MyStack(MyStack* other_stack) {
     max_size = other_stack->max_size;
     cur_size = other_stack->cur_size;
-    stack = new T[max_size];
+    stack = new T[this->max_size];
     for (size_t i = 0; i < cur_size; i++) {
-      stack[i] = other_stack->stack[i];
+      this->stack[i] = other_stack->stack[i];
     }
   }
 
@@ -41,11 +42,11 @@ class MyStack {
     if (!isEmpty())
       return stack[cur_size - 1];
     else
-      return NULL;
+      return 0;
   }
 
   bool isEmpty() const {
-    return !bool(cur_size);
+    return !static_cast<bool>(cur_size);
   }
 
   bool isFull() const {
@@ -56,7 +57,7 @@ class MyStack {
     if (!isEmpty())
       return stack[--cur_size];
     else
-      return NULL;
+      return 0;
   }
 
   void push(T element) {

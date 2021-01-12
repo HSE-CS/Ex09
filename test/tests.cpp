@@ -1,14 +1,14 @@
 // Copyright 2020 GHA Test Team
 #include <gtest/gtest.h>
 #include "MyStack.h"
-//#include "../Ex09/MyStack.h"
-//#include "pch.h"
+// #include "../Ex09/MyStack.h"
+// #include "pch.h"
 #include <string>
 
 
 TEST(MyStackTest, test1) {
   MyStack<int> st;
-  EXPECT_EQ(NULL, st.pop());
+  EXPECT_EQ(0, st.pop());
 }
 
 TEST(MyStackTest, test2) {
@@ -58,7 +58,7 @@ TEST(MyStackTest, test8) {
   st.push(2);
   st.pop();
   st.pop();
-  EXPECT_EQ(NULL, st.get());
+  EXPECT_EQ(0, st.get());
 }
 
 TEST(MyStackTest, test9) {
