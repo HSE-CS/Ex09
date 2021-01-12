@@ -35,9 +35,10 @@ template <typename T> class MyStack {
              throw "Index is out of bounds!";
      }
      T pop() {
-         --top_index;
-         if (top_index >= 0)
-             return data[top_index+1];
+         if (top_index >= 0) {
+             top_index -= 1;
+             return data[top_index + 1];
+         }
          else
              throw "Stack has already empty!";
      }
