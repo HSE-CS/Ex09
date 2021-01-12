@@ -52,7 +52,7 @@ const MyStack<int> &st2 = st;
 EXPECT_EQ(true, st2.isEmpty());
 }
 TEST(MyStackTest, test10) {
-MyStack<int> st(1);
+MyStack<int> st(0);
 st.push(22);
-EXPECT_EQ(true, st.isFull());
+EXPECT_EQ(, st.isFull());
 }
