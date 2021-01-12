@@ -1,5 +1,5 @@
 // Copyright 2021 ArinaMonicheva
-#include "time.h"
+#include <ctime>
 #include <iostream>
 #include "MyStack.h"
 
@@ -22,14 +22,14 @@ int main() {
   std::cout << st.pop() << std::endl;
   std::cout << st.get() << std::endl;
 
-  while(!st.isEmpty()) {
+  while (!st.isEmpty()) {
     std::cout << st.pop() << ' ';
   }
 
   std::cout << "Full or empty: " << st.isFull() << ' ';
   std::cout << st.isEmpty() << std::endl;
 
-  while ( !st.isFull()) {
+  while (!st.isFull()) {
     st.push(rand_r());
   }
 
