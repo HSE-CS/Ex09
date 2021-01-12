@@ -3,9 +3,9 @@
 
 int main() {
     MyStack<int> st(10);
-    st.push(rand());
-    st.push(rand());
-    st.push(rand());
+    st.push(50);
+    st.push(-8);
+    st.push(19);
 
     while (!st.isEmpty())
         std::cout << st.pop() << " ";
