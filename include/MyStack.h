@@ -5,7 +5,6 @@
 
 template <class T>
 class MyStack{
-
  private:
     int size{};
     int head{};
@@ -47,14 +46,18 @@ class MyStack{
     T get() const {
         if (!isEmpty()) {
             return this->stack[this->head - 1];
-        } else return -1; }
+        } else
+            return -1;
+    }
 
     T pop() {
         if (!isEmpty()) {
             this->head -= 1;
             T value = this->stack[this->head];
             return value;
-        } else return -1; }
+        } else
+            return -1;
+    }
 
     void push(T pushed) {
         if (!isFull()) {

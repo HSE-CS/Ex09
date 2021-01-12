@@ -3,7 +3,7 @@
 #include "MyStack.h"
 #include <iostream>
 
-int main(){
+int main() {
     MyStack<int> st(3);
 
     std::cout << st.get()<< "\n";
