@@ -50,8 +50,7 @@ class MyStack {
         if (!isFull()) {
             stack[top + 1] = num;
             top++;
-        }
-        else {
+        } else {
             std::cout << "Stack is full" << std::endl;
         }
     }
