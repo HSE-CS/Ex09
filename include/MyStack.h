@@ -57,7 +57,7 @@ inline T MyStack<T>::pop() {
 }
 
 template <typename T>
-inline size_t MyStack<T>::getSize() const{
+inline size_t MyStack<T>::getSize() const {
   return size;
 }
 
@@ -78,4 +78,4 @@ inline bool MyStack<T>::isEmpty() const {
   return top == 0;
 }
 
-#endif  //INCLUDE_MYSTACK_H_
+#endif  // INCLUDE_MYSTACK_H_
