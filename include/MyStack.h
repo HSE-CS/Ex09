@@ -36,15 +36,16 @@ if (top != -1) {
   value = stackPtr[top];
   stackPtr[top] = 0;
   --top;
-} else
-  return 0;
+} else {
+	return 0;
+}
 return value;
 }
 bool isFull() {
-if (top == 0)
+if (top == 0) {
   return true;
-else {
-  if (top == size) 
+} else {
+  if (top == size)
     return true;
   return false;
 }
