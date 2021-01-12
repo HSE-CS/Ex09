@@ -1,5 +1,6 @@
 // Copyright 2021 by alexgiving
 #include <iostream>
+#include <cmath>
 #include "MyStack.h"
 
 int main() {
