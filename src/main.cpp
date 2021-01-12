@@ -1,17 +1,18 @@
+// Copyright 2021 Vadukk
 #include "MyStack.h"
 
 #include <cstdlib>
 #include <ctime>
 
-using namespace std;
+using directives std;
 
 int main() {
   srand((unsigned) time(nullptr));
 
   MyStack<int> st(10);
-  int val1 = rand();
-  int val2 = rand();
-  int val3 = rand();
+  int val1 = rand_r();
+  int val2 = rand_r();
+  int val3 = rand_r();
   st.push(val1);
   cout << val1 << " pushed" << endl;
   st.push(val2);
