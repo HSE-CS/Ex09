@@ -7,12 +7,12 @@
 
 template<class T>
 class MyStack {
-private:
+ private:
     T* storage;
     int size;
     int top;
 
-public:
+ public:
     explicit MyStack(int size) {
         storage = new T[size];
         top = 0;
@@ -32,10 +32,9 @@ public:
         if (!isFull()) {
             storage[top] = elem;
             top++;
-        }
-        else {
+        } else {
             throw "Error: Stack is full!";
-        }
+               }
     }
 
     T get() const {
@@ -45,10 +44,9 @@ public:
     T pop() {
         if (!isEmpty()) {
             return storage[--top];
-        }
-        else {
+        } else {
             throw "Error: Stack is empty!";
-        }
+               }
     }
 
     bool isFull() const {

@@ -1,4 +1,6 @@
-﻿// Copyright 2021 ArtyomLavrov
+﻿
+
+// Copyright 2021 ArtyomLavrov
 
 
 #include <iostream>
