@@ -7,7 +7,7 @@ int main() {
     MyStack<double> st1(size);
     std::cout << "Is the stack empty? " << st1.isEmpty() << std::endl;
     for (size_t i = 0; i < size; ++i) {
-        st1.push(static_cast<double>(rand_r(NULL)%321)/320 + 
+        st1.push(static_cast<double>(rand_r(NULL)%321)/320 +
                                         (rand_r(NULL)%10-5));
     }
 

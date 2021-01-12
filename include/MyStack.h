@@ -21,7 +21,7 @@ template <typename T> class MyStack {
         this->topInd = 0;
     }
 
-    MyStack(MyStack& st) {
+    MyStack(const MyStack& st) {
         this->topInd = st.topInd;
         this->size = st.size;
         this->head = new T[this->size];
@@ -75,7 +75,6 @@ template <typename T> class MyStack {
             return head[topInd-1];
         }
     }
-
 };
 
 
