@@ -1,3 +1,4 @@
+// Copyright 2021 dmitrycvetkov2000
 #include "MyStack.h"
 
 #include <iostream>

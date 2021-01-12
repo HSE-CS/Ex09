@@ -1,12 +1,15 @@
 // Copyright 2021 dmitrycvetkov2000
+
+#ifndef INCLUDE_MYSTACK_H_
+
 #include <cstdlib>
 #include <cstring>
 #include <stdexcept>
 
 template <typename T>
-class MyStack
+class MyStack 
 {
-public:
+    public:
     explicit MyStack(const size_t stackSize) {
         if (!stackSize)
             throw std::logic_error("Null size is not allowed");
@@ -15,7 +18,9 @@ public:
         tail = new T[capacity];
     }
 
-    MyStack(const MyStack& other) : tail(new T[other.capacity]), size(other.size), capacity(other.capacity) {
+    MyStack(const MyStack& other) : tail(new T[other.capacity]),
+        size(other.size),
+        capacity(other.capacity) {
         for (size_t i = 0; i < size; ++i)
             tail[i] = other.tail[i];
     }
@@ -37,11 +42,9 @@ public:
     }
 
     void push(const T& elem) {
-        if (size == capacity)
-        {
+        if (size == capacity){
             T* newTail = new T[capacity *= 2];
-            if (!newTail)
-            {
+            if (!newTail){
                 std::free(tail);
                 throw std::bad_alloc();
             }
@@ -62,8 +65,10 @@ public:
         return !size;
     }
 
-private:
+    private:
     T* tail;
     size_t size;
     size_t capacity;
 };
+
+#endif // !INCLUDE_MYSTACK_H_
