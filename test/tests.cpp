@@ -56,8 +56,10 @@ TEST(StackTest, test9) {
   EXPECT_EQ(false, myStack.isEmpty());
 }
 TEST(StackTest, test10) {
-  MyStack<int> myStack;
-  EXPECT_EQ(NULL,myStack.get());
+  MyStack<char> myStack(2);
+  myStack.push('T');
+  EXPECT_EQ('T', myStack.get());
 }
+
 
 
