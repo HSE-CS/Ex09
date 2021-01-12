@@ -8,7 +8,7 @@
 
 template<class T>
 class MyStack {
-    public:
+  public:
     MyStack(int size);  // Constructor
     ~MyStack();  // Destructor
     MyStack(const MyStack<T>&);  // Copy Constructor
@@ -21,7 +21,7 @@ class MyStack {
     T isEmpty() const;  // test for emptiness
     T isFull() const;  // test for fullness
     T get() const;  // get top element
-    private:
+  private:
     int size;
     int top;
     T* store;
@@ -30,54 +30,45 @@ class MyStack {
 // Constructor
 template<class T>
 MyStack<T>::MyStack(int _size) :
-  size(_size), top(0)
-{
-  store = new T[size];}
+  size(_size), top(0){
+  store = new T[size]; }
 // Copy Constructor
 template<class T>
 MyStack<T>::MyStack(const MyStack <T>& otherStack) :
-  size(otherStack.getMyStackSize())
-{
+  size(otherStack.getMyStackSize()){
   store = new T[size];
   top = otherStack.getTop;
   for (int ix = 0; ix < top; ix++)
-    store[ix] = otherStack.getPtr()[ix];}
+    store[ix] = otherStack.getPtr()[ix]; }
 // Destructor
 template<class T>
-MyStack<T>::~MyStack()
-{
+MyStack<T>::~MyStack(){
   delete[] store; }
 // Get Stack Size
 template <class T>
-int MyStack<T>::getMyStackSize() const
-{
-  return size;}
+int MyStack<T>::getMyStackSize() const{
+  return size; }
 // Get Top
 template <class T>
-int MyStack<T>::getTop() const
-{
+int MyStack<T>::getTop() const{
   return top; }
 // Get Ptr on steck
 template <class T>
-T* MyStack<T>::getPtr() const
-{
+T* MyStack<T>::getPtr() const{
   return store; }
 // Push item to the Top
 template <typename T>
-void MyStack<T>::push(const T& value)
-{
+void MyStack<T>::push(const T& value){
   assert(top < size); 
   store[top++] = value; }
 // Delete item on steck
 template <typename T>
-void MyStack<T>::pop()
-{
+void MyStack<T>::pop(){
   assert(top > 0); 
   store[--top]; }
 // Print steck
 template <typename T>
-void MyStack<T>::printStack()
-{
+void MyStack<T>::printStack(){
   for (int ix = top - 1; ix >= 0; ix--)
     std:: cout << store[ix] << " "; }
 // Ñhecking the stack for emptiness

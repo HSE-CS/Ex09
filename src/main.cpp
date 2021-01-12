@@ -9,8 +9,8 @@ int main() {
   int ct = 0;
   int num;
   while (ct++ < 5) {
-   std :: cin >> num;
-   st.push(num); }
+    std :: cin >> num;
+    st.push(num); }
   st.printStack();
   std :: cout << "\n";
   st.pop();
