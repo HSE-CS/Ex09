@@ -30,7 +30,7 @@ TEST(MyStackTest, test5) {
   EXPECT_EQ(5, st.get());
 }
 TEST(MyStackTest, test6) {
-  MyStack<float> st(3);
+  MyStack<double> st(3);
   st.push(1.3);
   st.push(1.4);
   st.pop();
