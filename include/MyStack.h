@@ -1,3 +1,4 @@
+// Copyright 2020 Shabarshin Leonid
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
 
