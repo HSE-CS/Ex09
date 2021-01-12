@@ -1,6 +1,7 @@
 // Copyright 2020 ArinaMonicheva
 #include "MyStack.h"
 #include <gtest/gtest.h>
+#include <string>
 
 TEST(myStackTests, test1) {
   MyStack<int> st(10);
@@ -66,7 +67,7 @@ TEST(myStackTests, test10) {
 }
 
 TEST(myStackTests, test11) {
-  MyStack<string> st(2);
+  MyStack<std::string> st(2);
   st.push("Hello");
   st.push("World");
   EXPECT_EQ("World", st.get());
