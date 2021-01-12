@@ -12,6 +12,7 @@ class MyStack {
     T* stack;
     size_t length{0};
     bool isChar{false};
+
  public:
     ~MyStack() {
         delete[] stack;
@@ -50,7 +51,7 @@ class MyStack {
             return stack[length - 1];
         }
     }
-    T pop(){
+    T pop() {
         if (isChar) {
             T last = stack[length - 1];
             length--;

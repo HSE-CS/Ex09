@@ -57,5 +57,5 @@ TEST(StackTest, test10) {
     c.push('d');
     c.pop();
     c.pop();
-    EXPECT_EQ(b, c.pop());
+    EXPECT_EQ('b', c.pop());
 }
