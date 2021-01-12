@@ -1,11 +1,10 @@
-// Copyright 2020 GHA Test Team
+#include "gtest/gtest.h"
 #include "MyStack.h"
-
-#include <gtest/gtest.h>
 #include <string>
 
-TEST(MyStackTest, test1) {
-  MyStack<int> st(5);
-  EXPECT_EQ(true, st.isEmpty());
+TEST(Test, test1) 
+{
+	MyStack<int> st(1);
+	st.push(525);
+	EXPECT_EQ(525, st.get());
 }
-
