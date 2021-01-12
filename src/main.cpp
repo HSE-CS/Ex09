@@ -1,27 +1,19 @@
 // Copyright 2021 Shabarshin Leonid
 #include "MyStack.h"
-#include <iostream>
 
 int main() {
-    MyStack<int> st(6);
-    st.push(1);
-    st.push(2);
-    st.push(3);
-    st.push(4);
-    st.push(5);
-    st.push(6);
-    MyStack<int> st2(st);
-    std::cout << st.get() << " ";
-    std::cout << st.isFull() << "\n";
-    st2.pop();
-    std::cout << st2.get() << " ";
-    std::cout << st2.isFull() << "\n";
-    std::cout << "\n";
-    while (!st.isEmpty())
-        std::cout << st.pop() << " ";
-    std::cout << "\n";
-    std::cout << st.isEmpty() << "\n";
-    while (!st2.isEmpty())
-        std::cout << st2.pop() << " ";
+    MyStack<int> stack(5);
+    stack.push(50);
+    stack.push(1);
+    stack.push(21);
+    MyStack<int> new_stack(stack);
+    std::cout << new_stack.get() << std::endl;
+    std::cout << new_stack.isFull() << std::endl;
+    new_stack.push(3);
+    new_stack.push(10);
+    std::cout << new_stack.isFull() << std::endl;
+    while (!stack.isEmpty())
+        std::cout << stack.pop() << ' ';
+    std::cout << std::endl;
     return 0;
 }
