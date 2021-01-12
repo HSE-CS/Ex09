@@ -13,11 +13,11 @@ int main() {
   std::cout << st.isEmpty() << std::endl;
 
   st.push(rand_r(rSeed));
-  *rSeed++;
+  (*rSeed)++;
   st.push(rand_r(rSeed));
-  *rSeed++;
+  (*rSeed)++;
   st.push(rand_r(rSeed));
-  *rSeed++;
+  (*rSeed)++;
 
   std::cout << "Full or empty: " << st.isFull() << ' ';
   std::cout << st.isEmpty() << std::endl;
@@ -35,7 +35,7 @@ int main() {
 
   while (!st.isFull()) {
     st.push(rand_r(rSeed));
-    *rSeed++;
+    (*rSeed)++;
   }
 
   std::cout << "Full or empty: " << st.isFull() << ' ';
