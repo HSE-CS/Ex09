@@ -6,13 +6,13 @@
 
 template<typename Stack>
 class MyStack {
- private:
 
+ private:
 Stack* stackPtr;  // указатель на стек
 int size;  // размер стека
 Stack top;  // вершина стека
- public:
 
+ public:
 MyStack() {
 this->size = 0;
 this->stackPtr = 0;
@@ -24,24 +24,25 @@ this->stackPtr = new Stack[size];
 this->top = 0;
 }
 ~MyStack() {
-delete[] stackPtr; 
+delete[] stackPtr;
 }
 void push(const Stack phead) {
 ++top;
-stackPtr[top] = phead; 
+stackPtr[top] = phead;
 }
 Stack pop() {
 Stack value;
 if (top != -1) {
   value = stackPtr[top];
-  stackPtr[top] = 0; 
+  stackPtr[top] = 0;
   --top;
 }
-else return 0;
+else
+  return 0;
 return value;
 }
 bool isFull() {
-if (top == 0) 
+if (top == 0)
   return true;
 else {
   if (top == size) return true;
