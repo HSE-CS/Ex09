@@ -2,51 +2,61 @@
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
 template <typename T>
-class MyStack
-{
-private:
-  T* stackPtr; // óêàçàòåëü íà ñòåê
-  int size; // ðàçìåð ñòåêà
-  T top; // âåðøèíà ñòåêà
-public:
-  MyStack(int size) :
-    top(NULL), size(size) {
-    stackPtr = new T[size];
+class MyStack {
+ private:
+  T* stackPtr; // ÑƒÐºÐ°Ð·Ð°Ñ‚ÐµÐ»ÑŒ Ð½Ð° ÑÑ‚ÐµÐº
+  int size; // Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÑ‚ÐµÐºÐ°
+  int top; // Ð²ÐµÑ€ÑˆÐ¸Ð½Ð° ÑÑ‚ÐµÐºÐ°
+ public:
+  explicit MyStack(int size) : top(-1) {
+    this->stackPtr = new T[size];
+    this->size = size;
+  };
+  explicit MyStack() {
+    this->size = 0;
+    this->top = -1;
+    this->stackPtr = nullptr;
+  };
+  ~MyStack() {
+    delete[] stackPtr;
+  };
+  MyStack(const MyStack& object) {
+    this->size = object.size;
+    this->top = object.top;
+    this->stackPtr = new T[object.size];
+    for (unsigned i = 0; i < object.size; ++i)
+      this->stackPtr[i] =object.stackPtr[i];
   }
   T get()const {
-    if (top)
-      return stackPtr[top - 1];
+    if (top != -1)
+      return stackPtr[top];
     return NULL;
   }
-  bool push(const T value) {
-    if (top == size)
-      return false; // ñòåê ïîëîí
-    top++;
-    stackPtr[top] = value; // ïîìåùàåì ýëåìåíò â ñòåê
+  bool push(const T value) { 
+    if (top == size - 1)
+      return false; // ÑÑ‚ÐµÐº Ð¿Ð¾Ð»Ð¾Ð½
+    stackPtr[++top] = value; // Ð¿Ð¾Ð¼ÐµÑ‰Ð°ÐµÐ¼ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² ÑÑ‚ÐµÐº
     return true;
-  }// ïîìåñòèòü ýëåìåíò â ñòåê
+  }
+  // Ð¿Ð¾Ð¼ÐµÑÑ‚Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² ÑÑ‚ÐµÐº
   bool pop() {
-    if (top == NULL)
-      return false; // ñòåê ïóñò
-
-    stackPtr[top] = 0; // óäàëÿåì ýëåìåíò èç ñòåêà
-    top--;
-
-    return true; // óñïåøíîå âûïîëíåíèå îïåðàöèè
-  }// óäàëèòü èç ñòåêà ýëåìåíò
+    if (top == -1)
+      return false; // ÑÑ‚ÐµÐº Ð¿ÑƒÑÑ‚
+    stackPtr[top--] = 0; // ÑƒÐ´Ð°Ð»ÑÐµÐ¼ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð¸Ð· ÑÑ‚ÐµÐºÐ°
+    return true; // ÑƒÑÐ¿ÐµÑˆÐ½Ð¾Ðµ Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¸
+  }
+  // ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ Ð¸Ð· ÑÑ‚ÐµÐºÐ° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚
   bool isFull() const {
-    return top == size;
+    return top == size - 1;
   };
   bool isEmpty() const {
-    return top == NULL;
+    return top == -1;
   };
   void printStack() {
-    for (int ix = size - 1; ix >= 0; ix--)
-      std::cout << "|"  << stackPtr[ix] << std::endl;
+    for (int i = size - 1; i >= 0; i--)
+      std::cout << stackPtr[i] << std::endl;
   };
 };
 
 #endif  // INCLUDE_MYSTACK_H_
-
-
 
