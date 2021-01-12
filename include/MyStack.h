@@ -7,7 +7,7 @@ class MyStack {
   T* stackPtr;  // указатель на стек
   int size;  // размер стека
   int top;  // вершина стека
- 
+
  public:
   explicit MyStack(int size) : top(-1) {
     this->stackPtr = new T[size];
