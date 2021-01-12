@@ -6,7 +6,7 @@
 
 template <class T>
 class MyStack {
-    public:
+     public:
       explicit MyStack(int size) {
           stack = new T[size];
           this->size = size;
@@ -49,7 +49,7 @@ class MyStack {
           return (count == 0);
       }
 
-    private:
+     private:
       T* stack;
       int count = 0;
       int size = 0;
