@@ -9,7 +9,7 @@
 template<class T>
 class MyStack {
  public:
-  MyStack(int size);  // Constructor
+  explicit MyStack(int size);  // Constructor
   ~MyStack();  // Destructor
   MyStack(const MyStack<T>&);  // Copy Constructor
   int getMyStackSize() const;  // get size
@@ -71,7 +71,7 @@ template <typename T>
 void MyStack<T>::printStack() {
   for (int ix = top - 1; ix >= 0; ix--)
     std:: cout << store[ix] << " "; }
-// Ñhecking the stack for emptiness
+// Checking the stack
 template <typename T>
 T MyStack<T>::isEmpty() const {
   if (top == 0) return 1;
