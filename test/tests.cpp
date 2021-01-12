@@ -58,7 +58,7 @@ TEST(MyStackTest, test7) {
   st.push('c');
   st.push('a');
   st.push('t');
-  st.push('s')
+  st.push('s');
   EXPECT_EQ(false, st.isEmpty());
 }
 
@@ -78,7 +78,7 @@ TEST(MyStackTest, test9) {
   st.push('c');
   st.push('a');
   st.push('t');
-  st.push('s')
+  st.push('s');
   EXPECT_EQ('s', st.get());
 }
 
@@ -88,7 +88,7 @@ TEST(MyStackTest, test10) {
   st.push('c');
   st.push('a');
   st.push('t');
-  st.push('s')
+  st.push('s');
   EXPECT_EQ('s', st.pop());
 }
 
@@ -101,5 +101,5 @@ TEST(MyStackTest, test11) {
   st.push('s');
   MyStack<char> st1(st);
   st1.push('1');
-  EXPECT_EQ(true, st.isFull());
+  EXPECT_EQ(true, st1.isFull());
 }
