@@ -34,7 +34,7 @@ class MyStack {
             return stack[size - 1];
         }
         std::cout << "Stack is empty!\n";
-        return NULL;
+        return 0;
     };
     T pop() {
         if (!isEmpty()) {
@@ -43,7 +43,7 @@ class MyStack {
             return res;
         }
         std::cout << "Stack is empty!\n";
-        return NULL;
+        return 0;
     };
     void push(T elem) {
         if (!isFull()) {
