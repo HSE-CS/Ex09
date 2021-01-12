@@ -10,8 +10,8 @@ class MyStack {
     T* values;
     size_t size;
     size_t top;
-public:
-    MyStack(size_t size);
+ public:
+    explicit MyStack(size_t size);
     MyStack(const MyStack& stack);
     T get() const;
     void pop();
