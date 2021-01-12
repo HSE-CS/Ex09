@@ -1,12 +1,11 @@
 #include <iostream>
 #include "MyStack.h"
-using namespace std;
 
 int main() {
     MyStack<float> st(2);
     st.push(1.337);
-    cout << st.isFull() << endl;
-    cout << endl;
+    std::cout << st.isFull() << std::endl;
+    std::cout << std::endl;
     MyStack<char> st1(5);
     st1.push('M');
     st1.push('O');
@@ -14,12 +13,12 @@ int main() {
     st1.push('E');
     st1.push('Y');
     while (!st1.isEmpty()) {
-       cout << st1.pop() << endl;
+       std::cout << st1.pop() << std::endl;
     }
-    cout << endl;
+    std::cout << std::endl;
     MyStack<int> st2(5);
     st2.push(228);
-    cout << st2.get() << endl;
-    cout << st2.isEmpty() << endl;
+    std::cout << st2.get() << std::endl;
+    std::cout << st2.isEmpty() << std::endl;
     return 0;
 }
