@@ -9,9 +9,9 @@ class MyStack {
   int maxSize;
   int currentSize;
   T* data;
-  
+ 
  public:
-  explicit MyStack(unsigned int size){
+  explicit MyStack(unsigned int size) {
     currentSize = 0;
     maxSize = size;
     data = new T[maxSize];
@@ -30,18 +30,19 @@ class MyStack {
   }
 
   T get() const {
-    if(!isEmpty()) 
-      return data[currentSize - 1] 
+    if (!isEmpty())
+      return data[currentSize - 1];
   }
 
   T pop() {
-    if(!isEmpty())
+    if (!isEmpty()) {
       currentSize -= 1;
-      return data[currentSize]
+      return data[currentSize];
+    }  
   }
 
   void push(T value) {
-    if(!isFull()) {
+    if (!isFull()) {
       data[currentSize++] = value;
     }
   }
