@@ -3,13 +3,13 @@
 #pragma once
 
 template <class T> class MyStack {
-private:
+ private:
   int size;
   T *stack;
   int current = -1;
 
-public:
-  MyStack(int s) : size(s) { stack = new T[size]; }
+ public:
+  explicit MyStack(int s) : size(s) { stack = new T[size]; }
 
   MyStack(const MyStack &st) {
     stack = new T[st.size];
@@ -26,7 +26,7 @@ public:
       current++;
       stack[current] = elem;
     } else {
-      stack = (T *)realloc(stack, sizeof(T) * size * 2);
+      stack = reinterpret_cast<T *>(realloc(stack, sizeof(T) * size * 2));
       size *= 2;
       current++;
       stack[current] = elem;
