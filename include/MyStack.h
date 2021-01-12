@@ -6,7 +6,7 @@ template <typename T> class MyStack {
  private:
      T *data;
      unsigned int size;
-     unsigned int top_index;
+     int top_index;
 
  public:
      MyStack() {
@@ -35,11 +35,10 @@ template <typename T> class MyStack {
              throw "Index is out of bounds!";
      }
      T pop() {
-         if (top_index >= 0) {
-             top_index -= 1;
+         if (this->top_index >= 0) {
+             --top_index;
              return data[top_index + 1];
-         }
-         else
+         } else
              return 0;
      }
      T get() const {
