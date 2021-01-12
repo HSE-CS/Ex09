@@ -1,4 +1,5 @@
-// Copyright 2020 GHA Test Team
+// Copyright 2021 Grachev Alexander
+
 #include "MyStack.h"
 
 #include <gtest/gtest.h>
