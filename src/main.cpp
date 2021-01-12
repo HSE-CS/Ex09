@@ -1,4 +1,4 @@
-// Copyright 2020 Shabarshin Leonid
+// Copyright 2021 Shabarshin Leonid
 #include "MyStack.h"
 #include <iostream>
 int main() {

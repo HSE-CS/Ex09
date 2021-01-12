@@ -1,4 +1,4 @@
-// Copyright 2020 Shabarshin Leonid
+// Copyright 2021 Shabarshin Leonid
 #include <iostream>
 #include <new>
 #ifndef INCLUDE_MYSTACK_H_
