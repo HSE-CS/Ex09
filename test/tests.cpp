@@ -48,7 +48,7 @@ TEST(MyStackTest, test6) {
 
 TEST(MyStackTest, test7) {
     MyStack<double> st(5);
-    st.push(12.3)
+    st.push(12.3);
     EXPECT_DOUBLE_EQ(12.3, st.pop());
 }
 

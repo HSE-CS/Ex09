@@ -17,7 +17,7 @@ class MyStack {
         this->stack = new T[size];
     }
 
-    MyStack(MyStack& obj) {
+    MyStack(const MyStack& obj) {
         fullness = obj.fullness;
         size = obj.size;
         stack = new T[size];
@@ -62,4 +62,4 @@ class MyStack {
     }
 };
 
-#endif // INCLUDE_MYSTACK_H_
+#endif  // INCLUDE_MYSTACK_H_
