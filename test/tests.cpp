@@ -3,6 +3,7 @@
 
 #include <gtest/gtest.h>
 #include <string>
+#include <cstdint>
 
 TEST(MyStackTest, test1) {
   MyStack<int> st(5);
@@ -91,7 +92,7 @@ TEST(MyStackTest, test8) {
 
 
 TEST(MyStackTest, test9) {
-  MyStack<int16> st(3);
+  MyStack<int16_t> st(3);
   st.push(25);
   st.push(50);
   st.push(-10);
@@ -103,7 +104,7 @@ TEST(MyStackTest, test9) {
 
 
 TEST(MyStackTest, test10) {
-  MyStack<int64> st(3);
+  MyStack<int64_t> st(3);
   st.push(1000);
   st.push(2000);
   st.push(3000);
