@@ -17,12 +17,12 @@ private:
 	size_t SizeCurrent;
 	T* value;
 public:
-	MyStack (std::size_t count) {
+	explicit MyStack(std::size_t count) {
 		SizeMaximum = count;
 		SizeCurrent = 0;
 		value = new T[SizeMaximum+1];
 	}
-	MyStack (const MyStack& copied) {
+	MyStack(const MyStack& copied) {
 		
 	}
 	void push(T value) {
