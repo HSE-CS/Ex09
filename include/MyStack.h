@@ -6,7 +6,6 @@
 
 template<typename Stack>
 class MyStack {
-
  private:
 Stack* stackPtr;  // указатель на стек
 int size;  // размер стека
