@@ -13,7 +13,10 @@ class MyStack {
     size_t size_;
  public:
     explicit MyStack(size_t N) : stack_(new std::vector<T>()), size_(N) {}
-    MyStack(const MyStack &myStack) : stack_(myStack.stack_), size_(myStack.size_) {}
+    MyStack(const MyStack<T> &myStack) : size_(myStack.size_) {
+        stack_ = new std::vector<T>();
+        for (T t : *myStack.stack_) { stack_->push_back(t); }
+    }
     virtual ~MyStack() { delete stack_; }
     T get() const { return stack_->back(); }
     T pop() {

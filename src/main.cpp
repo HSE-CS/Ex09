@@ -19,7 +19,7 @@ int main() {
     /*MyStack<std::string> st(10);
     st.push("123");
     st.push("321");
-    MyStack<std::string> st2(st);
+    auto st2{st};
     std::cout << "321\t" << st2.pop() << std::endl;
     std::cout << "123\t" << st2.pop() << std::endl;*/
 
