@@ -1,18 +1,23 @@
-#include <iostream>
-
+// Copyright 2021 MalininDmitry
+//
+// Created by sharg on 12.01.2021.
+//
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 
 template <class T>
 class MyStack{
-private:
+ private:
     int size = 0;
     int current = 0;
     T * mass;
 
-public:
+ public:
     explicit MyStack(int s = 10){
         size = s;
         mass = new T[size];
     }
+    
     MyStack(const MyStack &other){//конструктор копирования
         this->size = other->size;
         this->mass = new T[other->size];
@@ -20,47 +25,46 @@ public:
             this->mass[i] = other->mass[i];
         }
     }
+    
     ~MyStack(){
         size = 0;
         current = 0;
         delete[] mass;
 
     }
+    
     T get() const{
         if (!isEmpty()) {
             return mass[0];
         }
         else{
-            throw "The stack is empty";
+            throw "Can not get a stack item because the stack is empty";
         }
     }
+    
     T pop(){
-        T * mass2;
-        mass2= new T[size-1];
-        T output = mass[0];
-        if(current >=1)
-            for (int i = 1; i <= current; i++) {
-                mass2[i-1] = mass[i];
-            }
-        delete[] mass;
-        mass = mass2;
-        current--;
-
-        return output;
+        if (!isEmpty()) {
+            return mass[0];
+        } else {
+            throw "Can not get a stack item because the stack is empty";
+        }
     }
+    
     void push(T a){
         if (!isFull()) {
             mass[current] = a;
             current++;
         } else {
-            throw "It is impossible";
+            throw "It is impossible to add item.Stack is overflowed";
         }
     }
+    
     [[nodiscard]] bool isFull() const{
         if (current == size)
             return true;
         return false;
     }
+    
     [[nodiscard]] bool isEmpty() const{
         if (current == 0)
             return true;
@@ -68,3 +72,4 @@ public:
     }
 };
 
+#endif  // INCLUDE_MYSTACK_H_
