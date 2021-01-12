@@ -1,5 +1,5 @@
 //
-//  MyStack.cpp
+//  MyStack.h
 //  programming-technologies
 //
 //  Created by Даниил Иванов on 12.01.2021.
@@ -26,13 +26,13 @@ public:
 		
 	}
 	void push(T value) {
-		if (isFull)
+		if (isFull())
 			return;
 		this->value[SizeCurrent] = value;
 		SizeCurrent++;
 	}
 	T pop() {
-		if (!(isEmpty)) {
+		if (!(isEmpty())) {
 			SizeCurrent--;
 			return value[SizeCurrent];
 		}
