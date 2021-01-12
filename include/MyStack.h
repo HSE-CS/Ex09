@@ -46,7 +46,8 @@ class MyStack{
     T get() const {
         if (!isEmpty()) {
             return this->stack[this->head - 1];
-        } else
+        }
+        else
             return -1;
     }
 
@@ -55,7 +56,8 @@ class MyStack{
             this->head -= 1;
             T value = this->stack[this->head];
             return value;
-        } else
+        }
+        else
             return -1;
     }
 
