@@ -1,10 +1,10 @@
-﻿// Copyright 2021 Stifeev Nikita
+// Copyright 2021 Stifeev Nikita
 #include "MyStack.h"
 
 int main() {
     MyStack<int> stack(10);
     for (int i = 0; i < 10; i++) {
-        int value = rand() % 10;
+        int value = rand_r() % 10;
         std::cout << "Push " << value << std::endl;
         stack.push(value);
     }
