@@ -47,7 +47,7 @@ template <typename T> class MyStack {
          return 0;
      }
      bool isFull() const {
-         return top_index == this->size + 1;
+         return top_index == this->size - 1;
      }
      bool isEmpty() const {
          return !(top_index + 1);

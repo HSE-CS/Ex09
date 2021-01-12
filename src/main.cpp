@@ -1,4 +1,6 @@
 ﻿// Copyright 2021 Sozinov Kirill
+
+
 #include "MyStack.h"
 #include <iostream>
 
