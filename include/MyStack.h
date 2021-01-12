@@ -17,42 +17,41 @@ class MyStack {
     current = 0;
     stack = nullptr;
   }
-  
+
   explicit MyStack(unsigned size) {
     max = size;
     current = 0;
     stack = new T[size];
   }
 
-  explicit MyStack(MyStack& b) {
+  explicit MyStack(const MyStack& b) {
     max = b.max;
     current = b.current;
     stack = new T[max];
-    for(unsigned i = 0; i < current; i++)
+    for (unsigned i = 0; i < current; i++)
       stack[i] = b.stack[i];
   }
 
-  ~MyStack()
-  {
+  ~MyStack(){
     delete stack;
   }
 
   T get() const {
-    if(!isEmpty())
+    if (!isEmpty())
       return stack[current-1];
-    return NULL;
+    return 0;
   }
 
   T pop() {
-    if(!isEmpty()) {
+    if (!isEmpty()) {
       current--;
       return stack[current];
     }
-    return NULL;
+    return 0;
   }
 
   void push(T var) {
-    if(current < max) {
+    if (current < max) {
       stack[current] = var;
       current++;
     }
