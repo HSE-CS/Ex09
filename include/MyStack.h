@@ -37,7 +37,7 @@ if (top != -1) {
   stackPtr[top] = 0;
   --top;
 } else {
-	return 0;
+  return 0;
 }
 return value;
 }
