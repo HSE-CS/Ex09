@@ -47,7 +47,7 @@ T MyStack<T>::get() const {
     if (!this->isEmpty()) {
         return this->stack[top_index];
     } else {
-        return -1;  //"Empty stack!"
+        return -1;  // "Empty stack!"
     }
 }
 
@@ -59,7 +59,7 @@ T MyStack<T>::pop() {
         this->top_index -= 1;
         return res;
     } else {
-        return -1;  //"Empty stack!"
+        return -1;  // "Empty stack!"
     }
 }
 
@@ -70,7 +70,7 @@ int MyStack<T>::push(T val) {
         this->stack[top_index] = val;
         return 0;
     } else {
-        return -1;  //"Full stack!";
+        return -1;  // "Full stack!";
     }
 }
 
