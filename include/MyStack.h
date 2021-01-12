@@ -10,6 +10,7 @@ class MyStack {
     T* stack;
     int size;
     int max_size;
+
  public:
     explicit MyStack(int n) {
         this->size = 0;
@@ -60,4 +61,4 @@ class MyStack {
         return (size == 0);
     }
 };
-#endif // INCLUDE_MYSTACK_H_
+#endif  // INCLUDE_MYSTACK_H_
