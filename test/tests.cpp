@@ -54,7 +54,7 @@ TEST(MyStackTest, test7) {
 TEST(MyStackTest, test8) {
     MyStack<int> st(5);
     st.push(500);
-    st.pushZ(600);
+    st.push(600);
     MyStack<int> st1(st);
     EXPECT_EQ(600, st1.get());
 }
