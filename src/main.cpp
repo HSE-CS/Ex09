@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Sozinov Kirill  
+﻿// Copyright 2021 Sozinov Kirill
 #include "MyStack.h"
 #include <iostream>
 
@@ -13,4 +13,3 @@ int main() {
         std::cout << my_st.pop() << " ";
     return 0;
 }
-
