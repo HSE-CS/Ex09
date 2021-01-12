@@ -1,10 +1,9 @@
-// Copyright 2020 valvarl
+// Copyright 2021 valvarl
 
 #include <iostream>
 #include "MyStack.h"
 
-int main()
-{
+int main() {
     /*MyStack<int> st(10);
     st.push(rand());
     st.push(rand());

@@ -1,7 +1,7 @@
-// Copyright 2020 valvarl
+// Copyright 2021 valvarl
 
-#ifndef EX09_MYSTACK_H
-#define EX09_MYSTACK_H
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 
 #include <cstddef>
 #include <vector>
@@ -21,9 +21,11 @@ class MyStack {
         return x;
     }
     void push(T x) { stack_->push_back(x); }
-    [[nodiscard]] bool isFull() const { return stack_->size() == stack_->capacity(); }
+    [[nodiscard]] bool isFull() const {
+        return stack_->size() == stack_->capacity();
+    }
     [[nodiscard]] bool isEmpty() const { return stack_->empty(); }
 };
 
 
-#endif //EX09_MYSTACK_H
+#endif  // INCLUDE_MYSTACK_H_
