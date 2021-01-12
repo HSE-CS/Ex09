@@ -1,3 +1,4 @@
+// Copyright 2021 dmitrycvetkov2000
 #include <cstdlib>
 #include <cstring>
 #include <stdexcept>
@@ -6,8 +7,7 @@ template <typename T>
 class MyStack
 {
 public:
-    explicit MyStack(const size_t stackSize)
-    {
+    explicit MyStack(const size_t stackSize) {
         if (!stackSize)
             throw std::logic_error("Null size is not allowed");
         capacity = stackSize;
@@ -15,33 +15,28 @@ public:
         tail = new T[capacity];
     }
 
-    MyStack(const MyStack& other) : tail(new T[other.capacity]), size(other.size), capacity(other.capacity)
-    {
+    MyStack(const MyStack& other) : tail(new T[other.capacity]), size(other.size), capacity(other.capacity) {
         for (size_t i = 0; i < size; ++i)
             tail[i] = other.tail[i];
     }
 
-    ~MyStack()
-    {
+    ~MyStack() {
         delete[] tail;
     }
 
-    T get() const
-    {
+    T get() const {
         if (isEmpty())
             throw std::out_of_range("Stack is empty");
         return tail[size - 1];
     }
 
-    T pop()
-    {
+    T pop() {
         const T value = get();
         --size;
         return value;
     }
 
-    void push(const T& elem)
-    {
+    void push(const T& elem) {
         if (size == capacity)
         {
             T* newTail = new T[capacity *= 2];
@@ -57,13 +52,13 @@ public:
         ++size;
     }
 
-    bool isFull() const
-    {
-        return false; // memory reallocation is implemented - stack is never full as long as there is enough memory to store it
+    bool isFull() const {
+        // memory reallocation is implemented
+        // stack is never full as long as there is enough memory to store it
+        return false;
     }
 
-    bool isEmpty() const
-    {
+    bool isEmpty() const {
         return !size;
     }
 
