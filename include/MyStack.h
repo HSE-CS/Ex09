@@ -1,15 +1,15 @@
-//
-// Created by victor on 12.01.2021.
-//
+// Copyright 2021 Shatilov Victor
 
-#ifndef EX09_MYSTACK_H
-#define EX09_MYSTACK_H
+
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 #include <iostream>
 
 template <class T>
 class MyStack {
+
 public:
-    explicit MyStack(int size){
+    explicit MyStack(int size) {
         this->head = 0;
         this->size = size;
         this->stack = new T[size];
@@ -48,7 +48,7 @@ public:
         if (!isFull()) {
             this->stack[this->head] = new_elem;
             this->head++;
-        }else {
+        } else {
             std::cout << "Stack is empty!\n";
         }
     }
@@ -58,10 +58,11 @@ public:
     bool isEmpty() const {
         return (head == 0);
     }
+
 private:
     int head{};
     int size{};
     T* stack;
 };
 
-#endif //EX09_MYSTACK_H
+#endif // INCLUDE_MYSTACK_H_
