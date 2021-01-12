@@ -1,8 +1,9 @@
 #include <iostream>
-using namespace std;
 
-template <typename T>
+
+template <class T>
 class MyStack{
+private:
     int size = 0;
     int current = 0;
     T * mass;
@@ -25,7 +26,7 @@ public:
         delete[] mass;
 
     }
-    const T get(){
+    T get() const{
         if (!isEmpty()) {
             return mass[0];
         }
