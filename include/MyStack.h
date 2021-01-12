@@ -17,7 +17,12 @@ public:
 		value = new T[maxSize+1];
 	}
 	MyStack (const MyStack& copied) {
-		
+		this->sizeNow = copied.sizeNow;
+		this->maxSize = copied.maxSize;
+		this->value = new T[this->maxSize];
+		for (size_t i = 0; i < this->maxSize; i++) {
+			this->value[i] = copied.value[i];
+		}
 	}
 	void push(T value) {
 		if (isFull())

@@ -23,7 +23,7 @@ TEST(MyStackTest, test3) {
 
 TEST(MyStackTest, test4) {
     MyStack<double> stack(15);
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 15; i++)
         stack.push(i * 1.2);
     EXPECT_EQ(true, stack.isFull());
 }
