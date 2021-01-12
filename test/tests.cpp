@@ -6,7 +6,7 @@
 
 // Check default param
 TEST(MyStackTest, test1) {
-  MyStack<int> st; 
+  MyStack<int> st;
   EXPECT_EQ(1, st.getSize());
 }
 
