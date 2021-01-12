@@ -45,7 +45,7 @@ public:
             update_stack[i] = stack[i];
         delete[] stack;
         num_of_el--;
-        stackArray = update_stack;
+        stack = update_stack;
         return temp;
     }
 
