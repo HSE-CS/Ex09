@@ -1,5 +1,6 @@
 #include <cstdlib>
 #include <cstring>
+#include <stdexcept>
 
 template <typename T>
 class MyStack
