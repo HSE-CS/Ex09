@@ -1,13 +1,13 @@
 // Copyright 2021 dmitrycvetkov2000
-
 #ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 
 #include <cstdlib>
 #include <cstring>
 #include <stdexcept>
 
 template <typename T>
-class MyStack 
+class MyStack
 {
     public:
     explicit MyStack(const size_t stackSize) {
@@ -42,9 +42,9 @@ class MyStack
     }
 
     void push(const T& elem) {
-        if (size == capacity){
+        if (size == capacity) {
             T* newTail = new T[capacity *= 2];
-            if (!newTail){
+            if (!newTail) {
                 std::free(tail);
                 throw std::bad_alloc();
             }
@@ -71,4 +71,4 @@ class MyStack
     size_t capacity;
 };
 
-#endif // !INCLUDE_MYSTACK_H_
+#endif  // !INCLUDE_MYSTACK_H_
