@@ -4,7 +4,6 @@
 #include <iostream>
 
 int main() {
-
     MyStack <int> s(5);
     std::cout << s.get() << std::endl;
     std::cout << s.pop() << std::endl;

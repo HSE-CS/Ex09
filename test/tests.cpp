@@ -6,8 +6,8 @@
 #include <string>
 
 TEST(MyStackTest, test1) {
-  MyStack<int> st(5);
-  EXPECT_EQ(true, st.isEmpty());
+    MyStack<int> st(5);
+    EXPECT_EQ(true, st.isEmpty());
 }
 
 TEST(MyStackTest, test2) {
