@@ -1,8 +1,8 @@
 // Copyright 12.01.21 DenisKabanov
 
+#include <string>
 #include "gtest/gtest.h"
 #include "MyStack.h"
-#include <string>
 
 TEST(Test, test1) {
     MyStack<int> st1(1);
@@ -43,20 +43,20 @@ TEST(Test, test6) {
 }
 
 TEST(Test, test7) {
-	MyStack<int> st7(1);
-	EXPECT_EQ(true, st7.isEmpty());
+    MyStack<int> st7(1);
+    EXPECT_EQ(true, st7.isEmpty());
 }
 
 TEST(Test, test8) {
     MyStack<int> st8(100);
-    EXPECT_EQ(false, st8.isEmpty());
+    EXPECT_EQ(false, st8.isFull());
 }
 
 TEST(Test, test9) {
     MyStack<int> st9(5);
     st9.push(525);
     st9.push(123);
-	st9.pop();
+    st9.pop();
     EXPECT_EQ(525, st9.pop());
 }
 
