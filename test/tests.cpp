@@ -62,5 +62,5 @@ TEST(MyStackTest, test9) {
 TEST(MyStackTest, test10) {
   MyStack<int> st(0);
   st.push(5);
-  EXPECT_EQ(false, st.isFull());
+  EXPECT_EQ(true, st.isFull());
 }
