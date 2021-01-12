@@ -5,11 +5,12 @@
 
 template<class T>
 class MyStack{
-private:
+ private:
     unsigned int size;
     int head;
     T* values;
-public:
+
+ public:
     explicit MyStack(unsigned int size) {
         values = new T[size];
         head = -1;
@@ -36,9 +37,8 @@ public:
             return values[--head];
     }
     void push(T value) {
-        if (isFull()) {
+        if (isFull())
             throw "Stack overflow";
-        }
         else {
             head++;
             values[head] = value;
