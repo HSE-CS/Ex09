@@ -7,12 +7,12 @@
 
 template<class T>
 class MyStack {
-private:
+ private:
     T* stack;
     int size;
     int top;
 
-public:
+ public:
     explicit MyStack(int n) {
         this->size = n;
         this->top = -1;
@@ -50,8 +50,7 @@ public:
         if (!isFull()) {
             stack[top + 1] = num;
             top++;
-        }
-        else {
+        } else {
             std::cout << "Stack is full" << std::endl;
         }
     }
