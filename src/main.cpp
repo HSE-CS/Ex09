@@ -1,3 +1,7 @@
+// Copyright 2021 MalininDmitry
+//
+// Created by sharg on 12.01.2021.
+//
 #include <iostream>
 #include "MyStack.h"
 
