@@ -15,4 +15,18 @@ int main() {
   std::cout << s.pop() << '\n';
   std::cout << s.pop() << '\n';
   std::cout << s.isEmpty() << '\n';
+
+  unsigned int seed = 16;
+
+  while (!s.isFull()) {
+    int r = rand_r(&seed) % 100;
+    std::cout << r << ' ';
+    s.push(r);
+  }
+  std::cout << '\n';
+  while (!s.isEmpty()) {
+    std::cout << s.pop() << ' ';
+  }
+  std::cout << '\n';
+  return 0;
 }

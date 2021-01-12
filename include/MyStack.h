@@ -17,11 +17,11 @@ class MyStack {
     len = 0;
     arr = new T[maxsize];
   }
-  MyStack(const MyStack& other) {
+  MyStack(const MyStack<T>& other) {
     len = other.len;
     maxsize = other.maxsize;
     arr = new T[maxsize];
-    memcpy(arr, other.arr, len);
+    memcpy(arr, other.arr, len * sizeof(T));
   }
   ~MyStack() { delete[] arr; }
   T get() const { return arr[len - 1]; }
