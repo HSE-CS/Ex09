@@ -11,7 +11,7 @@ int main() {
     while (!stack2.isEmpty()) {
         std::cout << stack2.pop() << "\n";
     }
-    
+
     unsigned int a = 123456789;
     unsigned int b = 0;
     std::cout << a << "\n";
