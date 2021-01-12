@@ -12,14 +12,13 @@ class MyStack {
     T* value;
 
  public:
-
-    MyStack (std::size_t count) {
+    explicit MyStack(std::size_t count) {
         maxSize = count;
         sizeNow = 0;
         value = new T[maxSize+1];
     }
 
-    MyStack (const MyStack& copied) {
+    explicit MyStack(const MyStack& copied) {
         this->sizeNow = copied.sizeNow;
         this->maxSize = copied.maxSize;
         this->value = new T[this->maxSize];
@@ -49,4 +48,4 @@ class MyStack {
         delete[] value;
     }
 };
-#endif //  !MYSTACK_H
+#endif  //  !MYSTACK_H
