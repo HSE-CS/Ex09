@@ -32,7 +32,6 @@ TEST(MyStackTest, test4) {
   a.push(5);
   bool check = a.isFull();
   EXPECT_EQ(1, check);
-
 }
 
 TEST(MyStackTest, test5) {
@@ -48,7 +47,7 @@ TEST(MyStackTest, test6) {
   a.push(10);
   a.pop();
   bool check = a.isEmpty();
-  EXPECT_EQ(0, check);
+  EXPECT_EQ(1, check);
 }
 
 TEST(MyStackTest, test7) {
@@ -57,9 +56,8 @@ TEST(MyStackTest, test7) {
   a.push(11);
   a.push(12);
   a.pop();
-  int check = a.get(); 
+  int check = a.get();
   EXPECT_EQ(11, check);
-
 }
 
 TEST(MyStackTest, test8) {
@@ -69,7 +67,7 @@ TEST(MyStackTest, test8) {
   a.push(12);
   a.push(13);
   a.push(14);
-  int check = a.get(); 
+  int check = a.get();
   EXPECT_EQ(14, check);
 }
 

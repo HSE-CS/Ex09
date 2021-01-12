@@ -3,12 +3,11 @@
 
 int main() {
     std::cout.precision(3);
-    srand(time(NULL));
     int size = 20;
     MyStack<double> st1(size);
     std::cout << "Is the stack empty? " << st1.isEmpty() << std::endl;
     for (size_t i = 0; i < size; ++i) {
-        st1.push((double)(rand()%321)/320 + (rand()%10-5)); 
+        st1.push(static_cast<double>(rand_r(NULL)%321)/320 + (rand_r(NULL)%10-5));
     }
 
     MyStack<double> copySt(st1);
@@ -25,7 +24,8 @@ int main() {
     std::cout << "What's the last element now? " << st1.get() << std::endl;
 
     MyStack<double> st2(st1);
-    std::cout << "What's the last element in copied stack? " << st1.get() << std::endl;
-    
+    std::cout << "What's the last element in copied stack? " 
+                                        << st1.get() << std::endl;
+
     return 0;
 }

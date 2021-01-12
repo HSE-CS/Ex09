@@ -1,6 +1,6 @@
 //  Copyright 2021 Nikita Naumov
-#ifndef INCLUDE_MYSTACK_H
-#define INCLUDE_MYSTACK_H
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 
 #include <typeinfo>
 #include <iostream>
@@ -13,9 +13,10 @@ template <typename T> class MyStack {
     T *head;
     int topInd;
     unsigned int size;
+
  public:
     explicit MyStack(int num) {
-        head = new T [num];
+        head = new T[num];
         this->size = num;
         this->topInd = 0;
     }
@@ -23,7 +24,7 @@ template <typename T> class MyStack {
     MyStack(MyStack& st) {
         this->topInd = st.topInd;
         this->size = st.size;
-        this->head = new T [this->size];
+        this->head = new T[this->size];
         for (size_t i = 0; i < this->size; ++i) {
             this->head[i] = st.head[i];
         }
@@ -75,9 +76,8 @@ template <typename T> class MyStack {
         }
     }
 
-
 };
 
 
 
-#endif  //  INCLUDE_MYSTACK_H
+#endif  //  INCLUDE_MYSTACK_H_
