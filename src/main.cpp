@@ -1,7 +1,7 @@
 // Copyright 2020 Konina Tatiana
-#include <iostream>
-#include <stdlib.h>
 #include "MyStack.h"
+#include <stdlib.h>
+#include <iostream>
 int main() {
   MyStack <int> myStack(5);
   // заполняем стек
@@ -13,11 +13,11 @@ int main() {
     std::cin >> temp;
     myStack.push(temp);
   }
-  myStack.printStack(); // вывод стека на экран
+  myStack.printStack();  // вывод стека на экран
   std::cout << "\nDEL:\n";
-  myStack.pop(); // удаляем элемент из стека
-  myStack.pop(); // удаляем элемент из стека
-  myStack.printStack(); // вывод стека на экран
+  myStack.pop();  // удаляем элемент из стека
+  myStack.pop();  // удаляем элемент из стека
+  myStack.printStack();  // вывод стека на экран
   MyStack<int> st(10);
   std::cout << st.isEmpty() << true << std::endl;
   std::cout << "------------------------" << std::endl;
@@ -61,9 +61,6 @@ int main() {
   myStack9.push(5);
   myStack9.push(6);
   std::cout << false << myStack9.isFull() << std::endl;
-  std::cout << "------------------------" << std::endl;
-  MyStack<int> myStack10;
-  std::cout << NULL << myStack10.get() << std::endl;
   std::cout << "------------------------" << std::endl;
     return 0;
 }
