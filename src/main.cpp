@@ -2,15 +2,14 @@
 #include <iostream>
 #include "MyStack.h"
 
-int main()
-{
+int main() {
     MyStack<int> st(4);
     std::cout << "Push 1" << std::endl;
     st.push(1);
     std::cout << "Push 2" << std::endl;
     st.push(2);
-    std::cout << "Push rand" << std::endl;
-    st.push(rand());
+    std::cout << "Push 41" << std::endl;
+    st.push(41);
     std::cout << "Get: " << st.get() << std::endl;
     int k = st.pop();
     std::cout << "Pop: " << k << std::endl;

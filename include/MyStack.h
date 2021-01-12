@@ -44,9 +44,9 @@ MyStack<T>::~MyStack() {
 
 template <class T>
 T MyStack<T>::get() const {
-    if (!this->isEmpty())
+    if (!this->isEmpty()) {
         return this->stack[top_index];
-    else {
+    } else {
         std::cout << "Empty stack!";
         return -1;
     }
@@ -59,8 +59,7 @@ T MyStack<T>::pop() {
         this->stack[top_index] = 0;
         this->top_index -= 1;
         return res;
-    }
-    else {
+    } else {
         std::cout << std::cout << "Empty stack!";
         return -1;
     }
@@ -72,8 +71,7 @@ int MyStack<T>::push(T val) {
         this->top_index += 1;
         this->stack[top_index] = val;
         return 0;
-    }
-    else {
+    } else {
         std::cout << std::cout << "Full stack!";
         return -1;
     }
@@ -83,14 +81,16 @@ template <class T>
 bool MyStack<T>::isFull() const {
     if (this->top_index == (size - 1))
         return true;
-    else return false;
+    else 
+        return false;
 }
 
 template <class T>
 bool MyStack<T>::isEmpty() const {
     if (this->top_index == -1)
         return true;
-    else return false;
+    else 
+        return false;
 }
 
 #endif  // INCLUDE_MYSTACK_H_
