@@ -1,6 +1,6 @@
 // Copyright 2021 Vadukk
-#ifndef INCLUDE_MYSTACK_H
-#define INCLUDE_MYSTACK_H
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 
 #include <string.h>
 

@@ -70,10 +70,10 @@ TEST(MyStackTest, test7) {
   st.push("juice");
   EXPECT_EQ(true, st.isFull());
   EXPECT_EQ(false, st.isEmpty());
-  EXPECT_TRUE(st.pop() == "juice");
-  EXPECT_TRUE(st.top() == "banana");
-  EXPECT_TRUE(st.pop() == "banana");
-  EXPECT_TRUE(st.pop() == "apple");
+  EXPECT_EQ("juice", st.pop());
+  EXPECT_EQ("banana", st.pop());
+  EXPECT_EQ("banana", st.pop());
+  EXPECT_EQ("apple", st.pop());
   EXPECT_EQ(true, st.isEmpty());
 }
 
@@ -91,7 +91,7 @@ TEST(MyStackTest, test8) {
 
 
 TEST(MyStackTest, test9) {
-  MyStack<short> st(3);
+  MyStack<int16> st(3);
   st.push(25);
   st.push(50);
   st.push(-10);
@@ -103,7 +103,7 @@ TEST(MyStackTest, test9) {
 
 
 TEST(MyStackTest, test10) {
-  MyStack<long> st(3);
+  MyStack<int64> st(3);
   st.push(1000);
   st.push(2000);
   st.push(3000);

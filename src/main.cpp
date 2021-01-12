@@ -4,7 +4,10 @@
 #include <cstdlib>
 #include <ctime>
 
-using directives std;
+using std::cout;
+using std::srand;
+using std::time;
+using std::rand_r;
 
 int main() {
   srand((unsigned) time(nullptr));
