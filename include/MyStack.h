@@ -1,24 +1,25 @@
 // Copyright NikDemoShow 2020
-#ifndef INCLUDE_MYSTRING_H_
-#define INCLUDE_MYSTRING_H_
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 
 template<class T>
 class MyStack {
-private:
-  size_t size;
-  size_t top;
+ private:
+  unsigned int size;
+  unsigned inttop;
   T* arr;
-public:
-  explicit MyStack(const size_t n_size): size(n_size), top(0) {
+
+ public:
+  explicit MyStack(const unsigned intn_size): size(n_size), top(0) {
     arr = new T[size];
   }
   MyStack(const MyStack& n_MyStack) : size(n_MyStack.size), top(n_MyStack.top) {
     arr = new T[size];
-    for (size_t i{ 0 }; i < size; ++i) {
+    for (unsigned int i{ 0 }; i < size; ++i) {
       arr[i] = n_MyStack.arr[i];
     }
   }
-  ~MyStack(){
+  ~MyStack() {
     delete[] arr;
   }
   T get() const {
