@@ -9,7 +9,7 @@ class MyStack {
   int maxSize;
   int currentSize;
   T* data;
- 
+
  public:
   explicit MyStack(unsigned int size) {
     currentSize = 0;
@@ -38,7 +38,7 @@ class MyStack {
     if (!isEmpty()) {
       currentSize -= 1;
       return data[currentSize];
-    }  
+    }
   }
 
   void push(T value) {
