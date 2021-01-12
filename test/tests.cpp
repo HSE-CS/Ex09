@@ -49,17 +49,17 @@ TEST(MyStackTest, test7) {
 
 TEST(MyStackTest, test8) {
     MyStack<int> st(2);
-    st.push(5)
+    st.push(5);
     st.push(1);
     EXPECT_EQ(1, st.pop());
 }
 
 TEST(MyStackTest, test9) {
     MyStack<int> st(33);
-    st.push(5)
+    st.push(5);
     st.push(1);
     st.push(4);
-    st.pop()
+    st.pop();
     EXPECT_EQ(1, st.pop());
 }
 
