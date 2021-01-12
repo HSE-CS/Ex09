@@ -76,4 +76,4 @@ class MyStack {
     }
 };
 
-#endif
+#endif // INCLUDE_MYSTACK_H_
