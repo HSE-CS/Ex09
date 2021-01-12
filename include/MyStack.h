@@ -1,11 +1,10 @@
-//Copyright 2021 Ziganshin Nikita
+// Copyright 2021 Ziganshin Nikita
 
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
 
 template < typename T >
 class MyStack {
-
  private:
     T *arr;
     int top;

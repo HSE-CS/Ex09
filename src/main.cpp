@@ -1,4 +1,4 @@
-//Copyright 2021 Ziganshin Nikita
+// Copyright 2021 Ziganshin Nikita
 #include "MyStack.h"
 #include <iostream>
 int main() {
