@@ -14,9 +14,9 @@ TEST(MyStackTest, test2) {
   st.push(10);
   st.push(20);
   st.push(30);
-  EXPECT_EQ(30, st.top());
+  EXPECT_EQ(30, st.get());
   EXPECT_EQ(30, st.pop());
-  EXPECT_EQ(20, st.top());
+  EXPECT_EQ(20, st.get());
   EXPECT_EQ(false, st.isEmpty());
 }
 
