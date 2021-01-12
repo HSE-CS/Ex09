@@ -4,12 +4,11 @@
 #define INCLUDE_MYSTACK_H_
 
 template<class T>
-class MyStack {
+class MyStack{
 private:
     unsigned int size;
     int head;
     T* values;
-
 public:
     explicit MyStack(unsigned int size) {
         values = new T[size];
@@ -31,12 +30,10 @@ public:
             return values[head];
     }
     T pop() {
-        if (isEmpty()) {
+        if (isEmpty())
             throw "Stack is empty";
-        }
-        else {
+        else
             return values[--head];
-        }
     }
     void push(T value) {
         if (isFull()) {
@@ -48,12 +45,10 @@ public:
         }
     }
     bool isFull() const {
-        if (head == size) {
+        if (head == size)
             return true;
-        }
-        else {
+        else
             return false;
-        }
     }
     bool isEmpty() const {
         if (head == -1)
