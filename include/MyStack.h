@@ -19,7 +19,7 @@ template <typename T> class MyStack {
          this->data = new T[size];
          this->top_index = -1;
      }
-     MyStack(MyStack &st) {
+     MyStack(const MyStack &st) {
          this->size = st.size;
          this->data = st.data;
          this->top_index = size - 1;
