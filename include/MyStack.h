@@ -81,7 +81,7 @@ template <class T>
 bool MyStack<T>::isFull() const {
     if (this->top_index == (size - 1))
         return true;
-    else 
+    else
         return false;
 }
 
@@ -89,7 +89,7 @@ template <class T>
 bool MyStack<T>::isEmpty() const {
     if (this->top_index == -1)
         return true;
-    else 
+    else
         return false;
 }
 
