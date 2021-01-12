@@ -37,9 +37,9 @@ class MyStack{
             return values[--head];
     }
     void push(T value) {
-        if (isFull())
+        if (isFull()) {
             throw "Stack overflow";
-        else {
+        } else {
             head++;
             values[head] = value;
         }
