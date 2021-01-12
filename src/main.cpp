@@ -1,13 +1,11 @@
 // Copyright 2021 Smirnov Grigory
 #include "MyStack.h"
 #include <ctime>
-int main()
-{
-  srand(time(NULL));
+int main() {
   MyStack<int> st(2);
   std::cout << st.isEmpty() << " ";
-  st.push(rand());
-  st.push(rand());
+  st.push(128);
+  st.push(256);
   std::cout << st.isFull() << " ";
   std::cout << st.isEmpty() << std::endl;
   std::cout << st.get() << std::endl;

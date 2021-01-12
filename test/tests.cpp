@@ -1,6 +1,5 @@
 // Copyright 2021 Smirnov Grigory
 #include "MyStack.h"
-
 #include <gtest/gtest.h>
 TEST(TestEmpty, test1) {
   MyStack<int> st(2);
@@ -90,4 +89,3 @@ TEST(TestPop, test4) {
   EXPECT_EQ(st.pop(), 2.34);
   EXPECT_EQ(cp.pop(), 2.1);
 }
-
