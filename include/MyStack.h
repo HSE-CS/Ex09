@@ -33,14 +33,16 @@ class MyStack {
      bool isFull() {
          if (position == length) {
              return true;
-         } else
+         } else {
              return false;
+         }
      }
      bool isEmpty() {
          if (position == 0) {
              return true;
-         } else
+         } else {
              return false;
+         }
      }
      ~MyStack() {
          delete[] stack;
