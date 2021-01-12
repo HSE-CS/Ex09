@@ -1,7 +1,7 @@
 // Copyright 2021 Tyulin Igor
 
-#ifndef EX09_MYSTACK_H
-#define EX09_MYSTACK_H
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 
 #include <iostream>
 
@@ -11,6 +11,7 @@ class MyStack{
     unsigned int size;
     T* value;
     int top;
+
  public:
     explicit MyStack(unsigned int pur) {
         value = new T[pur];
@@ -44,4 +45,4 @@ class MyStack{
         }
     }
 };
-#endif //EX09_MYSTACK_H
+#endif  // INCLUDE_MYSTACK_H_
