@@ -24,7 +24,7 @@ EXPECT_EQ(true, st.isFull());
 TEST(MyStackTest, test4) {
 MyStack<int> st(1);
 st.push(2);
-EXPECT_EQ(false, st.isFull());
+EXPECT_EQ(true, st.isFull());
 }
 
 TEST(MyStackTest, test5) {

@@ -23,5 +23,15 @@ int main() {
     std::cout << "321\t" << st2.pop() << std::endl;
     std::cout << "123\t" << st2.pop() << std::endl;*/
 
+    /*auto a = new MyStack<int>{1};
+    a->push(1);
+    std::cout << a->isFull();
+
+    MyStack<int> st(5);
+    std::cout << a->isEmpty();
+
+    auto b = std::vector<int>();
+    std::cout << b.empty();*/
+
     return 0;
 }
