@@ -6,20 +6,39 @@
 #include <string>
 #include <cstring>
 
-class MyString {
- private:
-    char* string;
-    unsigned int len;
+template <class Type>
+class  MyStack {
+private:
+    int num_of_el = 0;
+    int size;
+    Type* stack;
 
- public:
-    MyString();
-    explicit MyString(const char*);
-    explicit MyString(std::string);
-    MyString(const MyString&);
-    MyString(MyString&&);
-    ~MyString();
-    unsigned int length();
-    char* get();
+public:
+    explicit MyStack(int size) {
+        this->size = size;
+        stack = new Type[this->size];
+    }
+    MyStack(const MyStack& stack_prev) {
+        this->size = stack_prev.size;
+        this->nun_of_el = stack_prev.num_of_el;
+        this->stack = new Type[size];
+        int i = 0;
+        while (i < size) {
+            stack[i] = stack_prev.stack[i];
+            i++;
+        }
+    }
+    ~MyStack() {
+        delete[] stack;
+        size = 0;
+        num_of_el = 0;
+    }
+
+    Type get() const;
+    Type pop();
+    Type push();
+    Type isFull() const;
+    Type isEmpty() const;
+};
 
 #endif  // INCLUDE_MYSTRING_H_
-
