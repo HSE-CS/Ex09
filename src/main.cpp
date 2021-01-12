@@ -7,8 +7,7 @@ int main() {
   // заполняем стек
   std::cout << "PUSH:\n";
   int ct = 0;
-  while (ct++ != 5)
-  {
+  while (ct++ != 5) {
     int temp;
     std::cin >> temp;
     myStack.push(temp);
