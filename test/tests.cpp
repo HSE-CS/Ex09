@@ -34,11 +34,11 @@ TEST(MyStackTest, test4) {
 }
 
 TEST(MyStackTest, test5) {
-    MyStack<int> st1(5);
-    st1.push(5);
-    st1.push(10);
-    MyStack<int> st2 = st1;
-    EXPECT_EQ(10, st2.get());
+    MyStack<int> st(5);
+    st.push(5);
+    st.push(10);
+    st.push(15);
+    EXPECT_EQ(15, st.get());
 }
 
 TEST(MyStackTest, test6) {
