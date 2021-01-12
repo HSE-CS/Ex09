@@ -26,7 +26,7 @@ TEST(MyStackTest, test3) {
 TEST(MyStackTest, test4) {
   MyStack<int> st(3);
   st.push(12);
-  EXPECT_EQ(10, st.get());
+  EXPECT_EQ(12, st.get());
 }
 
 TEST(MyStackTest, test5) {
@@ -57,7 +57,7 @@ TEST(MyStackTest, test8) {
   MyStack<int> st(3);
   st.push(12);
   st.push(10);
-  EXPECT_EQ(true, st.isEmpty());
+  EXPECT_EQ(false, st.isEmpty());
 }
 
 TEST(MyStackTest, test9) {
