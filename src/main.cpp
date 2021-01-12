@@ -5,15 +5,16 @@
 
 int main() {
   srand(time(0));
+  unsigned int rSeed=0;
 
   MyStack<int> st(10);
 
   std::cout << "Full or empty: " << st.isFull() << ' ';
   std::cout << st.isEmpty() << std::endl;
 
-  st.push(rand_r());
-  st.push(rand_r());
-  st.push(rand_r());
+  st.push(rand_r(0));
+  st.push(rand_r(1));
+  st.push(rand_r(2));
 
   std::cout << "Full or empty: " << st.isFull() << ' ';
   std::cout << st.isEmpty() << std::endl;
@@ -30,7 +31,7 @@ int main() {
   std::cout << st.isEmpty() << std::endl;
 
   while (!st.isFull()) {
-    st.push(rand_r());
+    st.push(rand_r(rSeed++));
   }
 
   std::cout << "Full or empty: " << st.isFull() << ' ';
