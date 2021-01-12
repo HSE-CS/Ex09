@@ -74,8 +74,3 @@ TEST(MyStackTest, test10) {
     st.get();
     EXPECT_EQ(false, st.isEmpty());
 }
-
-TEST(MyStackTest, test10) {
-    MyStack<int> st(4);
-    EXPECT_EQ(0, st.get());
-}
