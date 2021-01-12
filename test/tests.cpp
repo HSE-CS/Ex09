@@ -1,18 +1,19 @@
+// Copyright 2021 Igumnova Natasha
 #include "MyStack.h"
 
-#include "gtest/gtest.h"
 #include <string>
+#include "gtest/gtest.h"
 
 TEST(StackTest, test1) {
     MyStack <int> st(10);
-    st.push(rand());
-    st.push(rand());
+    st.push(10);
+    st.push(1);
     EXPECT_EQ(false, st.isEmpty());
 }
 
 TEST(StackTest, test2) {
     MyStack <int> st(10);
-    st.push(rand());
+    st.push(2);
     st.pop();
     EXPECT_EQ(true, st.isEmpty());
 }

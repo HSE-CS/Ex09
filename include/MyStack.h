@@ -1,4 +1,4 @@
-//Copyright 2021 Igumnova Natasha
+// Copyright 2021 Igumnova Natasha
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
 
@@ -15,12 +15,12 @@ class MyStack {
         this->size = 0;
         this->max_size = n;
         this->stack = new T[n];
-    };
+    }
     MyStack(const MyStack& Stack) {
         this->size = Stack.size;
         this->max_size = Stack.max_size;
         this->stack = new T[Stack.max_size];
-        for (int i = 0;i < max_size;i++) {
+        for (int i = 0; i < max_size; i++) {
             stack[i] = Stack.stack[i];
         }
     }
@@ -35,7 +35,7 @@ class MyStack {
         }
         std::cout << "Stack is empty!\n";
         return 0;
-    };
+    }
     T pop() {
         if (!isEmpty()) {
             T res = stack[size - 1];
@@ -44,21 +44,20 @@ class MyStack {
         }
         std::cout << "Stack is empty!\n";
         return 0;
-    };
+    }
     void push(T elem) {
         if (!isFull()) {
             stack[size] = elem;
             size++;
-        }
-        else {
+        } else {
             std::cout << "Stack is full!\n";
         }
-    };
+    }
     bool isFull() const {
         return (size == max_size);
-    };
+    }
     bool isEmpty() const {
         return (size == 0);
-    };
+    }
 };
-#endif //INCLUDE_MYSTACK_H_
+#endif // INCLUDE_MYSTACK_H_
