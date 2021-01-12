@@ -14,7 +14,7 @@ TEST(MyTest, test2) {
 }
 TEST(MyTest, test3) {
     MyStack<int> st(2);
-    st2.push(228);
+    st.push(228);
     EXPECT_EQ(228,st.get());
 }
 TEST(MyTest, test4) {
