@@ -7,9 +7,8 @@
 #include <stdexcept>
 
 template <typename T>
-class MyStack
-{
-    public:
+class MyStack {
+ public:
     explicit MyStack(const size_t stackSize) {
         if (!stackSize)
             throw std::logic_error("Null size is not allowed");
@@ -65,10 +64,10 @@ class MyStack
         return !size;
     }
 
-    private:
+ private:
     T* tail;
     size_t size;
     size_t capacity;
 };
 
-#endif  // !INCLUDE_MYSTACK_H_
+#endif  // INCLUDE_MYSTACK_H_
