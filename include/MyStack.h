@@ -1,6 +1,7 @@
 // Copyright 2021 Artem Danyaev
 
 #pragma once
+#include <cstdlib>
 
 template <class T> class MyStack {
  private:
