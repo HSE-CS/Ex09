@@ -1,12 +1,12 @@
 // Copyright 2021 Nikolaev Ivan
 
-#ifndef INCLUDE_MYSTACK_H_ 
+#ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
 #include <iostream>
 
 template <class T>
 class MyStack {
-  public:
+   public:
       explicit MyStack(int size) {
           stack = new T[size];
           this->size = size;
@@ -48,10 +48,11 @@ class MyStack {
       bool isEmpty() const {
           return (count == 0);
       }
-  private:
+
+   private:
       T* stack;
       int count = 0;
       int size = 0;
 };
 
-#endif INCLUDE_MYSTACK_H_  // INCLUDE_MYSTACK_H_
+#endif // INCLUDE_MYSTACK_H_
