@@ -8,6 +8,7 @@ class MyStack {
   int length;
   int maxSize;
   T *array;
+
  public:
   explicit MyStack(int i) {
     this->maxSize = i;
@@ -29,7 +30,7 @@ class MyStack {
       return true;
     }
   }
-  bool isFull() const{
+  bool isFull() const {
     if (this->length < this->maxSize) {
       return false;
     } else {
@@ -52,12 +53,11 @@ class MyStack {
       return -1;
     }
   }
-  void push(T toPush){
-    if(!isFull()){
+  void push(T toPush) {
+    if (!isFull()) {
       this->length++;
-      this->array[this->length-1] = toPush;
+      this->array[this->length - 1] = toPush;
     }
   }
-
 };
-#endif  // INCLUDE_MYSTACK_H
+#endif  // INCLUDE_MYSTACK_H_
