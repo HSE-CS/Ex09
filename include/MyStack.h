@@ -6,11 +6,11 @@ template<class T>
 class MyStack {
  private:
   unsigned int size;
-  unsigned inttop;
+  unsigned int top;
   T* arr;
 
  public:
-  explicit MyStack(const unsigned intn_size): size(n_size), top(0) {
+  explicit MyStack(const unsigned int n_size): size(n_size), top(0) {
     arr = new T[size];
   }
   MyStack(const MyStack& n_MyStack) : size(n_MyStack.size), top(n_MyStack.top) {
@@ -49,4 +49,4 @@ class MyStack {
   }
 };
 
-#endif
+#endif  // INCLUDE_MYSTACK_H_
