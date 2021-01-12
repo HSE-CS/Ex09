@@ -7,7 +7,7 @@
 template <typename T>
 class MyStack {
  public:
-	 explicit MyStack(const int new_size) {
+    explicit MyStack(const int new_size) {
         size = new_size;
         stack = new T[size];
     }
