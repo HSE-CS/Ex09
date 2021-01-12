@@ -1,6 +1,6 @@
 // Copyright 2020 Dumarevskaya
-#ifndef MYSTACK_H_
-#define MYSTACK_H_
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 
 #include <iostream>
 
@@ -35,7 +35,7 @@ MyStack<T>::MyStack(const MyStack<T>& Stack) {
   for (size_t i = 0; i < Stack.top; i++) {
     next[i] = Stack.next[i];
   }
-};
+}
 
 template <typename T>
 MyStack<T>::~MyStack() {
@@ -47,35 +47,35 @@ inline T MyStack<T>::get() const {
   if (!isEmpty()) {
     return next[top];
   }
-};
+}
 
 template <typename T>
 inline T MyStack<T>::pop() {
   if (!isEmpty()) {
     return next[--top];
   }
-};
+}
 
 template <typename T>
 inline size_t MyStack<T>::getSize() const{
   return size;
-};
+}
 
 template <typename T>
 inline void MyStack<T>::push(T value) {
   if (!isFull()) {
     next[top++] = value;
   }
-};
+}
 
 template <typename T>
 inline bool MyStack<T>::isFull() const {
   return top >= size;
-};
+}
 
 template <typename T>
 inline bool MyStack<T>::isEmpty() const {
   return top == 0;
-};
+}
 
-#endif 
+#endif  //INCLUDE_MYSTACK_H_

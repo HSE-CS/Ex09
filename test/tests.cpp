@@ -68,5 +68,5 @@ TEST(MyStackTest, test10) {
   MyStack<char> st(5);
   st.push('a');
   st.push('b');
-  EXPECT_EQ(b, st.pop());
+  EXPECT_EQ('b', st.pop());
 }
