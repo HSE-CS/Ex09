@@ -1,3 +1,8 @@
+// Copyright 2021 Mushka Nikita
+
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
+
 template <class T>
 class MyStack{
 
@@ -7,7 +12,6 @@ class MyStack{
     T* stack;
 
  public:
-
     explicit MyStack(int size) {
         this->size = size;
         this->head = 0;
@@ -43,16 +47,14 @@ class MyStack{
     T get() const {
         if (!isEmpty()) {
             return this->stack[this->head - 1];
-        } else return -1;
-    }
+        } else return -1; }
 
     T pop() {
         if (!isEmpty()) {
-            this->head-=1;
+            this->head -= 1;
             T value = this->stack[this->head];
             return value;
-        } else return -1;
-    }
+        } else return -1; }
 
     void push(T pushed) {
         if (!isFull()) {
@@ -61,3 +63,5 @@ class MyStack{
         }
     }
 };
+
+#endif  // INCLUDE_MYSTACK_H_

@@ -1,3 +1,5 @@
+// Copyright 2021 Mushka Nikita
+
 #include "MyStack.h"
 #include <gtest/gtest.h>
 #include <string>

@@ -1,9 +1,9 @@
+// Copyright 2021 Mushka Nikita
+
 #include "MyStack.h"
 #include <iostream>
 
-int main()
-{
-
+int main(){
     MyStack<int> st(3);
 
     std::cout << st.get()<< "\n";
@@ -17,8 +17,8 @@ int main()
 
     std::cout <<st.get() << "\n";
 
-    while(!st.isEmpty())
+    while (!st.isEmpty())
         std::cout << st.pop() <<" ";
-    std::cout <<"\n"<< st.pop() ;
+    std::cout <<"\n"<< st.pop();
     return 0;
 }
