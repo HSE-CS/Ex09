@@ -7,7 +7,7 @@ int main() {
     MyStack<char> st('a');
     st.push('b');
     st.push('c');
-    while(!st.isEmpty()) {
+    while (!st.isEmpty()) {
         std::cout << st.pop() << std::endl;
     }
     return 0;

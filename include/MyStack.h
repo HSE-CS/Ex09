@@ -8,6 +8,10 @@
 
 template<typename T>
 class MyStack {
+ private:
+    T* stack;
+    size_t length{0};
+    bool isChar{false};
  public:
     ~MyStack() {
         delete[] stack;
@@ -74,7 +78,7 @@ class MyStack {
             _tempStack = nullptr;
             return last;
         }
-    };
+    }
     void push(T _value) {
         if (isChar) {
             length++;
@@ -109,10 +113,6 @@ class MyStack {
             return false;
         }
     }
- private:
-    T* stack;
-    size_t length{0};
-    bool isChar{false};
 };
 
-#endif //  INCLUDE_MYSTACK_H_
+#endif  //  INCLUDE_MYSTACK_H_
