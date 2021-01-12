@@ -1,8 +1,7 @@
-// Copyright 2020 GHA Test Team
-#include "../include/MyStack.h"
-
+//  Copyright 2021 Dmitry Vargin
 #include <gtest/gtest.h>
 #include <string>
+#include "../include/MyStack.h"
 
 TEST(MyStackTest, test1) {
     MyStack<int> stack(5);
@@ -10,9 +9,9 @@ TEST(MyStackTest, test1) {
 }
 
 TEST(MyStackTest, test2) {
-    MyStack<long> stack(3);
-    stack.push(321341234l);
-    stack.push(1l);
+    MyStack<int> stack(3);
+    stack.push(32134);
+    stack.push(1);
     EXPECT_EQ(1, stack.get());
 }
 
@@ -42,9 +41,9 @@ TEST(MyStackTest, test6) {
 }
 
 TEST(MyStackTest, test7) {
-    MyStack<unsigned long long> stack(10);
+    MyStack<int> stack(10);
     for (int i = 0; i < 10; ++i) {
-        stack.push(i*i*i*i*i*i);
+        stack.push(i*i);
     }
     MyStack copyStack(stack);
     EXPECT_EQ(true, copyStack.isFull());

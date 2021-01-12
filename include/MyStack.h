@@ -1,60 +1,62 @@
-#ifndef EX09_MYSTACK_H
-#define EX09_MYSTACK_H
+//  Copyright 2021 Dmitry Vargin
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 
 #include "iostream"
 
 template <class T>
 class MyStack{
-private:
-    int max_length;
-    int length = 0;
-    T *arr;
-public:
-    MyStack(int max_length){
-        this->max_length = max_length;
-        this->arr = new T[max_length];
-    }
+ private:
+     int max_length;
+     int length = 0;
+     T *arr;
 
-    MyStack(const MyStack<T> &stack){
-        this->max_length = stack.max_length;
-        this->length = stack.length;
-        this->arr = new T[stack.max_length];
-        for (int i = 0; i < stack.max_length; ++i) {
-            this->arr[i] = stack.arr[i];
-        }
-    }
+ public:
+     explicit MyStack(int max_length) {
+         this->max_length = max_length;
+         this->arr = new T[max_length];
+     }
 
-    ~MyStack(){
-        delete[] this->arr;
-    }
+     MyStack(const MyStack<T> &stack) {
+          this->max_length = stack.max_length;
+          this->length = stack.length;
+         this->arr = new T[stack.max_length];
+         for (int i = 0; i < stack.max_length; ++i) {
+             this->arr[i] = stack.arr[i];
+         }
+     }
 
-    T get() const{
-        return this->arr[this->length-1];
-    }
+     ~MyStack() {
+         delete[] this->arr;
+     }
 
-    T pop() {
-        return this->arr[--this->length];
-    }
+     T get() const {
+         return this->arr[this->length-1];
+     }
 
-    void push(T element){
-        this->arr[length++] = element;
-    }
+     T pop() {
+         return this->arr[--this->length];
+     }
 
-    bool isFull() const{
-        return this->length == this->max_length;
-    }
+     void push(T element) {
+         this->arr[length++] = element;
+     }
 
-    bool isEmpty() const{
-        return this->length == 0;
-    }
+     bool isFull() const {
+         return this->length == this->max_length;
+     }
 
-    void printStack() const{
-        std::cout << "Stack:" << std::endl;
-        for (int i = 0; i < this->length; ++i) {
-            std::cout << this->arr[i] << ' ';
-        }
-        std::cout << "\n\n";
-    }
+     bool isEmpty() const {
+         return this->length == 0;
+     }
+
+     void printStack() const {
+         std::cout << "Stack:" << std::endl;
+         for (int i = 0; i < this->length; ++i) {
+             std::cout << this->arr[i] << ' ';
+         }
+         std::cout << "\n\n";
+     }
 };
 
-#endif //EX09_MYSTACK_H
+#endif  // INCLUDE_MYSTACK_H_
