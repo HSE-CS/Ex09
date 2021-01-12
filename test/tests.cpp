@@ -55,13 +55,13 @@ TEST(MyStackTest, test8) {
 }
 
 TEST(MyStackTest, test9) {
-  MyStack<int> st(1);
+  MyStack<int> st(2);
   st.push(10);
   EXPECT_EQ(false, st.isEmpty());
 }
 
 TEST(MyStackTest, test10) {
-  MyStack<int> st(1);
+  MyStack<int> st(2);
   st.push(10);
   EXPECT_EQ(false, st.isFull());
 }
