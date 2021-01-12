@@ -30,7 +30,8 @@ public:
     T pop() {
         if (top == 0) {
             return 0;
-        } else {
+        }
+        else {
             top--;
             return store[top];
         }
