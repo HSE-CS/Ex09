@@ -8,7 +8,7 @@ int main(){
     stack.push(1);
     stack.push(0);
     stack.push(-46354);
-    cout << "Create stack with length argument and push 2 elements:" << endl;
+    cout << "Create stack and push 2 elements:" << endl;
     stack.printStack();
 
     cout << "Get last element:" << endl;
