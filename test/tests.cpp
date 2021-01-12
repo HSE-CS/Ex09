@@ -12,7 +12,7 @@ TEST(MyStackTest, test1) {
 TEST(MyStackTest, test2) {
     MyStack<int> st(5);
     for (int i = 0; i < 5; i++) {
-        st.push(rand_r());
+        st.push(1);
     }
     EXPECT_EQ(true, st.isFull());
 }
