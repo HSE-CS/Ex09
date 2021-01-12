@@ -47,6 +47,6 @@ class MyStack {
   T get() const {
     return ar[top];
   }
-}
+};
 
 #endif  // INCLUDE_MYSTACK_H_

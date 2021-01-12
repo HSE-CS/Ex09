@@ -4,27 +4,22 @@
 #include <cstdlib>
 #include <ctime>
 
-using std::cout;
-using std::srand;
-using std::time;
-using std::rand_r;
-
 int main() {
-  srand((unsigned) time(nullptr));
+  unsigned seed = (unsigned) std::time(nullptr);
 
   MyStack<int> st(10);
-  int val1 = rand_r();
-  int val2 = rand_r();
-  int val3 = rand_r();
+  int val1 = std::rand_r(&seed);
+  int val2 = std::rand_r(&seed);
+  int val3 = std::rand_r(&seed);
   st.push(val1);
-  cout << val1 << " pushed" << endl;
+  std::cout << val1 << " pushed" << std::endl;
   st.push(val2);
-  cout << val2 << " pushed" << endl;
+  std::cout << val2 << " pushed" << std::endl;
   st.push(val3);
-  cout << val3 << " pushed" << endl;
+  std::cout << val3 << " pushed" << std::endl;
 
   while (!st.isEmpty()) {
-    std::cout << st.pop() << " popped" << endl;
+    std::cout << st.pop() << " popped" << std::endl;
   }
   return 0;
 }
