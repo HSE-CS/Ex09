@@ -64,7 +64,7 @@ TEST(MyStackTest, test6) {
 
 
 TEST(MyStackTest, test7) {
-  MyStack<string> st(3);
+  MyStack<std::string> st(3);
   st.push("apple");
   st.push("banana");
   st.push("juice");
