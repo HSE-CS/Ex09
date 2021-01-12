@@ -34,11 +34,32 @@ public:
         num_of_el = 0;
     }
 
-    Type get() const;
-    Type pop();
-    Type push();
-    Type isFull() const;
-    Type isEmpty() const;
+    Type get() const {
+        return stack[num_of_el - 1];
+    }
+
+    Type pop() {
+        Type temp = stack[num_of_el - 1];
+        Type* update_stack = new Type[num_of_el - 1];
+        for (int i = 0; i < num_of_el - 1; i++)
+            update_stack[i] = stack[i];
+        delete[] stack;
+        num_of_el--;
+        stackArray = update_stack;
+        return temp;
+    }
+
+    void push(Type element) {
+        stack[num_of_el] = element;
+        num_of_el++;
+    }
+
+    bool isFull() const {
+        return num_of_el == size;
+    }
+    bool isEmpty() const {
+        return num_of_el == 0;
+    }
 };
 
 #endif  // INCLUDE_MYSTRING_H_
