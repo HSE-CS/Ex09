@@ -6,16 +6,19 @@
 
 template <class T>
 class MyStack {
-private:
+ private:
     size_t maxSize;
     size_t sizeNow;
     T* value;
-public:
+
+ public:
+
     MyStack (std::size_t count) {
         maxSize = count;
         sizeNow = 0;
         value = new T[maxSize+1];
     }
+
     MyStack (const MyStack& copied) {
         this->sizeNow = copied.sizeNow;
         this->maxSize = copied.maxSize;
@@ -46,4 +49,4 @@ public:
         delete[] value;
     }
 };
-#endif // !MYSTACK_H
+#endif //  !MYSTACK_H
