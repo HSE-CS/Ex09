@@ -55,7 +55,7 @@ class MyStack {
             stackData[top] = newItem;
             top++;
         } else {
-            throw "It is impossible to add a new item to the stack because it is overflowed";
+            throw "It is impossible to add item.Stack is overflowed";
         }
     }
 

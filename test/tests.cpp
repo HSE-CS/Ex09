@@ -11,7 +11,7 @@ TEST(MyStackTest, test1) {
 TEST(MyStackTest, test2) {
   MyStack<int> st(1);
   st.push(1);
-  EXPECT_EQ(true, Stack.isFull());
+  EXPECT_EQ(true, st.isFull());
 }
 TEST(MyStackTest, test3) {
   MyStack<char> st(2);
@@ -27,7 +27,7 @@ TEST(MyStackTest, test4) {
 TEST(MyStackTest, test5) {
   MyStack<int> st(1);
   st.push(5);
-  EXPECT_EQ(5, Stack.get());
+  EXPECT_EQ(5, st.get());
 }
 TEST(MyStackTest, test6) {
   MyStack<float> st(3);
