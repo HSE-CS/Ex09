@@ -1,5 +1,6 @@
-#ifndef MYSTACK_H
-#define MYSTACK_H
+// Copyright 2021 Vadukk
+#ifndef INCLUDE_MYSTACK_H
+#define INCLUDE_MYSTACK_H
 
 #include <string.h>
 
@@ -8,8 +9,9 @@ class MyStack {
   T* ar;
   int capacity;
   int top;
-public:
-  MyStack(int capacity) : capacity(capacity), top(-1) {
+
+ public:
+  explicit MyStack(int capacity) : capacity(capacity), top(-1) {
     ar = new T[capacity];
   }
 
@@ -47,4 +49,4 @@ public:
   }
 }
 
-#endif
+#endif  // INCLUDE_MYSTACK_H_
