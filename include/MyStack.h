@@ -31,16 +31,15 @@ class MyStack{
         current = 0;
         delete[] mass;
     }
-    
-    T get() const{
+
+    T get() const {
         if (!isEmpty()) {
             return mass[current-1];
-        }
-        else{
+        } else {
             throw "Can not get a stack item because the stack is empty";
         }
     }
-    
+
     T pop() {
         if (!isEmpty()) {
             return mass[--current];
@@ -48,7 +47,7 @@ class MyStack{
             throw "Can not get a stack item because the stack is empty";
         }
     }
-    
+
     void push(T a) {
         if (!isFull()) {
             mass[current] = a;
@@ -57,14 +56,14 @@ class MyStack{
             throw "It is impossible to add item.Stack is overflowed";
         }
     }
-    
-    [[nodiscard]] bool isFull() const{
+
+    [[nodiscard]] bool isFull() const {
         if (current == size)
             return true;
         return false;
     }
-    
-    [[nodiscard]] bool isEmpty() const{
+
+    [[nodiscard]] bool isEmpty() const {
         if (current == 0)
             return true;
         return false;
