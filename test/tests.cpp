@@ -82,5 +82,5 @@ EXPECT_EQ(10, st2.get());
 
 TEST(MyStackTest, test10) {
 MyStack<int> st(5);
-EXPECT_EQ(NULL, st.get());
+EXPECT_EQ(-1, st.get());
 }
