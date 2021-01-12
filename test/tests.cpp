@@ -74,6 +74,6 @@ TEST(MyStackTest, test9) {
 TEST(MyStackTest, test10) {
     MyStack<std::string> st(5);
     st.push("abc");
-    st.push("123");
-    EXPECT_EQ("123", st.get());
+    st.push("1234");
+    EXPECT_EQ("1234", st.get());
 }
