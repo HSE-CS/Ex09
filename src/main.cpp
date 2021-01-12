@@ -8,10 +8,9 @@ int main() {
   MyStack<int> st(5);
   int ct = 0;
   int num;
-  while (ct++ < 5)
-  {
-	std :: cin >> num;
-	st.push(num); }
+  while (ct++ < 5) {
+   std :: cin >> num;
+   st.push(num); }
   st.printStack();
   std :: cout << "\n";
   st.pop();

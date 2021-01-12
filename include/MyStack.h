@@ -8,7 +8,7 @@
 
 template<class T>
 class MyStack {
-  public:
+    public:
     MyStack(int size);  // Constructor
     ~MyStack();  // Destructor
     MyStack(const MyStack<T>&);  // Copy Constructor
@@ -20,8 +20,8 @@ class MyStack {
     void printStack();
     T isEmpty() const;  // test for emptiness
     T isFull() const;  // test for fullness
-    T get () const;  // get top element
-  private:
+    T get() const;  // get top element
+    private:
     int size;
     int top;
     T* store;
