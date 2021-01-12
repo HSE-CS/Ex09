@@ -32,7 +32,7 @@ class MyStack {
       stack[i] = b.stack[i];
   }
 
-  ~MyStack(){
+  ~MyStack() {
     delete stack;
   }
 

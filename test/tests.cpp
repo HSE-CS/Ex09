@@ -23,7 +23,7 @@ TEST(MyStackTest, test3) {
 
 TEST(MyStackTest, test4) {
   MyStack<int> st(5);
-  st.push(5)
+  st.push(5);
   EXPECT_EQ(false, st.isFull());
 }
 
