@@ -34,6 +34,7 @@ class MyStack {
             stack->pop_back();
             return t;
         }
+        return 0;
     }
 
     void push(T x) {
