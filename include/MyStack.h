@@ -60,4 +60,4 @@ class MyStack {
     return head == 0;
   }
 };
-#endif // INCLUDE_MYSTACK_H_
+#endif  //  INCLUDE_MYSTACK_H_
