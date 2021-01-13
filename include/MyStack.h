@@ -4,15 +4,16 @@
 
 template <class T>
 class MyStack {
-private:
+ private:
     std::vector<T> *mas;
     int length;
-public:
-    MyStack(int x) : length(x) {
+
+ public:
+    explicit MyStack(int x) : length(x) {
         mas = new std::vector<T>;
         mas->reserve(x);
     }
-    MyStack( const MyStack& x) {
+    MyStack(const MyStack& x) {
         mas = x.mas;
         length = x.length;
     }
@@ -30,8 +31,7 @@ public:
     }
     void push(T x) {
         if (mas->empty() == 1) mas->insert(mas->begin(), x);
-        else
-        mas->push_back(x);
+        else mas->push_back(x);
     }
     bool isFull() const {
         if (mas->size() == length) return true;
