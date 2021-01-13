@@ -25,7 +25,7 @@ int main()
     if(st.isEmpty())
         cout << endl <<"Stack is empty(((" << endl << endl << endl;
 
-    MyStack<char*> st_1(5);
+    MyStack<string> st_1(5);
     st_1.push("capitan Andrej \"ALWAYSWANNAFLY\" Bondarenko");
     st_1.push("Vladimir \"RodjER\" Nikogosian");
     st_1.push("Victor \"GeneRaL\" Nigrini");
