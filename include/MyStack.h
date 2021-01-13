@@ -9,10 +9,11 @@ class MyStack{
     int size;
     int current_size;
     T* stack;
+
  public:
     MyStack() {
         this->size = 0;
-        this->current_size=0;
+        this->current_size = 0;
         this->stack = nullptr;
     }
     explicit MyStack(unsigned target_size) {

@@ -11,16 +11,16 @@ int main() {
     st.push(228);
     st.push(322);
     if (st.isFull())
-        std::cout<<"Stack is full:(" << "\n";
+        std::cout << "Stack is full:(" << "\n";
     else
-        std::cout<<"There's still room:)" << "\n";
+        std::cout << "There's still room:)" << "\n";
     if (st.isEmpty())
-        std::cout <<"Stack is empty(((" << "\n";
+        std::cout << "Stack is empty(((" << "\n";
     else
-        std::cout <<"COOL! Stack isn't empty))))" << "\n";
+        std::cout << "COOL! Stack isn't empty))))" << "\n";
 
     while (!st.isEmpty())
-        std::cout << st.pop() <<" ";
+        std::cout << st.pop() << " ";
     if (st.isEmpty())
         std::cout << "\n" <<"Stack is empty(((" << "\n" << "\n" << "\n";
 
@@ -32,13 +32,13 @@ int main() {
     st_1.push("Alik \"V-TUNE\" Vorobey");
     st_1.push("sostav NA'VI");
     if (st_1.isFull())
-        std::cout<<"Stack is full:(" << "\n";
+        std::cout << "Stack is full:(" << "\n";
     else
-        std::cout<<"There's still room:)" << "\n";
+        std::cout << "There's still room:)" << "\n";
     if (st_1.isEmpty())
-        std::cout <<"Stack is empty(((" << "\n";
+        std::cout << "Stack is empty(((" << "\n";
     else
-        std::cout <<"COOL! Stack isn't empty))))" << "\n";
+        std::cout << "COOL! Stack isn't empty))))" << "\n";
     while (!st_1.isEmpty()){
         std::cout << st_1.pop() << "\n";
 
