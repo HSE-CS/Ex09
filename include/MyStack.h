@@ -42,7 +42,7 @@ class MyStack{
         return this->stack[--current_size];
     }
     void push(T new_element) {
-        if (this->isFull()){
+        if (this->isFull()) {
           return;
         }
         this->stack[this->current_size++] = new_element;

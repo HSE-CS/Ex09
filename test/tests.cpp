@@ -62,8 +62,8 @@ TEST(MyStackTest, test9) {
   st.push(228);
   st.push(228);
   st.push(228);
-  int summa=0;
-  while(!st.isEmpty())
+  int summa = 0;
+  while (!st.isEmpty())
       summa+=st.pop()
   EXPECT_EQ(1368, summa);
 }

@@ -39,10 +39,8 @@ int main() {
         std::cout << "Stack is empty(((" << "\n";
     else
         std::cout << "COOL! Stack isn't empty))))" << "\n";
-    while (!st_1.isEmpty()){
+    while (!st_1.isEmpty()) {
         std::cout << st_1.pop() << "\n";
-
     }
-
     return 0;
 }
