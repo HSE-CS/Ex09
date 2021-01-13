@@ -1,14 +1,18 @@
 // Copyright 2021 ch2oh
 
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
+
 #include <cstddef>
 #include <vector>
 
 template<typename T>
 class MyStack {
-private:
-    std::vector<T> *stack;
-    size_t size;
-public:
+ private:
+     std::vector<T> *stack;
+     size_t size;
+     
+ public:
     explicit MyStack(size_t t) : stack(new std::vector<T>()), size(t) {}
 
     MyStack(const MyStack<T> &toCopy) : size(toCopy.size) {
@@ -44,3 +48,5 @@ public:
         return stack->empty();
     }
 };
+
+#endif  // INCLUDE_MYSTACK_H_
