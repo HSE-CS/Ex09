@@ -31,11 +31,13 @@ class MyStack {
     }
     void push(T x) {
         if (mas->empty() == 1) mas->insert(mas->begin(), x);
-        else mas->push_back(x);
+        else 
+            mas->push_back(x);
     }
     bool isFull() const {
         if (mas->size() == length) return true;
-        else return false;
+        else 
+            return false;
     }
     bool isEmpty() const {
         return mas->empty() == true;
