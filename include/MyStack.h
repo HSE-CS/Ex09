@@ -1,4 +1,4 @@
-// Copyright 12.12.20 KostinAndrej
+// Copyright 13.12.20 KostinAndrej
 
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_

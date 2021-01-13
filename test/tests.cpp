@@ -1,4 +1,5 @@
 // Copyright 2020 GHA Test Team
+// Copyright 13.12.20 KostinAndrej
 #include "MyStack.h"
 
 #include <gtest/gtest.h>
@@ -24,7 +25,7 @@ EXPECT_EQ(true, st.isFull());
 
 TEST(MyStackTest, test4) {
 MyStack<int> st(5);
-EXPECT_EQ(false, st.st.isFull());
+EXPECT_EQ(false, st.isFull());
 }
 
 TEST(MyStackTest, test5) {

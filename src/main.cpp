@@ -1,4 +1,4 @@
-#include <cstdlib>
+// Copyright 13.12.20 KostinAndrej
 #include <iostream>
 #include "MyStack.h"
 using namespace std;
