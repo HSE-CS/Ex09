@@ -4,13 +4,12 @@
 #define INCLUDE_MYSTACK_H_
 
 template <class T>
-class MyStack
-{
-private:
+class MyStack{
+ private:
     int size;
     int current_size;
     T* stack;
-public:
+ public:
     MyStack() {
         this->size = 0;
         this->current_size=0;
@@ -20,7 +19,6 @@ public:
         this->size = target_size;
         this->current_size = 0;
         this->stack = new T[this->size];
-
     }
     MyStack(const MyStack& another_MyStack) {
         this->size = another_MyStack.size;
@@ -37,22 +35,23 @@ public:
             return 0;
         return this->stack[this->current_size-1];
     }
-    T pop(){
+    T pop() {
         if (this->isEmpty())
-            return 0;
+          return 0;
         return this->stack[--current_size];
     }
-    void push(T new_element){
-        if(this->isFull()){
-            return;
+    void push(T new_element) {
+        if (this->isFull()){
+          return;
         }
         this->stack[this->current_size++] = new_element;
     }
-    bool isFull() const{
+    bool isFull() const {
         return this->current_size == this->size;
     }
-    bool isEmpty() const{
+    bool isEmpty() const {
         return this->current_size == 0;
     }
 };
+
 #endif  // INCLUDE_MYSTACK_H_
