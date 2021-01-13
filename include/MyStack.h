@@ -1,7 +1,7 @@
 // Copyright 2021 Toliman
 
-#ifndef EX09_MYSTACK_H
-#define EX09_MYSTACK_H
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 
 template<typename T>
 class MyStack {
@@ -46,4 +46,4 @@ class MyStack {
     }
 };
 
-#endif  // EX09_MYSTACK_H
+#endif  // INCLUDE_MYSTACK_H_

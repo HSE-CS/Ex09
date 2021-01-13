@@ -96,7 +96,7 @@ TEST(MyStackTest, test5) {
 
 TEST(MyStackTest, test6) {
     MyStack<int> s(3);
-    for(int i = 0; i < 3; ++i)
+    for (int i = 0; i < 3; ++i)
         s.push(i);
     ASSERT_TRUE(s.isFull());
 }
@@ -114,8 +114,8 @@ TEST(MyStackTest, test7) {
 
 TEST(MyStackTest, test8) {
     MyStack<int> s(3);
-    for(int i = 0; i < 3; ++i)
-    s.push(i);
+    for (int i = 0; i < 3; ++i)
+        s.push(i);
     ASSERT_FALSE(s.isEmpty());
 }
 
@@ -161,7 +161,7 @@ TEST(MyStackTest, test13) {
 }
 
 TEST(MyStackTest, test14) {
-    MyStack<long long> s(5);
+    MyStack<int64_t> s(5);
     s.push(1e18 + 1);
     s.push(1e18 + 2);
     s.push(1e18 + 3);
