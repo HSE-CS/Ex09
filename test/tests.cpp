@@ -62,5 +62,5 @@ TEST(stack_test, test9) {
     st1.push(1);
     st1.pop();
     st1.push(2);
-    EXPECT_EQ(1, st1.pop());
+    EXPECT_EQ(2, st1.pop());
 }
