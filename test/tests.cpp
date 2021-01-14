@@ -21,7 +21,7 @@ TEST(MyStackTest, test3) {
     MyStack<int> stack(10);
     stack.push(1);
     stack.push(2);
-    EXPECT_EQ(1, stack.pop());
+    EXPECT_EQ(2, stack.pop());
 }
 
 TEST(MyStackTest, test4) {
@@ -29,7 +29,7 @@ TEST(MyStackTest, test4) {
     stack.push(2);
     stack.push(4);
     stack.push(6);
-    EXPECT_EQ(4, stack.pop());
+    EXPECT_EQ(6, stack.pop());
 }
 
 TEST(MyStackTest, test5) {
@@ -62,7 +62,7 @@ TEST(MyStackTest, test9) {
     stack.push(4);
     stack.push(6);
     stack.pop();
-    EXPECT_EQ(2, stack.pop());
+    EXPECT_EQ(4, stack.pop());
 }
 
 TEST(MyStackTest, test10) {
@@ -71,5 +71,5 @@ TEST(MyStackTest, test10) {
     stack.push('b');
     stack.push('c');
     stack.pop();
-    EXPECT_EQ('a', stack.pop());
+    EXPECT_EQ('b', stack.pop());
 }
