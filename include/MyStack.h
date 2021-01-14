@@ -1,5 +1,6 @@
 // Copyright 2021 Alexey Tatsenko
 #pragma once
+#include<iostream>
 template <class T>
 class MyStack {
  private:
