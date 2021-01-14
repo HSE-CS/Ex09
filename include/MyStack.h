@@ -1,4 +1,4 @@
-//Copyright 2020 VladimirUspensky
+// Copyright 2020 VladimirUspensky
 
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
