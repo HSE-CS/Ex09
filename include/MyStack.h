@@ -7,12 +7,12 @@
 
 template<class T>
 class MyStack {
-private:
+ private:
     int size;
     int max_size;
     T* stack;
 
-public:
+ public:
     explicit MyStack(int i) {
         this->size = 0;
         this->max_size = i;
@@ -29,16 +29,14 @@ public:
     T get() const {
         if (!isEmpty()) {
             return this->stack[size - 1];
-        }
-        else
+        } else
             return -1;
     }
     T pop() {
         if (!isEmpty()) {
             this->size--;
             return this->stack[size];
-        }
-        else
+        } else
             return -1;
     }
     T push(T element) {
@@ -46,13 +44,13 @@ public:
             this->stack[size] = element;
             this->size++;
             return element;
-        }
-        else
+        } else
             return -1;
     }
     bool isFull() const {
         if (this->size == this->max_size) return true;
-        else return false;
+        else 
+		    return false;
     }
     bool isEmpty() const {
         if (this->size == 0) return true;
