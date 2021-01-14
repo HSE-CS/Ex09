@@ -1,10 +1,9 @@
 // Copyright 2021 Krissupervizz
 #include "MyStack.h"
 
-int main()
-{
+int main(){
     MyStack<int> st(4);
-    std::cout<<st.push(1)<<std::endl;
+    std::cout << st.push(1) << std::endl;
     std::cout << st.push(2) << std::endl;
     std::cout << st.push(3) << std::endl;
 
