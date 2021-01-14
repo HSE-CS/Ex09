@@ -60,13 +60,13 @@ class MyStack {
         }
         return false;
     }
-   
+
     bool isEmpty() const {
-         if (top == 0){
+         if (top == 0) {
             return true;
         }
         return false;
     }
-}; 
+};
 
-#endif // INCLUDE_MYSTACK_H_
+#endif  // INCLUDE_MYSTACK_H_
