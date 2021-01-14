@@ -9,7 +9,7 @@ class MyStack {
     int size;
 
  public:
-    MyStack(int n) {
+    explicit MyStack(int n) {
         pos = -1;
         size = n;
         array = new T[n];
@@ -19,7 +19,7 @@ class MyStack {
         size = n.size;
     }
     ~MyStack() {
-        if(array != nullptr)
+        if (array != nullptr)
             delete[] array;
     }
     T get() const {
@@ -40,8 +40,7 @@ class MyStack {
         if (pos == -1) {
             array[0] = n;
             pos = 0;
-        }
-        else if (pos == size - 1) {
+        } else if (pos == size - 1) {
             std::cout << "error";
         } else {
             pos++;
