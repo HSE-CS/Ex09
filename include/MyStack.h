@@ -24,19 +24,16 @@ class MyStack {
         for (int i = 0; i < size; ++i) {
             stack[i] = copied.stack[i];
         }
-
     }
 
-    ~MyStack()
-    {
+    ~MyStack() {
         delete[] stack;
     }
 
     T get() const {
         if (top <= 0) {
             return 0;
-        }
-        else {
+        } else {
             return stack[top - 1];
         }
     }
@@ -44,8 +41,7 @@ class MyStack {
     T pop() {
         if (top <= 0) {
             return 0;
-        }
-        else {
+        } else {
             top--;
             return stack[top];
         }
@@ -65,14 +61,12 @@ class MyStack {
         return false;
     }
    
-
-        bool isEmpty() const {
-            if (top == 0){
-                return true;
+    bool isEmpty() const {
+         if (top == 0){
+            return true;
         }
-            return false;
+        return false;
     }
-
-};
+}; 
 
 #endif // INCLUDE_MYSTACK_H_
