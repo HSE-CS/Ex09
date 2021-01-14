@@ -1,6 +1,4 @@
-//
-// Created by vladimir on 14.01.2021.
-//
+//Copyright 2020 VladimirUspensky
 
 #include <iostream>
 
