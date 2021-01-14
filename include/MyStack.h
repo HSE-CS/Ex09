@@ -1,40 +1,45 @@
 // Copyright 2021 Krissupervizz
-#ifndef MYSTACK_H
-#define MYSTACK_H
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 #define CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#include <stdio.h>
+
 template<class T>
 class MyStack {
  private:
-     long long size;
-     long long max_size;
+     int size;
+     int max_size;
      T* stack;
+
  public:
-     MyStack(int i) {//конструктор с одним параметром.
+     explicit MyStack(int i) {
          this->size = 0;
          this->max_size = i;
          this->stack = new T[i];
-     };
-     MyStack(const MyStack& MyStack) {                  //конструктор копирования.
+     }
+     MyStack(const MyStack& MyStack) {
          this->max_size = MyStack.max_size;
          this->size = MyStack.size;
          this->stack = MyStack.stack;
      }
-     ~MyStack() { //деструктор.
+     ~MyStack() {
          delete[] this->stack;
      }	 	
-     T get() const { //возвращение элемента на вершине стека(без изменения состояния последнего).
+     T get() const {
          if (!isEmpty()) {
              return this->stack[size-1];
          }
+         else return -1;
      };
-     T pop() { //выталкивание элемента из стека.
+     T pop() {
          if (!isEmpty()) {
              this->size--;
              return this->stack[size];
          }
+         else return -1;
      }
-     T push(T element) {                           //добавление элемента в стек.
+     T push(T element) {
          if (!isFull()) {
              this->stack[size] = element;
              this->size++;
@@ -42,15 +47,15 @@ class MyStack {
          }
          else return -1;
      }
-     bool isFull() const { //проверка заполненности стека.
+     bool isFull() const {
          if (this->size == this->max_size) return true;
          else return false;
      }
-     bool isEmpty() const { //проверка пустоты стека.
+     bool isEmpty() const {
          if (this->size == 0) return true;
          else return false;
      }
 };
 
 
-#endif MYSTACK_H
+#endif  // INCLUDE_MYSTACK_H_
