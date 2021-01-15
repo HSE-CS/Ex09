@@ -10,10 +10,12 @@ TEST(MyStackTest, test1) {
 }
 
 TEST(MyStackTest, test2) {
-  MyStack<int> st(2);
-  st.push(6);
-  st.push(101);
-  EXPECT_EQ(101, st.get());
+  MyStack<int> st(5);
+  st.push(2);
+  st.push(10);
+  st.push(3);
+  st.pop();
+  EXPECT_EQ(10, st.get());;
 }
 
 TEST(MyStackTest, test3) {
