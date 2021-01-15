@@ -72,7 +72,7 @@ EXPECT_EQ(false, st.isEmpty());
 
 TEST(MyStackTest, test9) {
 MyStack<int> st(9);
-EXPECT_EQ(-1, st.pop());
+EXPECT_EQ(0, st.pop());
 }
 
 TEST(MyStackTest, test10) {
