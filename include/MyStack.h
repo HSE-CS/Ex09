@@ -11,6 +11,7 @@ class MyStack {
   T* ptr;
   int size;
   int index;
+
  public:
   MyStack() {
     this->size = 0;
@@ -23,7 +24,7 @@ class MyStack {
     this->ptr = new T[size];
   }
 
-  MyStack (const MyStack& my_stack) {
+  MyStack(const MyStack& my_stack) {
     this->index = my_stack.index;
     this->size = my_stack.size;
     this->ptr = new T[my_stack.size];
