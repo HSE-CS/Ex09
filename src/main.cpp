@@ -3,10 +3,11 @@
 
 int main() {
   MyStack<int> st(5);
-  MyStack<int> cc(st);
-  for (size_t i = 0; i < 5; i++) {
+  for (size_t i = 1; i < 6; i++) {
     st.push(i);
   }
+  st.expand();
+  MyStack<int> cc(st);
   std::cout << st.get() << std::endl;
   for (size_t i = 0; i < 5; i++) {
   std::cout << st.pop() << std::endl;
