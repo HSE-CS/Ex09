@@ -44,16 +44,16 @@ class MyStack {
 
     bool isFull() const {
         if (head == size)
-			return true;
+            return true;
         else
-			return false;
+            return false;
     }
 
     bool isEmpty() const {
         if (head == 0)
-			return true;
+            return true;
         else
-			return false;
+            return false;
     }
 
 };
