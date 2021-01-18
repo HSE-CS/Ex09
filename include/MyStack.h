@@ -11,12 +11,12 @@ class MyStack {
     T* value;
 
  public:
-    explicit MyStack(unsigned int new_size) { //конструктор с одним параметром
+    explicit MyStack(unsigned int new_size) {
         size = new_size;
         value = new T[size];
     }
 
-    MyStack(const MyStack& tmp) { //конструктор копирования
+    MyStack(const MyStack& tmp) {
         size = tmp.size;
         head = tmp.head;
         value = new T[size];
@@ -24,30 +24,30 @@ class MyStack {
             value[i] = tmp.value[i];
     }
 
-    ~MyStack() { //деструктор
+    ~MyStack() {
         delete value;
     }
 
-    T get() const { //возвращение элемента на вершине стека(без изменения состояния последнего)
+    T get() const {
         return value[head - 1];
     }
 
-    T pop() { //выталкивание элемента из стека
+    T pop() {
         head--;
         return value[head];
     }
 
-    void push(T num) { //добавление элемента в стек
+    void push(T num) {
         value[head] = num;
         head++;
     }
 
-    bool isFull() const { //проверка заполненности стека
+    bool isFull() const {
         if (head == size) return true;
         else return false;
     }
 
-    bool isEmpty() const { //проверка пустоты стека
+    bool isEmpty() const {
         if (head == 0) return true;
         else return false;
     }
