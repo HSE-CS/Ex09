@@ -29,14 +29,17 @@ public:
 	}
 
 	T get() const {	  //возвращение элемента на вершине стека(без изменения состояния последнего)
+		return value[head - 1];
 	}
 
 	T pop() {	 //выталкивание элемента из стека
-
+		head--;
+		return value[head];
 	}
 
-	void push() {	 //добавление элемента в стек
-
+	void push(T num) {	 //добавление элемента в стек
+		value[head] = num;
+		head++;
 	}
 
 	bool isFull() const {	 //проверка заполненности стека
