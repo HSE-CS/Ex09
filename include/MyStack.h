@@ -43,11 +43,13 @@ public:
 	}
 
 	bool isFull() const {	 //проверка заполненности стека
-
+		if (head == size) return true;
+		else return false;
 	}
 
 	bool isEmpty() const {	 //проверка пустоты стека
-
+		if (head == 0) return true;
+		else return false;
 	}
 
 };
