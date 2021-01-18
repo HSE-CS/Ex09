@@ -22,7 +22,7 @@ class MyStack {
          this->values = new T[this->reserved_size];
          for (int i = 0; i < rhv.size; ++i)
              this->values[i] = rhv.values[i];
-         this->size = rhv.size();
+         this->size = rhv.size;
      }
      ~MyStack() {
          delete[] this->values;
