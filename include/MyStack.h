@@ -55,7 +55,6 @@ class MyStack {
         else
             return false;
     }
-
 };
 
 #endif  // INCLUDE_MYSTACK_H_
