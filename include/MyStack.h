@@ -45,7 +45,7 @@ MyStack<T>::~MyStack() {
 template <typename T>
 inline T MyStack<T>::get() const {
   if (!isEmpty()) {
-    return next[top];
+    return next[top - 1];
   }
 }
 
