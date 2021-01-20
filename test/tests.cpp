@@ -1,7 +1,6 @@
 // Copyright 2021 DBarinov
 
 #include "MyStack.h"
-#include <string>
 #include <gtest/gtest.h>
 
 
@@ -74,4 +73,3 @@ TEST(MyStackTest, test10) {
   st.push(8);
   EXPECT_TRUE(st.isFull());
 }
-
