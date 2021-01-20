@@ -5,8 +5,6 @@
 
 
 TEST(MyStackTest, test1) {
-  MyStack<int> st(5);
-  EXPECT_EQ(true, st.isEmpty());
   MyStack<int> st(10);
   EXPECT_FALSE(st.isFull());
 }
