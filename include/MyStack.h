@@ -30,7 +30,7 @@ class MyStack{
             stack[i] = rStack.stack[i];
     }
 
-    ~MyStack() { delete[] stack; };
+    ~MyStack() { delete[] stack; }
 
     bool isFull() const { return (top == size); }
 
