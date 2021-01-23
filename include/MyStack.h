@@ -4,14 +4,12 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std;
-
 template <typename T>
 class MyStack {
 private:
-     T* stackPtr;  // указатель на стек
-     int size;  // размер стека
-     T top = 0;  // вершина стека
+     T* stackPtr;
+     int size;
+     T top = 0;
 public:
     explicit MyStack(int n_size) {
         size = n_size;
@@ -29,17 +27,17 @@ public:
 
     ~MyStack() {
         delete[] stackPtr;
-    }  // деструктор
+    }
 
     void push(T value) {
         stackPtr[top] = value;
         top++;
-    }  // поместить элемент в стек
+    }
 
     T pop() {
         top--;
         return stackPtr[top];
-    }  // удалить из стека элемент
+    }
 
     T get() const {
         return stackPtr[top - 1];
