@@ -46,18 +46,16 @@ public:
     bool isFull() const {
         if (top == size) {
             return true;
-        }
-        else {
+        }else {
             return false;
-        };
+        }
     }
 
     bool isEmpty() const {
         if (top == 0) {
             return true;
-        }
-        else {
+        }else {
             return false;
-        };
+        }
     }
 };

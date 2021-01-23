@@ -1,8 +1,7 @@
 // Copyright Salakhov Ramazan
 #include "MyStack.h"
 
-int main()
-{
+int main() {
     MyStack<char> st(5);
     st.push('o');
     st.push('l');
