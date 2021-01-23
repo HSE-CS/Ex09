@@ -10,7 +10,8 @@ TEST(MyStackTest, test1) {
 }
 
 TEST(MyStack, test2) {
-    MyStack<char> st('a');
+    MyStack<char> st(1);
+    st('a')
     EXPECT_EQ(false, st.isEmpty());
 }
 

@@ -1,4 +1,4 @@
-//Copyright Salakhov Ramazan
+// Copyright Salakhov Ramazan
 #include "MyStack.h"
 
 using namespace std;

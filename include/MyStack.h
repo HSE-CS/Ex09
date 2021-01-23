@@ -1,4 +1,4 @@
-//Copyright Salakhov Ramazan
+// Copyright Salakhov Ramazan
 
 #pragma once
 #include "stdio.h"
