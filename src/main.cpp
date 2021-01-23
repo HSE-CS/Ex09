@@ -12,7 +12,6 @@ int main()
     st.push('h');
     MyStack <char> st2(st);
 
-
     while (!st2.isEmpty())
         cout << st2.pop() << " ";
     return 0;

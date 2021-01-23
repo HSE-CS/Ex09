@@ -1,13 +1,9 @@
 // Copyright Salakhov Ramazan
 
 #pragma once
-#include "stdio.h"
 #include <iostream>
-#include <string>
-
-using namespace std;
-
 #include <iomanip>
+using namespace std;
 
 template <typename T>
 class MyStack

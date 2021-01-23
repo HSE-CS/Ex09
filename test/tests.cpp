@@ -2,7 +2,6 @@
 #include "MyStack.h"
 
 #include <gtest/gtest.h>
-#include <string>
 
 TEST(MyStackTest, test1) {
   MyStack<int> st(5);
@@ -11,7 +10,7 @@ TEST(MyStackTest, test1) {
 
 TEST(MyStack, test2) {
     MyStack<char> st(1);
-    st('a')
+    st.push('a');
     EXPECT_EQ(false, st.isEmpty());
 }
 
