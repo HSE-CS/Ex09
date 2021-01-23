@@ -10,7 +10,7 @@ class MyStack {
      T* stackPtr;
      int size;
      T top = 0;
- public:
+  public:
      explicit MyStack(int n_size) {
         size = n_size;
         stackPtr = new T[size];
