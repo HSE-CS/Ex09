@@ -7,7 +7,7 @@ class MyStack {
  private:
     unsigned int size;
     unsigned int head = 0;
-	T* data;
+    T* data;
  public:
     explicit MyStack(int size_) {
         size = size_;
@@ -43,11 +43,11 @@ class MyStack {
     }
     bool isEmpty() {
         if (head == 0) {
-           return true;
+            return true;
         }
         return false;
     }
-	bool isFull() {
+    bool isFull() {
         if (head == size) {
            return true;
         }
