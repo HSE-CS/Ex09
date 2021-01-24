@@ -8,6 +8,7 @@ class MyStack {
     unsigned int size;
     unsigned int head = 0;
     T* data;
+
  public:
     explicit MyStack(int size_) {
         size = size_;
