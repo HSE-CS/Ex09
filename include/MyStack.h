@@ -5,15 +5,15 @@
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
 
-template <typename T>
+template<typename T>
 class MyStack {
     //Разработать шаблон класса MyStack.
- private:
+private:
     T *stack;
     int topIndex;
     int sizeStack;
 
- public:
+public:
 
     //конструктор с одним параметром.
     MyStack(int size) {
@@ -23,7 +23,7 @@ class MyStack {
     };
 
     //конструктор копирования.
-    MyStack(const MyStack& copiedOne) {
+    MyStack(const MyStack &copiedOne) {
         this->topIndex = copiedOne.topIndex;
         this->sizeStack = copiedOne.sizeStack;
         this->stack = new T[copiedOne.sizeStack];
@@ -52,7 +52,7 @@ class MyStack {
     // - выталкивание элемента из стека.
     //pop()
     T pop() {
-        if (this->topIndex == - 1) {
+        if (this->topIndex == -1) {
             std::cout << "Nothing to pop";
         } else {
             T popping = this->stack[this->topIndex];
@@ -80,7 +80,7 @@ class MyStack {
     // - проверка пустоты стека.
     //isEmpty() const
     bool isEmpty() const {
-        return (this->topIndex == - 1);
+        return (this->topIndex == -1);
     }
 
 };
