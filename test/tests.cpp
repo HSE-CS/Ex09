@@ -1,30 +1,29 @@
 // Copyright 2021 by shaidi
 
 TEST(MyStack, test1) {
+    MyStack<int> st(6);
+    EXPECT_EQ(1, st.isEmpty());
+}
+
+TEST(MyStack, test2) {
+    MyStack<int> st(3);
+    st.push(4);
+    st.push(10);
+    EXPECT_EQ(0, st.isEmpty());
+}
+
+TEST(MyStack, test3) {
     MyStack<int> st(2);
     st.push(1);
     st.push(2);
     EXPECT_EQ(1, st.isFull());
 }
 
-TEST(MyStack, test2) {
+TEST(MyStack, test4) {
     MyStack<int> st(3);
     st.push(1);
     st.push(2);
     EXPECT_EQ(0, st.isFull());
-}
-
-
-TEST(MyStack, test3) {
-    MyStack<int> st(3);
-    st.push(1);
-    st.push(2);
-    EXPECT_EQ(0, st.isEmpty());
-}
-
-TEST(MyStack, test4) {
-    MyStack<int> st(6);
-    EXPECT_EQ(1, st.isEmpty());
 }
 
 TEST(MyStack, test5) {
