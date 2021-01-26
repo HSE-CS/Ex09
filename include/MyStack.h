@@ -37,8 +37,8 @@ public:
         return num[first];
     }
 
-    void push(T num) {
-        num[first] = num;
+    void push(T n) {
+        num[first] = n;
         first++;
     }
 
