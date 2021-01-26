@@ -1,16 +1,16 @@
 // Copyright 2021 by shaidi
-#ifndef MyStack_h
-#define MyStack_h
+#ifndef INCLUDE_MYSTACK_H_ 
+#define INCLUDE_MYSTACK_H_ 
 
 template <typename T>
 
 class MyStack {
-private:
+ private:
     unsigned int size;
     unsigned int first = 0;
     T* num;
 
-public:
+ public:
     explicit MyStack(unsigned int new_size) {
         size = new_size;
         num = new T[size];
@@ -57,4 +57,4 @@ public:
     }
 };
 
-#endif  // MyStack_h
+#endif  // INCLUDE_MYSTACK_H_
