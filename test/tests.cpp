@@ -1,7 +1,9 @@
 // Copyright 2021 by shaidi
+#include <gtest/gtest.h>
+#include <string>
 
 TEST(MyStack, test1) {
-  MyStack<int> st(6);
+  MyStack<int> st(5);
   EXPECT_EQ(1, st.isEmpty());
 }
 
