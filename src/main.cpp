@@ -1,11 +1,11 @@
 // Copyright 2021 КЉраюшкина …катерина
 
-#include "Stack.h"
+#include "MyStack.h"
 #include <iostream>
 #include <string>
 
 int main() {
-  Stack<int> st(5);
+  MyStack<int> st(5);
   int ct = 0;
   int num; 
   while (ct++ < 5) {

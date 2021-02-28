@@ -1,26 +1,26 @@
 // Copyright 2021 Краюшкина Екатерина
-#ifndef INCLUDE_STACK_H_
-#define INCLUDE_STACK_H_
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 
 #include <iostream>
 #include <string>
 #include <cassert>
 
 template<class S>
-class Stack {
+class MyStack {
  public:
-  explicit Stack(int size);
-  ~Stack();  
-  Stack(const Stack<S>&);
-  int takeStakeSize() const; 
-  int takeUpper() const;  
-  S* takePtr() const; 
+  explicit MyStack(int size);
+  ~MyStack();  
+  MyStack(const MyStack<S>&);
+  int getMyStakeSize() const; 
+  int getUpper() const;  
+  S* getPtr() const; 
   void push(const S&);  
   void pop();  
-  void printStack();
+  void printMyStack();
   S isEmpty() const; 
   S isFull() const;
-  S take() const;
+  S get() const;
  private:
   int size;
   int upper;
@@ -28,62 +28,62 @@ class Stack {
 };
 
 template<class S>
-Stack<S>::Stack(int _size) :
+MyStack<S>::MyStack(int _size) :
   size(_size), upper(0) {
   store = new S[size]; }
 
 template<class S>
-Stack<S>::Stack(const Stack <S>& otherSt) :
-  size(otherSt.takeStackSize()) {
+MyStack<S>::MyStack(const MyStack <S>& otherStack) :
+  size(otherStack.getMyStackSize()) {
   store = new S[size];
-  upper = otherSt.takeUpper;
+  upper = otherStack.getUpper;
   for (int ix = 0; ix < upper; ix++)
-    store[ix] = otherSt.getPtr()[ix]; }
+    store[ix] = otherStack.getPtr()[ix]; }
 
 template<class S>
-Stack<S>::~Stack() {
+MyStack<S>::~MyStack() {
   delete[] store; }
 
 template <class S>
-int Stack<S>::takeStackSize() const {
+int MyStack<S>::getMyStackSize() const {
   return size; }
 
 template <class S>
-int Stack<S>::takeUpper() const {
+int MyStack<S>::getUpper() const {
   return upper; }
 
 template <class S>
-S* Stack<S>::takePtr() const {
+S* MyStack<S>::getPtr() const {
   return store; }
 
 template <typename S>
-void Stack<S>::push(const S& value) {
+void MyStack<S>::push(const S& value) {
   assert(upper < size);
   store[upper++] = value; }
 
 template <typename S>
-void Stack<S>::pop() {
+void MyStack<S>::pop() {
   assert(upper > 0);
   store[--upper]; }
 
 template <typename S>
-void Stack<S>::printStack() {
+void MyStack<S>::printStack() {
   for (int ix = upper - 1; ix >= 0; ix--)
     std:: cout << store[ix] << " "; }
 
 template <typename S>
-S Stack<S>::isEmpty() const {
+S MyStack<S>::isEmpty() const {
   if (upper == 0) return 1;
   return 0; }
 
 template <typename S>
-S Stack<S>::isFull() const {
+S MyStack<S>::isFull() const {
   if (upper == size) return 1;
   return 0; }
 
 template <typename S>
-S Stack <S>::take() const {
+S MyStack <S>::take() const {
   if (upper != 0)
     return store[upper - 1]; }
 
-#endif  // INCLUDE_STACK_H_
+#endif  // INCLUDE_MYSTACK_H_
