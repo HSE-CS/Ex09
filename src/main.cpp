@@ -1,4 +1,4 @@
-// Copyright 2021 Краюшкина Екатерина
+// Copyright 2021 КЉраюшкина …катерина
 
 #include "Stack.h"
 #include <iostream>
@@ -6,9 +6,9 @@
 
 int main() {
   Stack<int> st(5);
-  int c = 0;
+  int ct = 0;
   int num; 
-  while (c++ < 5) {
+  while (ct++ < 5) {
     std :: cin >> num;
     st.push(num); }
   st.printStack();
