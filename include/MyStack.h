@@ -1,4 +1,4 @@
-// Copyright 2021 Љраюшкина …катерина
+// Copyright 2021 Краюшкина Екатерина
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
 
@@ -67,7 +67,7 @@ void MyStack<S>::pop() {
   store[--upper]; }
 
 template <typename S>
-void MyStack<S>::printStack() {
+void MyStack<S>::printMyStack() {
   for (int ix = upper - 1; ix >= 0; ix--)
     std:: cout << store[ix] << " "; }
 

@@ -1,4 +1,4 @@
-// Copyright 2021 КЉраюшкина …катерина
+// Copyright 2021 Краюшкина Екатерина
 
 #include "MyStack.h"
 #include <iostream>
