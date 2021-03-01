@@ -12,7 +12,7 @@ class MyStack {
   explicit MyStack(int size);
   ~MyStack();
   MyStack(const MyStack<S>&);
-  int getMyStakeSize() const;
+  int getMyStackSize() const;
   int getUpper() const;
   S* getPtr() const;
   void push(const S&);
