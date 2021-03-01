@@ -16,7 +16,7 @@ int main() {
   st.pop();
   st.printMyStack();
   std :: cout << "\n";
-  std :: cout << st.take() << "\n";
+  std :: cout << st.get() << "\n";
   std :: cout << st.isFull() << "\n";
   std :: cout << st.isEmpty()<< "\n";
   return 0;
