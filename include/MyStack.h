@@ -82,9 +82,8 @@ S MyStack<S>::isFull() const {
   return 0; }
 
 template <typename S>
-S MyStack <S>::get() const {
-
+S MyStack<S>::get() const {
   if (upper != 0)
-    return store[upper - 1]; }
+  return store[upper - 1]; }
 
 #endif  // INCLUDE_MYSTACK_H_
