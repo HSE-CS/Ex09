@@ -83,6 +83,7 @@ S MyStack<S>::isFull() const {
 
 template <typename S>
 S MyStack <S>::take() const {
+
   if (upper != 0)
     return store[upper - 1]; }
 
