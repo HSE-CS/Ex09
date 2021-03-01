@@ -4,8 +4,8 @@
 #include <gtest/gtest.h>
 #include <string>
 
-TEST(MyStackTest, test1) {	
-  MyStack<int> st(5);	  	  
+TEST(MyStackTest, test1) {
+  MyStack<int> st(5);	  
   st.push('3');
   st.push('4');
   st.push('5');
@@ -82,3 +82,4 @@ TEST(MyStackTest, test9) {
 TEST(MyStackTest, test10) {
   MyStack<int> st(5);
   EXPECT_EQ(1, st.isEmpty()); }*/
+  
