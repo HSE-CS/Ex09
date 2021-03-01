@@ -1,4 +1,4 @@
-// Copyright 2021 Краюшкина Екатерина
+// Copyright 2021 Krayushkina
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
 
@@ -10,15 +10,15 @@ template<class S>
 class MyStack {
  public:
   explicit MyStack(int size);
-  ~MyStack();  
+  ~MyStack();
   MyStack(const MyStack<S>&);
   int getMyStakeSize() const; 
-  int getUpper() const;  
-  S* getPtr() const; 
-  void push(const S&);  
-  void pop();  
+  int getUpper() const;
+  S* getPtr() const;
+  void push(const S&);
+  void pop();
   void printMyStack();
-  S isEmpty() const; 
+  S isEmpty() const;
   S isFull() const;
   S get() const;
  private:

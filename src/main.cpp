@@ -1,4 +1,4 @@
-// Copyright 2021 Краюшкина Екатерина
+// Copyright 2021 Krayushkina
 
 #include "MyStack.h"
 #include <iostream>
@@ -7,14 +7,14 @@
 int main() {
   MyStack<int> st(5);
   int ct = 0;
-  int num; 
+  int num;
   while (ct++ < 5) {
     std :: cin >> num;
     st.push(num); }
-  st.printStack();
+  st.printMyStack();
   std :: cout << "\n";
   st.pop();
-  st.printStack();
+  st.printMyStack();
   std :: cout << "\n";
   std :: cout << st.take() << "\n";
   std :: cout << st.isFull() << "\n";

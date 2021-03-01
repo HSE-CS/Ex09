@@ -1,4 +1,4 @@
-// Copyright 2020 КЉраюшкина …катерина
+// Copyright 2021 Krayushkina
 
 /*#include "MyStack.h"
 #include <gtest/gtest.h>
