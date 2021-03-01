@@ -86,5 +86,4 @@ S MyStack <S>::take() const {
   if (upper != 0)
     return store[upper - 1]; }
 
-#endif
-//INCLUDE_MYSTACK_H_
+#endif  // INCLUDE_MYSTACK_H_
