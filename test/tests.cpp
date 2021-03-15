@@ -8,7 +8,7 @@ TEST(MyStack, test1)
 	st.push(1);
 	st.push(2);
 	st.push(3);
-	EXPECT_EQ(true, st.isEmpty());
+	EXPECT_EQ(false, st.isEmpty());
 }
 
 TEST(MyStack, test2) 
@@ -23,7 +23,7 @@ TEST(MyStack, test3)
 {
 	MyStack<int> st(3);
 
-	EXPECT_EQ(true, st.isFull());
+	EXPECT_EQ(false, st.isFull());
 }
 
 TEST(MyStack, test4) 
@@ -65,7 +65,7 @@ TEST(MyStack, test8)
 	st.push(3);
 	st.pop();
 	st.pop();
-	EXPECT_EQ(1, st.isEmpty());
+	EXPECT_EQ(false, st.isEmpty());
 }
 
 TEST(MyStack, test9) 
