@@ -23,7 +23,7 @@ st.push(1);
 EXPECT_EQ(false, st.isFull());}
 TEST(MyStack, test5) {
 MyStack<int> st(3);
-st.push(3); 
+st.push(3);
 EXPECT_EQ(3, st.get());}
 TEST(MyStack, test6) {
 MyStack<int> st(3);

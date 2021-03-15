@@ -5,12 +5,12 @@
 
 template <typename T>
 class MyStack {
-private:
+private: 
 unsigned int size;
 unsigned int head = 0;
 T* value;
 
-public:
+public: 
 explicit MyStack(int size_) {
 size = size_;
 value = new T[size];}
@@ -43,4 +43,4 @@ if (head == size) {
 return true;}
 return false;}
 };
-#endif // INCLUDE_MYSTACK_H_
+#endif//INCLUDE_MYSTACK_H_
