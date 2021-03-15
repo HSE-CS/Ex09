@@ -3,7 +3,8 @@
 
 template <typename T>
 
-class MyStack {
+class MyStack 
+{
 private:
 	unsigned int size;
 	unsigned int head = 0;
@@ -16,16 +17,16 @@ public:
 		value = new T[size];
 	}
 
-	MyStack(const MyStack& stack) 
-	{
-		size = stack.size;
-		data = new T[size];
-		for (int i = 0; i < size; ++i) 
+	 MyStack(const MyStack& stack) 
+	 {
+        size = stack.size;
+        data = new T[size];
+        for (int i = 0; i < size; ++i) 
 		{
-			value[i] = stack.value[i];
-		}
-		head = stack.head;
-	}
+            data[i] = stack.data[i];
+        }
+        head = stack.head;
+    }
 
 	~MyStack() 
 	{
