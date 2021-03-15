@@ -1,6 +1,5 @@
 #include "MyStack.h"
 #include <iostream>
-#include <iomanip>
 
 
 	int main() 

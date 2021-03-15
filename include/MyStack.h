@@ -1,8 +1,8 @@
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
 #include <iostream>
-#include <iomanip>
-using namespace std;
+
+
 
 template <typename T>
 class MyStack 
