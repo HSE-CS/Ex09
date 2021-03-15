@@ -35,9 +35,10 @@ public:
 		delete value;
 	}
 
-	T get() const
+	T& get() const
 	{
-		return value[head - 1];
+		int head_ = head - 1;
+		return value[head_];
 	}
 
 	int getSize() 
@@ -45,7 +46,7 @@ public:
 		return size;
 	}
 
-	T pop()
+	T& pop()
 	{
 		head--;
 		return value[head];
