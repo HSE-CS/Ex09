@@ -1,7 +1,7 @@
 #include "MyStack.h"
 #include <iostream>
 #include <iomanip>
-using namespace std;
+
 
 	int main() 
 	{
@@ -13,7 +13,7 @@ using namespace std;
 		st.push(5);
 
 		while (!st.isEmpty())
-			cout << st.pop() << " ";
+			std::cout << st.pop() << " ";
 		return 0;
 
 	}
