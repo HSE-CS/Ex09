@@ -35,7 +35,7 @@ public:
 		delete value;
 	}
 
-	T& get() const
+	T get() const
 	{
 		return value[head - 1];
 	}
@@ -45,7 +45,7 @@ public:
 		return size;
 	}
 
-	T& pop()
+	T pop()
 	{
 		head--;
 		return value[head];

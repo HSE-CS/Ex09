@@ -1,5 +1,6 @@
 #include "MyStack.h"
-
+#include <gtest/gtest.h>
+#include <string>
 
 
 TEST(MyStack, test1) 
