@@ -1,3 +1,4 @@
+// Copyright 2021 by Liza
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
 #include <iostream>
