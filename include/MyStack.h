@@ -3,8 +3,6 @@
 #define INCLUDE_MYSTACK_H_
 #include <iostream>
 
-
-
 template <typename T>
 class MyStack 
 {
@@ -14,7 +12,7 @@ private:
 	T* value;
 
 public:
-	explicit MyStack (int size_) {
+	explicit MyStack (int  size_) {
 		size = size_;
 		value = new T[size];}
 	MyStack(const MyStack& stack) {
