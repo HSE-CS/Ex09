@@ -79,4 +79,4 @@ public:
 	}
 };
 
-#endif
+#endif // INCLUDE_MYSTACK_H_
