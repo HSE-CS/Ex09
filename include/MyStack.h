@@ -1,8 +1,10 @@
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
+#include <iostream>
+
+
 
 template <typename T>
-
 class MyStack 
 {
 private:
@@ -11,59 +13,69 @@ private:
 	T* value;
 
 public:
-	explicit MyStack(unsigned int new_size) 
+	explicit MyStack(int size_) 
 	{
-		size = new_size;
+		size = size_;
 		value = new T[size];
 	}
 
-	 MyStack(const MyStack& stack) 
-	 {
-        size = stack.size;
-        data = new T[size];
-        for (int i = 0; i < size; ++i) 
+	MyStack(const MyStack& stack) 
+	{
+		size = stack.size;
+		value = new T[size];
+		for (int i = 0; i < size; ++i) 
 		{
-            data[i] = stack.data[i];
-        }
-        head = stack.head;
-    }
+			value[i] = stack.value[i];
+		}
+		head = stack.head;
+	}
 
 	~MyStack() 
 	{
 		delete value;
 	}
 
-	T get() const 
+	T& get() const
 	{
-		return value[head - 1];
+		int head_ = head - 1;
+		return value[head_];
 	}
 
-	T pop() 
+	int getSize() 
+	{
+		return size;
+	}
+
+	T& pop()
 	{
 		head--;
 		return value[head];
 	}
 
-	void push(T num)
+	void push(double num) 
 	{
-		value[head] = num;
-		head++;
+		if (head < size) 
+		{
+			value[head] = num;
+			head++;
+		}
 	}
 
-	bool isFull() const 
+	bool isEmpty() 
 	{
-		if (head == size)
+		if (head == 0) 
+		{
 			return true;
-		else
-			return false;
+		}
+		return false;
 	}
 
-	bool isEmpty() const 
-	{
-		if (head == 0)
+	bool isFull() {
+		if (head == size) 
+		{
 			return true;
-		else
-			return false;
+		}
+		return false;
 	}
 };
 
