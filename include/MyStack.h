@@ -48,7 +48,7 @@ public:
         if (top_idx > 0) {
             return pointer[--top_idx];
         }
-        return NULL;
+        return 0;
     }
 
     Type get() const {
