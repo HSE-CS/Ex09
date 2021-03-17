@@ -82,6 +82,6 @@ TEST(MyStackTest, test10) {
     EXPECT_EQ(false, st.isEmpty());
     EXPECT_EQ(12, st.get());
     EXPECT_EQ(12, st.get());
-    EXPECT_EQ(12, st.pop);
+    EXPECT_EQ(12, st.pop());
     EXPECT_EQ(10, st.get());
 }
