@@ -1,7 +1,7 @@
 // Copyright 2021 by Maxim
 
-#ifndef UNTITLED3_MYSTACK_H_
-#define UNTITLED3_MYSTACK_H_
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 template<typename Type>
 class MyStack {
  private:
@@ -9,6 +9,7 @@ class MyStack {
     bool is_empty;
     int size;
     Type *pointer;
+
  public:
     explicit MyStack(int size) {
         this->size = size;
@@ -59,4 +60,4 @@ class MyStack {
         return top_idx == 0;
     }
 };
-#endif  // UNTITLED3_MYSTACK_H_
+#endif  // INCLUDE_MYSTACK_H_
