@@ -47,7 +47,6 @@ TEST(MyStackTest, test7) {
     MyStack<int> st(20);
     st.push(10);
     st.push(12);
-    st.pop();
     EXPECT_EQ(12, st.pop());
     EXPECT_EQ(10, st.pop());
     EXPECT_EQ(true, st.isEmpty());
