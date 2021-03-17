@@ -11,8 +11,8 @@ class MyStack {
     Type *pointer;
  public:
     explicit MyStack(int size) {
-        this->size = abs(size);
-        this->pointer = new Type[abs(size)];
+        this->size = size;
+        this->pointer = new Type[size];
         this->is_empty = false;
         if (size == 0) {
             this->is_empty = true;
