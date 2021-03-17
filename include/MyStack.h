@@ -1,20 +1,16 @@
-//
-// Created by fatin on 17.03.2021.
-//
+// Copyright 2021 by Maxim
 
-#ifndef UNTITLED3_MYSTACK_H
-#define UNTITLED3_MYSTACK_H
-
-
+#ifndef UNTITLED3_MYSTACK_H_
+#define UNTITLED3_MYSTACK_H_
 template<typename Type>
 class MyStack {
-private:
+ private:
     int top_idx;
     bool is_empty;
     int size;
     Type *pointer;
-public:
-    MyStack(int size) {
+ public:
+    explicit MyStack(int size) {
         this->size = abs(size);
         this->pointer = new Type[abs(size)];
         this->is_empty = false;
@@ -62,8 +58,5 @@ public:
     bool isEmpty() const {
         return top_idx == 0;
     }
-
 };
-
-
-#endif //UNTITLED3_MYSTACK_H
+#endif  // UNTITLED3_MYSTACK_H_
