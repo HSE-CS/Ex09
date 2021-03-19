@@ -7,12 +7,12 @@
 
 template<class T>
 class MyStack {
-private:
+ private:
     unsigned int size;
     int count;
     T* ptr;
 
-public:
+ public:
     explicit MyStack(int SIZE) {
         size = SIZE;
         ptr = new T[SIZE];
