@@ -1,5 +1,4 @@
-﻿// Copyright 2021 Golovanov  
-
+//  Copyright 2021 Golovanov
 
 #include "MyStack.h"
 #include <iostream>
