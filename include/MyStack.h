@@ -1,5 +1,4 @@
 // Copyright 2021 Golovanov
-
 #include <iostream>
 #include <new>
 #ifndef INCLUDE_MYSTACK_H_
