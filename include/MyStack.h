@@ -4,8 +4,8 @@
 template <typename T>
 class MyStack{
 public:
-	MyStack(int stack_capacity) : size(0), capacity(stack_capacity), arr(new T[capacity]){}
-	MyStack(MyStack &another) : size(another.size), capacity(another.capacity), arr(new T[capacity]){
+	MyStack(int stack_capacity) : size(0), capacity(stack_capacity), arr(new T[stack_capacity]){}
+	MyStack(MyStack &another) : size(another.size), capacity(another.capacity), arr(new T[another.capacity]){
 		for(int i = 0; i < size; i++){
 			arr[i] = another.arr[i];
 		}
