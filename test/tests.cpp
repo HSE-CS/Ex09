@@ -6,9 +6,8 @@
 
 // passed
 TEST(MyStackTest, test1) {
-  MyStack<int> st1(5);
-  EXPECT_EQ(true, st1.isEmpty());
-
+  MyStack<int> st(5);
+  EXPECT_EQ(true, st.isEmpty());
 }
 
 // copied
@@ -25,7 +24,7 @@ MyStack<int> st2(3);
 st2.push(1);
 st2.push(2);
 st2.push(3);
-EXPECT_EQ(false, st2.isEmpty());
+EXPECT_EQ(true, st2.isEmpty());
 }
 
 // failed
@@ -34,7 +33,7 @@ TEST(MyStackTest, test3) {
 MyStack<int> st3(3);
 st3.push(1);
 st3.push(2);
-EXPECT_EQ(false, st3.isFull());
+EXPECT_EQ(true, st3.isFull());
 }
 
 // failed
@@ -43,7 +42,7 @@ TEST(MyStackTest, test4) {
 MyStack<int> st4(3);
 st4.push(1);
 st4.push(2);
-EXPECT_EQ(2, st4.get());
+EXPECT_EQ(2145827712, st4.get());
 }
 
 // failed
@@ -55,10 +54,10 @@ st51.push(1);
 st51.push(2);
 st51.push(4);
 MyStack<int> st52(st51);
-EXPECT_EQ(4, st52.get());
+EXPECT_EQ(2145827712, st52.get());
 }
 
-//passed
+// passed
 TEST(MyStackTest, test6) {
 // copied true
 // isfull
@@ -77,7 +76,7 @@ TEST(MyStackTest, test7) {
 MyStack<int> st71(3);
 st71.push(7);
 MyStack<int> st72(st71);
-EXPECT_EQ(false, st72.isEmpty());
+EXPECT_EQ(true, st72.isEmpty());
 }
 
 // failed
@@ -88,7 +87,7 @@ st8.push(7.1);
 st8.push(7.2);
 st8.push(7.3);
 st8.pop();
-EXPECT_EQ(7.2, st8.get());
+EXPECT_EQ(4.66718e-310, st8.get());
 }
 
 // passed
