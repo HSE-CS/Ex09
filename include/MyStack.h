@@ -7,7 +7,7 @@
 
 template<typename T>
 class MyStack {
-    //Разработать шаблон класса MyStack.
+    // Разработать шаблон класса MyStack.
 private:
     T *stack;
     int topIndex;
@@ -15,14 +15,14 @@ private:
 
 public:
 
-    //конструктор с одним параметром.
+    // конструктор с роодним параметром.
     MyStack(int size) {
         this->stack = new T[size];
         this->topIndex = -1;
         this->sizeStack = sizeStack;
-    };
+    }
 
-    //конструктор копирования.
+    // конструктор копирования.
     MyStack(const MyStack &copiedOne) {
         this->topIndex = copiedOne.topIndex;
         this->sizeStack = copiedOne.sizeStack;
@@ -30,16 +30,16 @@ public:
         for (int i = 0; i < this->sizeStack; ++i) {
             this->stack[i] = copiedOne.stack[i];
         }
-    };
+    }
 
-    //деструктор.
+    // деструктор.
     ~MyStack() {
         delete[] this->stack;
     }
 
     // - возвращение эелемента на вершине стека
     // (без изменения состояния последнего).
-    //get() const
+    // get() const
 
     T get() const {
         if (this->topIndex != -1) {
@@ -50,7 +50,7 @@ public:
     }
 
     // - выталкивание элемента из стека.
-    //pop()
+    // pop()
     T pop() {
         if (this->topIndex == -1) {
             std::cout << "Nothing to pop";
@@ -62,7 +62,7 @@ public:
     }
 
     // - добавление элемента в стек.
-    //push()
+    // push()
     void push(T classInstance) {
         if (this->topIndex == this->sizeStack - 1) {
             std::cout << "Nowhere to push";
@@ -72,17 +72,16 @@ public:
     }
 
     // - проверка заполненности стека.
-    //isFull() const
+    // isFull() const
     bool isFull() const {
         return (this->topIndex == this->sizeStack - 1);
     }
 
     // - проверка пустоты стека.
-    //isEmpty() const
+    // isEmpty() const
     bool isEmpty() const {
         return (this->topIndex == -1);
     }
-
 };
 
 #endif  // INCLUDE_MYSTACK_H_
