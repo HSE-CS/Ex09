@@ -95,6 +95,6 @@ TEST(MyStackTest, test10) {
 // isempty true
 MyStack<int> st(3);
 st.push(1);
-st.pop()
+st.pop();
 EXPECT_EQ(true, st.isEmpty());
 }
