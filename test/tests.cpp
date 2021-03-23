@@ -86,7 +86,7 @@ MyStack<int> st8(3);
 st8.push(1);
 st8.push(2);
 st8.push(3);
-//st8.pop();
+// st8.pop();
 EXPECT_EQ(3, st8.get());
 }
 
