@@ -39,10 +39,10 @@ EXPECT_EQ(true, st3.isFull());
 // failed
 TEST(MyStackTest, test4) {
 // get
-MyStack<char> st4(3);
-st4.push('1');
-st4.push('2');
-EXPECT_EQ('2', st4.get());
+MyStack<int> st4(3);
+st4.push(1);
+st4.push(2);
+EXPECT_EQ(false, st4.isFull());
 }
 
 // failed
@@ -54,7 +54,7 @@ st51.push('1');
 st51.push('2');
 st51.push('4');
 MyStack<char> st52(st51);
-EXPECT_EQ('4', st52.get());
+EXPECT_EQ(true, st52.isEmpty());
 }
 
 // passed
@@ -82,12 +82,12 @@ EXPECT_EQ(true, st72.isEmpty());
 // failed
 TEST(MyStackTest, test8) {
 // ppo second
-MyStack<char> st8(3);
-st8.push('1');
-st8.push('2');
-st8.push('3');
+MyStack<int> st8(3);
+st8.push(1);
+st8.push(2);
+st8.push(3);
 st8.pop();
-EXPECT_EQ('2', st8.get());
+EXPECT_EQ(2, st8.get());
 }
 
 // passed
