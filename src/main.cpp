@@ -7,9 +7,9 @@
 int main() {
     srand(time(0));
     MyStack<int> st(10);
-    st.push(rand());
-    st.push(rand());
-    st.push(rand());
+    st.push(1234);
+    st.push(4356);
+    st.push(7890);
 
     while (!st.isEmpty())
         std::cout << st.pop() <<" ";
