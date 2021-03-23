@@ -83,11 +83,11 @@ EXPECT_EQ(true, st72.isEmpty());
 TEST(MyStackTest, test8) {
 // ppo second
 MyStack<char> st8(3);
-st8.push('a1');
-st8.push('a2');
-st8.push('a3');
+st8.push('1');
+st8.push('2');
+st8.push('3');
 st8.pop();
-EXPECT_EQ('a2', st8.get());
+EXPECT_EQ('2', st8.get());
 }
 
 // passed
