@@ -8,15 +8,14 @@
 template<typename T>
 class MyStack {
     // Разработать шаблон класса MyStack.
-private:
+ private:
     T *stack;
     int topIndex;
     int sizeStack;
 
-public:
-
+ public:
     // конструктор с роодним параметром.
-    MyStack(int size) {
+    explicit MyStack(int size) {
         this->stack = new T[size];
         this->topIndex = -1;
         this->sizeStack = sizeStack;
