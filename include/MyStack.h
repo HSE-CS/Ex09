@@ -12,7 +12,7 @@ class MyStack {
  public:
   explicit MyStack(int Size) {
     size = Size;
-    stack = new T[size];
+    st_value = new T[size];
   }
   MyStack(const MyStack& ST) {
     size = ST.size;
@@ -23,13 +23,13 @@ class MyStack {
     point = ST.point;
   }
   ~MyStack() {
-      delete[] st_value; 
+      delete[] st_value;
   }
   T& get() {
     return st_value[point-1];
   }
   int getSize() {
-      return size; 
+      return size;
   }
   T& pop() {
     point--;
@@ -40,7 +40,7 @@ class MyStack {
       st_value[point] = x;
       point++;
     }
-  }  
+  }
   bool isEmpty() {
     if (point == 0)
       return true;
