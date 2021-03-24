@@ -6,7 +6,7 @@
 template<class T>
 class MyStack{
  private:
-    unsigned int lenght;
+    unsigned int length;
     int top;
     T* values;
 
