@@ -8,7 +8,7 @@ int main() {
   st.push(3);
   st.push(5);
   st.push(9);
-  while (!st.isEmpty()) 
-	  std::cout << st.pop() << " ";
+  while (!st.isEmpty())
+     std::cout << st.pop() << " ";
   return 0;
 }
