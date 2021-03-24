@@ -1,7 +1,7 @@
 // Copyright 2021 Roman Burtsev
 #include "MyStack.h"
 
-#include "gtest/gtest.h"
+#include <gtest/gtest.h>
 #include <string>
 
 TEST(MyStackTest, test1) {
