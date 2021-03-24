@@ -5,8 +5,8 @@
 #include <string>
 
 TEST(MyStackTest, test1) {
-  	MyStack<int> Stack(2);
-  	EXPECT_EQ(true, Stack.isEmpty());
+    MyStack<int> Stack(2);
+    EXPECT_EQ(true, Stack.isEmpty());
 }
 
 TEST(MyStackTest, test2) {
@@ -61,5 +61,4 @@ TEST(MyStackTest, test10) {
     MyStack<int> Stack(5);
     const MyStack<int>& Stack2 = Stack;
     EXPECT_EQ(false, Stack2.isFull());
-}
-
+} 
