@@ -1,4 +1,4 @@
-// Copyright 2020 PolinaPanina
+// Copyright 2021 PolinaPanina
 #include "MyStack.h"
 #include <iostream>
 

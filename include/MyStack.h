@@ -1,6 +1,7 @@
-// Copyright 2020 PolinaPanina
+// Copyright 2021 PolinaPanina
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
+#include <iostream>
 
 template <class T>
 class MyStack {
