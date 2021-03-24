@@ -1,4 +1,4 @@
-// Copyright by Roman Burtsev 19SE-1
+// Copyright 2021 by Roman Burtsev
 
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
@@ -6,20 +6,20 @@
 template<class T>
 class MyStack{
  private:
-    unsigned int length;
+    unsigned int t_size;
     int top;
     T* values;
 
  public:
-    explicit MyStack(unsigned int length) {
-        values = new T[length];
+    explicit MyStack(unsigned int t_size) {
+        values = new T[t_size];
         top = -1;
-        this->length = length;
+        this->t_size = t_size;
     }
     MyStack(const MyStack& MyStack) {
         this->values = MyStack.values;
         this->top = MyStack.top;
-        this->length = MyStack.length;
+        this->t_size = MyStack.t_size;
     }
     ~MyStack() {
         delete[] values;
@@ -45,7 +45,7 @@ class MyStack{
         }
     }
     bool isFull() const {
-        if (top == length)
+        if (top == t_size)
             return true;
         else
             return false;

@@ -8,7 +8,6 @@ TEST(MyStackTest, test1) {
     MyStack<int> Stack(2);
     EXPECT_EQ(true, Stack.isEmpty());
 }
-
 TEST(MyStackTest, test2) {
     MyStack<int> Stack(5);
     Stack.push(3);
