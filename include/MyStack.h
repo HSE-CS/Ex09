@@ -1,5 +1,7 @@
 // Copyright by Roman Burtsev 19SE-1
 
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 
 template<class T>
 class MyStack{
@@ -60,3 +62,4 @@ class MyStack{
             return false;
     }
 };
+#endif
