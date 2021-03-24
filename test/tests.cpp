@@ -61,4 +61,4 @@ TEST(MyStackTest, test10) {
     MyStack<int> Stack(5);
     const MyStack<int>& Stack2 = Stack;
     EXPECT_EQ(false, Stack2.isFull());
-} 
+}

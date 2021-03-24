@@ -16,7 +16,7 @@ class MyStack{
         top = -1;
         this->length = length;
     }
-    MyStack(const MyStack& MyStack) { 
+    MyStack(const MyStack& MyStack) {
         this->values = MyStack.values;
         this->top = MyStack.top;
         this->length = MyStack.length;
@@ -25,20 +25,16 @@ class MyStack{
         delete[] values;
     }
     T get() const {
-        if (isEmpty()) {
+        if (isEmpty())
             throw "Stack is empty";
-        }
-        else {
+        else
             return values[top];
-        }
     }
     T pop() {
-        if (isEmpty()) {
+        if (isEmpty())
             throw "Stack is empty";
-        }
-        else {
+        else
             return values[--top];
-        }
     }
     void push(T value) {
         if (isFull()) {

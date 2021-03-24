@@ -15,4 +15,4 @@ int main() {
     std::cout << "Empty: " << stack.isEmpty() << std::endl;
     std::cout << std::endl;
     return 0;
-} 
+}
