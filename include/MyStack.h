@@ -1,67 +1,66 @@
 #ifndef INCLUDE_MYSTACK_H_
 #define INCLUDE_MYSTACK_H_
+
 #include <iostream>
 
 template <class T>
-class MyStack 
-{
-private:
-	int size;
-	T* st_value;
-	int point = 0;
+class MyStack {
+ private:
+     unsigned int length;
+     unsigned int position;
+     T* stack;
 
-public:
-	explicit MyStack(int Size) 
-	{
-		size = Size;
-		st_value = new T[size];
-	}
-	MyStack(const MyStack& ST) 
-	{
-		size = ST.size;
-		st_value = new T[size];
-		for (int i = 0; i < size; ++i) 
-		{
-			st_value[i] = ST.st_value[i];
-		}
-		point = ST.point;
-	}
-	~MyStack() 
-	{
-		delete[] st_value;
-	}
-	T& get() 
-	{
-		return st_value[point - 1];
-	}
-	int getSize() 
-	{
-		return size;
-	}
-	T& pop() 
-	{
-		point--;
-		return st_value[point];
-	}
-	void push(double x) 
-	{
-		if (point < size) 
-		{
-			st_value[point] = x;
-			point++;
-		}
-	}
-	bool isEmpty() 
-	{
-		if (point == 0)
-			return true;
-		return false;
-	}
-	bool isFull() 
-	{
-		if (point == size)
-			return true;
-		return false;
-	}
+ public:
+     MyStack() {
+         length = 0;
+         position = 0;
+         stack = nullptr;
+     }
+     explicit MyStack(unsigned int size) {
+         stack = new T[size];
+         length = size;
+     }
+     MyStack(const MyStack& my_st) {
+         length = my_st.length;
+         position = my_st.position;
+         stack = new T[length];
+         for (int i = 0; i < length; ++i) {
+             stack[i] = my_st.stack[i];
+         }
+     }
+     bool isFull() {
+         if (position == length) {
+             return true;
+         } else {
+             return false;
+         }
+     }
+     bool isEmpty() {
+         if (position == 0) {
+             return true;
+         } else {
+             return false;
+         }
+     }
+     ~MyStack() {
+         delete[] stack;
+     }
+     T& get() {
+         int position_ = position - 1;
+         return stack[position_];
+     }
+     int getSize() {
+         return length;
+     }
+     T& pop() {
+         position -= 1;
+         return stack[position];
+     }
+     void push(double x) {
+         if (position < length) {
+             stack[position] = x;
+             position++;
+         }
+     }
 };
 #endif  // INCLUDE_MYSTACK_H_
