@@ -1,6 +1,7 @@
 // Copyright 2021 by shaidi
 #include <gtest/gtest.h>
 #include <string>
+#include "MyStack.h"
 
 TEST(MyStack, test1) {
   MyStack<int> st(5);
