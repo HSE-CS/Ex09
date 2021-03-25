@@ -64,7 +64,7 @@ TEST(MyStackTest, test9) {
 	  st.push(i);
   }
   st.pop();
-  EXPECT_EQ(2, st.get());
+  EXPECT_EQ(1, st.get());
 }
 
 TEST(MyStackTest, test10) {
@@ -72,7 +72,7 @@ TEST(MyStackTest, test10) {
   for(int i = 0; i < 3; i++){
 	  st.push(i);
   }
-  EXPECT_EQ(3, st.pop());
+  EXPECT_EQ(2, st.pop());
 }
 
 
@@ -90,7 +90,7 @@ TEST(MyStackTest, test12) {
 	  st.push(i);
   }
   MyStack<int> st2(st);
-  EXPECT_EQ(3, st2.get());
+  EXPECT_EQ(2, st2.get());
 }
 
 
