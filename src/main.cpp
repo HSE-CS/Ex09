@@ -1,16 +1,14 @@
 #include "MyStack.h"
+#include <iostream>
 
 int main() 
 {
-	MyStack<char> st(5);
-	st.push('o');
-	st.push('l');
-	st.push('l');
-	st.push('e');
-	st.push('h');
-	MyStack <char> st2(st);
-
-	while (!st2.isEmpty())
-		std::cout << st2.pop() << " ";
+	MyStack<int> st(10);
+	st.push(1);
+	st.push(3);
+	st.push(5);
+	st.push(9);
+	while (!st.isEmpty())
+		std::cout << st.pop() << " ";
 	return 0;
 }

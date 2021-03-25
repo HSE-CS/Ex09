@@ -1,76 +1,67 @@
-#pragma once
-#pragma once
+#ifndef INCLUDE_MYSTACK_H_
+#define INCLUDE_MYSTACK_H_
 #include <iostream>
-#include <iomanip>
 
-template <typename T>
+template <class T>
 class MyStack 
 {
 private:
-	T* stackPtr;
 	int size;
-	T top = 0;
+	T* st_value;
+	int point = 0;
 
 public:
-	explicit MyStack(int n_size) 
+	explicit MyStack(int Size) 
 	{
-		size = n_size;
-		stackPtr = new T[size];
+		size = Size;
+		st_value = new T[size];
 	}
-
-	MyStack(const MyStack& another_stack) 
+	MyStack(const MyStack& ST) 
 	{
-		size = another_stack.size;
-		stackPtr = new T[size];
-		top = another_stack.top;
-
-		for (unsigned int i = 0; i < top; i = i + 1)
-			stackPtr[i] = another_stack.stackPtr[i];
+		size = ST.size;
+		st_value = new T[size];
+		for (int i = 0; i < size; ++i) 
+		{
+			st_value[i] = ST.st_value[i];
+		}
+		point = ST.point;
 	}
-
 	~MyStack() 
 	{
-		delete[] stackPtr;
+		delete[] st_value;
 	}
-
-	void push(T value) 
+	T& get() 
 	{
-		stackPtr[top] = value;
-		top++;
+		return st_value[point - 1];
 	}
-
-	T pop() 
+	int getSize() 
 	{
-		top--;
-		return stackPtr[top];
+		return size;
 	}
-
-	T get() const 
+	T& pop() 
 	{
-		return stackPtr[top - 1];
+		point--;
+		return st_value[point];
 	}
-
-	bool isFull() const 
+	void push(double x) 
 	{
-		if (top == size) 
+		if (point < size) 
 		{
+			st_value[point] = x;
+			point++;
+		}
+	}
+	bool isEmpty() 
+	{
+		if (point == 0)
 			return true;
-		}
-		else 
-		{
-			return false;
-		}
+		return false;
 	}
-
-	bool isEmpty() const 
+	bool isFull() 
 	{
-		if (top == 0) 
-		{
+		if (point == size)
 			return true;
-		}
-		else 
-		{
-			return false;
-		}
+		return false;
 	}
 };
+#endif  // INCLUDE_MYSTACK_H_
