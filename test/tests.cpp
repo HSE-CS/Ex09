@@ -4,7 +4,7 @@
 #include "MyStack.h"
 
 TEST(MyStack, test1) {
-  MyStack<int> st(5);
+  MyStack<int> st(6);
   EXPECT_EQ(1, st.isEmpty());
 }
 
